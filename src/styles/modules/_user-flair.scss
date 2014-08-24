@@ -57,3 +57,9 @@
 		$pos: $pos - 32px;
 	}
 }
+// Removes flair off listing pages, moderator box in sidebar, and posts on author
+.listing-page .flair,
+.sidecontentbox .flair,
+#siteTable .flair{
+	display: none;
+}

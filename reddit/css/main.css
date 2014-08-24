@@ -3,6 +3,27 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
+body {
+  padding: 2.5rem; }
+
+#header {
+  position: static; }
+
+#sr-header-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 20px;
+  width: 100%;
+  background: #333;
+  border-bottom: none !important; }
+  #sr-header-area a,
+  #sr-header-area span,
+  #sr-header-area .drop-choices {
+    background: #333;
+    color: #fff; }
+
 .flair {
   display: inline-block;
   height: 1.5rem;
@@ -184,3 +205,8 @@
     background-position: 0 -68rem; }
   .flair-official.flair-oilers:before {
     background-position: 0 -70rem; }
+
+.listing-page .flair,
+.sidecontentbox .flair,
+#siteTable .flair {
+  display: none; }
