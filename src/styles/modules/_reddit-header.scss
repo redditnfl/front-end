@@ -1,0 +1,52 @@
+#header {
+	display: flex;
+	background-color: transparent;
+	border-bottom: none;
+	background: #444;
+}
+#header-bottom-left {
+	display: block;
+	width: calc(100% - 300px);
+	font-size: 0;
+	background: transparent;
+}
+// Reddit sub-navigation wrapper
+.tabmenu {
+	float: left;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	// Reddit sub-navigation link containers
+	li {
+		display: inline-block;
+		margin: 0;
+		// Reddit sub-navigation links
+		.choice {
+			display: block;
+			padding: rem(2px);
+			margin: rem(18px) rem(8px);
+			font-family: helvetica, arial, sans-serif;
+			font-size: rem(12px);
+			font-weight: 400;
+			letter-spacing: .1em;
+			line-height: 1em;
+			text-transform: uppercase;
+			background: transparent;
+			border: none !important;
+			color: #999;
+			transition: color .3s;
+			&:hover { color: lighten(#999, 40); }
+		}
+		&.selected .choice{
+			color: lighten(#999, 40);
+			background: transparent;
+		}
+		&:first-child .choice { margin-left: rem(18px); }
+	}
+}
+// Kills unwanted elements
+#jumpToContent,
+#header-img { @extend %kill; }
+// Temporary
+.pagename { @extend %kill; }
