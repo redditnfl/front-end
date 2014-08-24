@@ -1,0 +1,12 @@
+// Creates EMs from pixels
+//  em(16px) -> 1em
+@function em($target, $context: $font-size) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0em;
+}
+// Creates REMs from pixels
+// rem(16px) -> 1rem
+@function rem($target, $context: $font-size) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0rem;
+}
