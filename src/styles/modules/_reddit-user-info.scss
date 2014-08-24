@@ -1,0 +1,67 @@
+// User info wrapper
+#header-bottom-right {
+	position: static;
+	display: block;
+	height: 100%;
+	width: rem(300px);
+	padding: rem(15px) rem(20px) rem(15px) 0;
+	float: right;
+	text-align: right;
+	background: transparent;
+	border-radius: 0;
+	// User link
+	// Seperator bars
+	.separator{ @extend %kill; }
+	// Icons
+	%icon{
+		position: static;
+		top: 0;
+		display: inline-block;
+		height: rem(20px);
+		width: rem(20px);
+		margin: 0 0 0 rem(20px);
+		text-indent: 100%;
+		background: url(../img/user-icons.png) transparent 0 0;
+		background-size: rem(20px);
+		overflow: hidden;
+		white-space: nowrap;
+		opacity: .6;
+		transition: opacity .3s;
+		// Hover for icon
+		&:hover{
+			opacity: 1;
+		}
+	}
+	.user{
+		@extend %icon;
+		position: relative;
+		font-size: 0;
+		a{
+			@extend %cover-all;
+		}
+	}
+	#mail{
+		@extend %icon;
+		background-position: 0 rem(-25px);
+		&.havemail{
+			opacity: 1;
+		}
+	}
+	#modmail{
+		@extend %icon;
+		background-position: 0 rem(-50px);
+		&.havemail{
+			opacity: 1;
+		}
+	}
+	// Languages Link
+	.pref-lang{
+		@extend %icon;
+		background-position: 0 rem(-75px);
+	}
+	// Log Out
+	.logout > a{
+		@extend %icon;
+		background-position: 0 rem(-100px);
+	}
+}
