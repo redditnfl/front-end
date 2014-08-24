@@ -36,7 +36,7 @@ gulp.task("default", function(){
 // SCSS to CSS task - run "gulp to-css"
 gulp.task("to-css", function(){
 	return gulp.src(paths.src.styles+"/*.scss")
-	.pipe(sass())
+	.pipe(sass({sourcemap: false}))
 	.pipe(prefix("last 5 version"))
 	.pipe(gulp.dest(paths.public.css));
 });
