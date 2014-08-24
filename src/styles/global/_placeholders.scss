@@ -1,5 +1,4 @@
 %clearfix {
-  *zoom: 1;
   &:before, &:after {
     content: " ";
     display: table;
@@ -7,4 +6,15 @@
   &:after {
     clear: both;
   }
+}
+%kill{
+  display: none !important;
+}
+%cover-all{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
 }

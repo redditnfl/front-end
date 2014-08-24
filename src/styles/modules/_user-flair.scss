@@ -1,5 +1,5 @@
 // Flair wrapping element
-.flair{
+.flair {
 	display: inline-block;
 	height: rem(24px);
 	width: rem(28px);
@@ -14,14 +14,14 @@
 	color: #222;
 	overflow: hidden;
 	white-space: nowrap;
-	&:hover{
+	&:hover {
 		width: auto;
 		border-color:  #ddd;
 		background-color: #f5f5f5;
 		cursor: help;
 	}
 	// Flair logo element
-	&:before{
+	&:before {
 		content: "";
 		display: inline-block;
 		height: rem(20px);
@@ -34,7 +34,7 @@
 	}
 	// Generates background position each team needed
 	$pos: 0;
-	@each $team in $nfl-list{
+	@each $team in $nfl-list {
 		&-#{$team}:before {
 			background-position: 0 rem($pos);
 		}
@@ -42,7 +42,7 @@
 	}
 }
 // Official Flair
-.flair-official{
+.flair-official {
 	height: rem(36px);
 	width: rem(40px);
 	&:before{
@@ -50,7 +50,7 @@
 		width: rem(32px);
 	}
 	$pos: 0;
-	@each $team in $nfl-list{
+	@each $team in $nfl-list {
 		&.flair-#{$team}:before {
 			background-position: 0 rem($pos);
 		}
@@ -61,5 +61,5 @@
 .listing-page .flair,
 .sidecontentbox .flair,
 #siteTable .flair{
-	display: none;
+	@extend %kill;
 }
