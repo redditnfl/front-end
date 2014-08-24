@@ -5,23 +5,22 @@
 
 .flair {
   display: inline-block;
-  height: 1.25rem;
-  width: 1.25rem;
-  padding: 0.125rem;
+  height: 1.5rem;
+  width: 1.75rem;
+  padding: 0.0625rem 0.25rem;
   margin-right: 0.1875rem;
   vertical-align: middle;
   font-size: 0.625rem;
   line-height: 1em;
-  border: 0 solid #ddd;
-  border-radius: 3px;
+  border: 0.0625rem solid transparent;
+  border-radius: 0.1875rem;
   background: transparent;
   color: #222;
   overflow: hidden;
   white-space: nowrap; }
   .flair:hover {
     width: auto;
-    padding: 0.0625rem;
-    border-width: 0.0625rem;
+    border-color: #ddd;
     background-color: #f5f5f5;
     cursor: help; }
   .flair:before {
@@ -37,72 +36,151 @@
   .flair-cardinals:before {
     background-position: 0 0; }
   .flair-falcons:before {
-    background-position: 0 -20px; }
+    background-position: 0 -1.25rem; }
   .flair-ravens:before {
-    background-position: 0 -40px; }
+    background-position: 0 -2.5rem; }
   .flair-bills:before {
-    background-position: 0 -60px; }
+    background-position: 0 -3.75rem; }
   .flair-panthers:before {
-    background-position: 0 -80px; }
+    background-position: 0 -5rem; }
   .flair-bears:before {
-    background-position: 0 -100px; }
+    background-position: 0 -6.25rem; }
   .flair-bengals:before {
-    background-position: 0 -120px; }
+    background-position: 0 -7.5rem; }
   .flair-browns:before {
-    background-position: 0 -140px; }
+    background-position: 0 -8.75rem; }
   .flair-cowboys:before {
-    background-position: 0 -160px; }
+    background-position: 0 -10rem; }
   .flair-broncos:before {
-    background-position: 0 -180px; }
+    background-position: 0 -11.25rem; }
   .flair-lions:before {
-    background-position: 0 -200px; }
+    background-position: 0 -12.5rem; }
   .flair-packers:before {
-    background-position: 0 -220px; }
+    background-position: 0 -13.75rem; }
   .flair-texans:before {
-    background-position: 0 -240px; }
+    background-position: 0 -15rem; }
   .flair-colts:before {
-    background-position: 0 -260px; }
+    background-position: 0 -16.25rem; }
   .flair-jaguars:before {
-    background-position: 0 -280px; }
+    background-position: 0 -17.5rem; }
   .flair-chiefs:before {
-    background-position: 0 -300px; }
+    background-position: 0 -18.75rem; }
   .flair-dolphins:before {
-    background-position: 0 -320px; }
+    background-position: 0 -20rem; }
   .flair-vikings:before {
-    background-position: 0 -340px; }
+    background-position: 0 -21.25rem; }
   .flair-patriots:before {
-    background-position: 0 -360px; }
+    background-position: 0 -22.5rem; }
   .flair-saints:before {
-    background-position: 0 -380px; }
+    background-position: 0 -23.75rem; }
   .flair-giants:before {
-    background-position: 0 -400px; }
+    background-position: 0 -25rem; }
   .flair-jets:before {
-    background-position: 0 -420px; }
+    background-position: 0 -26.25rem; }
   .flair-raiders:before {
-    background-position: 0 -440px; }
+    background-position: 0 -27.5rem; }
   .flair-eagles:before {
-    background-position: 0 -460px; }
+    background-position: 0 -28.75rem; }
   .flair-steelers:before {
-    background-position: 0 -480px; }
+    background-position: 0 -30rem; }
   .flair-chargers:before {
-    background-position: 0 -500px; }
+    background-position: 0 -31.25rem; }
   .flair-49ers:before {
-    background-position: 0 -520px; }
+    background-position: 0 -32.5rem; }
   .flair-seahawks:before {
-    background-position: 0 -540px; }
+    background-position: 0 -33.75rem; }
   .flair-rams:before {
-    background-position: 0 -560px; }
+    background-position: 0 -35rem; }
   .flair-buccaneers:before {
-    background-position: 0 -580px; }
+    background-position: 0 -36.25rem; }
   .flair-titans:before {
-    background-position: 0 -600px; }
+    background-position: 0 -37.5rem; }
   .flair-redskins:before {
-    background-position: 0 -620px; }
+    background-position: 0 -38.75rem; }
   .flair-nfl:before {
-    background-position: 0 -640px; }
+    background-position: 0 -40rem; }
   .flair-nfc:before {
-    background-position: 0 -660px; }
+    background-position: 0 -41.25rem; }
   .flair-afc:before {
-    background-position: 0 -680px; }
+    background-position: 0 -42.5rem; }
   .flair-oilers:before {
-    background-position: 0 -700px; }
+    background-position: 0 -43.75rem; }
+
+.flair-official {
+  height: 2.25rem;
+  width: 2.5rem; }
+  .flair-official:before {
+    height: 2rem;
+    width: 2rem; }
+  .flair-official.flair-cardinals:before {
+    background-position: 0 0; }
+  .flair-official.flair-falcons:before {
+    background-position: 0 -2rem; }
+  .flair-official.flair-ravens:before {
+    background-position: 0 -4rem; }
+  .flair-official.flair-bills:before {
+    background-position: 0 -6rem; }
+  .flair-official.flair-panthers:before {
+    background-position: 0 -8rem; }
+  .flair-official.flair-bears:before {
+    background-position: 0 -10rem; }
+  .flair-official.flair-bengals:before {
+    background-position: 0 -12rem; }
+  .flair-official.flair-browns:before {
+    background-position: 0 -14rem; }
+  .flair-official.flair-cowboys:before {
+    background-position: 0 -16rem; }
+  .flair-official.flair-broncos:before {
+    background-position: 0 -18rem; }
+  .flair-official.flair-lions:before {
+    background-position: 0 -20rem; }
+  .flair-official.flair-packers:before {
+    background-position: 0 -22rem; }
+  .flair-official.flair-texans:before {
+    background-position: 0 -24rem; }
+  .flair-official.flair-colts:before {
+    background-position: 0 -26rem; }
+  .flair-official.flair-jaguars:before {
+    background-position: 0 -28rem; }
+  .flair-official.flair-chiefs:before {
+    background-position: 0 -30rem; }
+  .flair-official.flair-dolphins:before {
+    background-position: 0 -32rem; }
+  .flair-official.flair-vikings:before {
+    background-position: 0 -34rem; }
+  .flair-official.flair-patriots:before {
+    background-position: 0 -36rem; }
+  .flair-official.flair-saints:before {
+    background-position: 0 -38rem; }
+  .flair-official.flair-giants:before {
+    background-position: 0 -40rem; }
+  .flair-official.flair-jets:before {
+    background-position: 0 -42rem; }
+  .flair-official.flair-raiders:before {
+    background-position: 0 -44rem; }
+  .flair-official.flair-eagles:before {
+    background-position: 0 -46rem; }
+  .flair-official.flair-steelers:before {
+    background-position: 0 -48rem; }
+  .flair-official.flair-chargers:before {
+    background-position: 0 -50rem; }
+  .flair-official.flair-49ers:before {
+    background-position: 0 -52rem; }
+  .flair-official.flair-seahawks:before {
+    background-position: 0 -54rem; }
+  .flair-official.flair-rams:before {
+    background-position: 0 -56rem; }
+  .flair-official.flair-buccaneers:before {
+    background-position: 0 -58rem; }
+  .flair-official.flair-titans:before {
+    background-position: 0 -60rem; }
+  .flair-official.flair-redskins:before {
+    background-position: 0 -62rem; }
+  .flair-official.flair-nfl:before {
+    background-position: 0 -64rem; }
+  .flair-official.flair-nfc:before {
+    background-position: 0 -66rem; }
+  .flair-official.flair-afc:before {
+    background-position: 0 -68rem; }
+  .flair-official.flair-oilers:before {
+    background-position: 0 -70rem; }
