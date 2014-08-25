@@ -1,0 +1,68 @@
+// All "components" within the side bar will begin with an hr, then an h4, and finally a random header between h1-h6
+// creating a unique code for us to target (e.g. hr + h4 + h1 + component).
+// It's messy, for sure.
+
+// kill all h4 following hr
+.titlebox > hr + h4{
+	@extend %kill;
+	// kill all header elements follow hr and h4
+	@for $i from 1 through 6{
+		+ h#{$i}{
+				@extend %kill;
+		}
+	}
+}
+// Teams logo header's unique code is 41(h4+h1)
+.titlebox hr + h4 + h1{
+	// Large container
+	+ ul{
+		@extend %clearfix;
+		position: absolute;
+		top: rem(20px);
+		left: 0;
+		display: block;
+		width: 100%;
+		padding: rem(10px) rem(40px);
+		margin: 0;
+		background: #fff;
+		list-style: none;
+		li{
+			display: flex;
+			justify-content: space-between;
+			width: 50%;
+			float: left;
+			&:first-child{
+				padding-right: rem(42px);
+				>a{
+					display: block;
+					float: right;
+				}
+			}
+			&:last-child{
+				padding-left: rem(42px);
+				>a{
+					display: block;
+					float: left;
+				}
+			}
+		}
+	}
+}
+
+// r/nfl logo
+.pagename{
+	visibility: none;
+	a{
+		position: absolute;
+		top: rem(20px);
+		left: 50%;
+		z-index: 10;
+		display: block;
+		height: rem(60px);
+		width: rem(84px);
+		margin-left: rem(-42px);
+		visibility: visible;
+		background: url("../img/page-elements.png");
+		background-size: rem(250px);
+	}
+}
