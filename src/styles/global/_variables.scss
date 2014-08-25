@@ -7,4 +7,41 @@ $break-tablet-only: "only screen and (min-width : 768px) and (max-width : 1024px
 $break-desktop: "only screen and (min-width : 1025px)";
 
 // NFL List
-$nfl-list: cardinals, falcons, ravens, bills, panthers, bears, bengals, browns, cowboys, broncos, lions, packers, texans, colts, jaguars, chiefs, dolphins, vikings, patriots, saints, giants, jets, raiders, eagles, steelers, chargers, 49ers, seahawks, rams, buccaneers, titans, redskins, nfl, nfc, afc, oilers;
+// List is - name abbr subreddit
+
+$nfl-teams-info:
+	(cardinals ARI azcardinals),
+	(falcons ALT falcons),
+	(ravens BAL ravens),
+	(bills BUF buffalobils),
+	(panthers CAR panthers),
+	(bears CHI chibears),
+	(bengals CIN bengals),
+	(browns CLE browns),
+	(cowboys DAL cowboys),
+		(broncos DEN denverbroncos),
+		(lions DET detroitlions),
+		(packers GB greenbaypackers),
+		(texans HOU texans),
+		(colts IND colts),
+		(jaguars JAX jaguars),
+		(chiefs KC kansascitychiefs),
+		(dolphins MIA miamidolphins),
+		(vikings MIN minnesotavikings),
+		(patriots NE patriots),
+		(saints NO saints),
+		(giants NYG nygiants),
+		(jets NYJ nyjets),
+		(raiders OAK oaklandraiders),
+		(eagles PHI eagles),
+		(steelers PIT steelers),
+		(chargers SD chargers),
+		(49ers SF 49ers),
+		(seahawks SEA seahawks),
+		(rams STL saintlouisrams),
+		(buccaneers TB buccaneers),
+		(titans TEN tennesseetitans),
+		(redskins WAS redskins),
+		(nfl NFL nfl),
+		(nfc NFC nfc),
+		(afc AFC afc);
