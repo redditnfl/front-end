@@ -27,8 +27,10 @@
 		background: #fff;
 		list-style: none;
 		li{
-			display: flex;
-			justify-content: space-between;
+			display: block;
+			// One day when reddit supports justify-content
+			//display: flex;
+			//justify-content: space-between;
 			width: 50%;
 			float: left;
 			&:first-child{
