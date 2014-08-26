@@ -66,20 +66,20 @@
 // Gets background position for all teams for flair, link images, and abbr images.
 $pos-20: 0;
 $pos-32: 0;
-@each $team in $nfl-teams-info {
-	$name: nth($team, 1); // returns team name(e.g. giants)
-	$abbr: nth($team, 2); // returns team abbr(e.g. NYG)
-	$url: nth($team, 3); // returns team url(e.g. /r/nygiants)
-	a[href$="/r/#{$url}"]:before,
-	a[href$="/#{$abbr}"]:before{
+@each $team in $nfl-teams {
+	$thisName: map-get($team, name);
+	$thisAbbr: map-get($team, abbr);
+	$thisUrl: map-get($team, url);
+	a[href$="/r/#{$thisUrl}"]:before,
+	a[href$="/#{$thisAbbr}"]:before{
 		@extend %team-link;
 	}
-	.flair-#{$name}:before,
-	a[href$="/r/#{$url}"]:before,
-	a[href$="/#{$abbr}"]:before{
+	.flair-#{$thisName}:before,
+	a[href$="/r/#{$thisUrl}"]:before,
+	a[href$="/#{$thisAbbr}"]:before{
 		background-position: 0 rem($pos-20);
 	}
-	.flair-#{$name}.official:before{
+	.flair-#{$thisName}.official:before{
 		background-position: 0 rem($pos-32);
 	}
 	$pos-20: $pos-20 - 20px;

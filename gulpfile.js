@@ -37,7 +37,7 @@ gulp.task("default", function(){
 gulp.task("to-css", function(){
 	return gulp.src(paths.src.styles+"/*.scss")
 	.pipe(sass({sourcemap: false}))
-	.pipe(prefix("last 5 version"))
+	.pipe(prefix("last 2 versions", "ie 9", "ie 8"))
 	.pipe(gulp.dest(paths.public.css));
 });
 
