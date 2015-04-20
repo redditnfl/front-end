@@ -1,74 +1,106 @@
-var gulp = require('gulp');
-var sass = require('gulp-ruby-sass');
-var prefix = require('gulp-autoprefixer');
-var replace = require('gulp-replace');
-var include = require('gulp-file-include');
+var gulp = require('gulp'),
+	sass = require("gulp-sass"),
+	plumber = require("gulp-plumber"),
+	prefix = require('gulp-autoprefixer'),
+	replace = require('gulp-replace'),
+	include = require('gulp-file-include'),
+	notify = require("gulp-notify");
 
-var sys = {
-	src: "src/",
-	public: "public/",
-	reddit: "reddit/"
-}
-var paths = {
-	src:{
-		img: sys.src+"img",
-		markup: sys.src+"markdown",
-		styles: sys.src+"styles",
-	},
-	public:{
-		img: sys.public+"img",
-		markdown: sys.public+"markdown",
-		css: sys.public+"css",
-	},
-	reddit:{
-		sidebar: sys.reddit+"sidebar",
-		css: sys.reddit+"css",
+// Default path
+	var paths = {
+		src: {parentPath: "./src/"},
+		pub: {parentPath: "./pub/"},
+		reddit: {parentPath: "./reddit/"}
+	};
+
+// Create project paths
+	createPath("scss", "css");
+	createPath("img");
+	createPath("markdown");
+
+// Compile CSS - run "gulp css"
+	gulp.task("css", function(){
+		return gulp.src(paths.src.scss+"/**/*.scss")
+		.pipe(plumber({errorHandler: errorAlert}))
+		.pipe(sass())
+		.pipe(prefix({browsers: ["last 2 version"]}))
+		.pipe(gulp.dest(paths.pub.css))
+	});
+	
+// Compile Markdown - run "gulp md"
+	gulp.task("md", function(){
+		return gulp.src(paths.src.markdown+"/**/*.md")
+		.pipe(plumber({errorHandler: errorAlert}))
+		.pipe(include('@@'))
+		.pipe(gulp.dest(paths.pub.markdown))
+	});
+
+// Move Images - run "gulp img"
+	gulp.task("img", function(){
+		return gulp.src(paths.src.img+"/*.*")
+		.pipe(gulp.dest(paths.pub.img));
+	});
+	
+	
+// Compile
+	gulp.task("compile", ["md", "css", "img"], function(){
+		return gulp.src("src/fake")
+		.pipe(notify({title: "Project Compiled!", message: "", sound: "Wuka"}))
+		.pipe(gulp.dest("src/fake"))
+	});
+	
+// Watch files
+	gulp.task("watch", function(){
+		gulp.watch(paths.src.scss+"/**/*.scss", ["css"]);
+		gulp.watch(paths.src.img+"/*", ["img"]);
+		gulp.watch(paths.src.markdown+"/**/*.md", ["md"]);
+	});
+	
+// Default take
+	gulp.task("default", ["watch", "compile"]);
+
+// Reddit safe CSS
+	gulp.task("reddit-css", ["css"], function(){
+		return gulp.src(paths.pub.css+"/*.css")
+		.pipe(replace("../img/", "%%"))
+		.pipe(replace(".jpg", "%%"))
+		.pipe(replace(".png", "%%"))
+		.pipe(gulp.dest(paths.reddit.css));
+	});
+
+// Reddit Safe Markdown
+	gulp.task("reddit-md", ["md"], function(){
+		return gulp.src(paths.pub.markdown+"/*.md")
+		.pipe(gulp.dest(paths.reddit.markdown));
+	});
+
+// Reddit Safe Images
+	gulp.task("reddit-img", ["img"], function(){
+		return gulp.src(paths.pub.img+"/*.*")
+		.pipe(gulp.dest(paths.reddit.img));
+	});
+	
+// Compile Reddit Safe Code
+	gulp.task("reddit-compile", ["reddit-md", "reddit-css", "reddit-img"], function(){
+		return gulp.src("src/fake")
+		.pipe(notify({title: "Project Compiled!", message: "", sound: "Wuka"}))
+		.pipe(gulp.dest("src/fake"))
+	});
+
+// Error function
+	function errorAlert(error){
+		notify.onError({title: "Gulp Error", message: "Check your terminal", sound: "Sosumi"})(error);
+		console.log(error.toString());
+		this.emit("end");
+	};
+
+// Create project paths
+	function createPath(srcPath, pubPath){
+		if(pubPath === undefined){
+			var pubPath = srcPath;
+		}
+		// Final paths
+		paths.src[srcPath+""] = paths.src.parentPath+srcPath;
+		paths.pub[pubPath+""] = paths.pub.parentPath+pubPath;
+		paths.reddit[pubPath+""] = paths.reddit.parentPath+pubPath;
 	}
-};
-
-// Default Watch task - run "gulp"
-gulp.task("default", function(){
-	gulp.watch(paths.src.img+"/**/*.*", ["to-img"], function(){});
-    gulp.watch(paths.src.markup+"/**/*.md", ["to-html"], function(){});
-    gulp.watch(paths.src.styles+"/**/*.scss", ["to-css"], function(){});
-});
-
-// SCSS to CSS task - run "gulp to-css"
-gulp.task("to-css", function(){
-	return gulp.src(paths.src.styles+"/*.scss")
-	.pipe(sass({sourcemap: false}))
-	.pipe(prefix("last 2 versions", "ie 9", "ie 8"))
-	.pipe(gulp.dest(paths.public.css));
-});
-
-// Markdown task - run "gulp to-html"
-gulp.task("to-markdown", function(){
-	return gulp.src(paths.src.markup+"/*.md")
-	.pipe(include('@@'))
-	.pipe(gulp.dest(paths.public.markdown));
-});
-
-// img task - run "gulp to-img"
-gulp.task("to-img", function(){
-	return gulp.src(paths.src.img+"/*.*")
-	.pipe(gulp.dest(paths.public.sidebar));
-});
-
-// CSS to reddit
-gulp.task("to-reddit-css", ["to-css"], function(){
-	return gulp.src(paths.public.css+"/*.css")
-	.pipe(replace("../img/", "%%"))
-	.pipe(replace(".jpg", "%%"))
-	.pipe(replace(".png", "%%"))
-	.pipe(gulp.dest(paths.reddit.css));
-});
-
-// Markdown to reddit
-gulp.task("to-reddit-md", ["to-markdown"], function(){
-	return gulp.src(paths.public.markdown+"/*.md")
-	.pipe(gulp.dest(paths.reddit.sidebar));
-});
-
-// Order 66 - run "gulp order-66"
-// This will produce the two files neccassary for reddit, which will be created in the "reddit" directory
-gulp.task("order-66", ["to-reddit-css", "to-reddit-md"], function(){});

@@ -1,0 +1,27 @@
+.spacer:nth-child(1){
+	display: block;
+	height: 200px;
+	width: 260px;
+	margin: 60px 20px 20px;
+	background: #eee;
+}
+.spacer:nth-child(3){
+	padding: 0 20px;
+}
+.spacer:nth-child(3)::before{
+	content: "Headline";
+	@extend %headline;
+	font-size: 20px;
+	margin: 0 0 10px;
+	color: color(grey,100);
+}
+.spacer:nth-child(3)::after{
+	content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper mattis dignissim. Nam ullamcorper augue dictum, dictum nulla porttitor, laoreet ipsum. Donec scelerisque eu ipsum vel tristique.";
+	@extend %body-copy;
+	display: block;
+	margin-bottom: 60px;
+	font-size: 14px;
+	line-height: 1.4em;
+	text-align: justify;
+	color: color(grey,100);
+}

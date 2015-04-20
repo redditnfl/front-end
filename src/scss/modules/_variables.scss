@@ -1,0 +1,66 @@
+// Color
+$nfl-blue: #1B487B;
+$nfl-red: #AA2E3A;
+$nfl-0: #FFF;
+$nfl-100: #272626;
+$nfl-gold: #C9A00F;
+
+// Media Breaks
+$breakpoints: (name: max, size: 1700, num:20),
+							(name: medium, size:1040, num:10),
+							(name: small, size:770, num:0);
+
+// NFL Teams
+$nfl-teams: (name:cardinals, abbr:ARI, url:azcardinals),
+						(name:falcons, abbr:ATL, url:falcons),
+						(name:ravens, abbr:BAL, url:ravens),
+						(name:bills, abbr:BUF, url:buffalobills),
+						(name:panthers, abbr:CAR, url:panthers),
+						(name:bears, abbr:CHI, url:chibears),
+						(name:bengals, abbr:CIN, url:bengals),
+						(name:browns, abbr:CLE, url:browns),
+						(name:cowboys, abbr:DAL, url:cowboys),
+						(name:broncos, abbr:DEN, url:denverbroncos),
+						(name:lions, abbr:DET, url:detroitlions),
+						(name:packers, abbr:GB, url:greenbaypackers),
+						(name:texans, abbr:HOU, url:texans),
+						(name:colts, abbr:IND, url:colts),
+						(name:jaguars, abbr:JAX, url:jaguars),
+						(name:chiefs, abbr:KC, url:kansascitychiefs),
+						(name:dolphins, abbr:MIA, url:miamidolphins),
+						(name:vikings, abbr:MIN, url:minnesotavikings),
+						(name:patriots, abbr:NE, url:patriots),
+						(name:saints, abbr:NO, url:saints),
+						(name:giants, abbr:NYG, url:nygiants),
+						(name:jets, abbr:NYJ, url:nyjets),
+						(name:raiders, abbr:OAK, url:oaklandraiders),
+						(name:eagles, abbr:PHI, url:eagles),
+						(name:steelers, abbr:PIT, url:steelers),
+						(name:chargers, abbr:SD, url:chargers),
+						(name:forty-niners, abbr:SF, url:49ers),
+						(name:seahawks, abbr:SEA, url:seahawks),
+						(name:rams, abbr:STL, url:stlouisrams),
+						(name:buccaneers, abbr:TB, url:buccaneers),
+						(name:titans, abbr:TEN, url:tennesseetitans),
+						(name:redskins, abbr:WAS, url:redskins);
+
+// Fonts Info
+$f-stack1: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+$f-stack2: "Arial", "Helvetica", sans-serif;
+$fonts:(
+	(type: display, variants:(
+		(name: $f-stack1, weight: 400, num: 0),
+		(name: $f-stack1, weight: 700, num: 1)
+	)),
+	(type: copy, variants:(
+		(name: $f-stack2, weight: 400, num: 0),
+		(name: $f-stack2, weight: 700, num: 1)
+	))
+);
+
+// Element Info
+$h-reddit-nav: 20px;
+$h-team-header:60px;
+$h-hero: 80px;
+$h-sub-nav: 60px;
+$h-sidebar:;

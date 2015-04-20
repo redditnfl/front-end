@@ -1,0 +1,82 @@
+#header-bottom-right{
+	&{
+		position: static;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		padding: 0;
+		border-radius: 0;
+		float: right;
+		background: transparent;
+	}
+	.user{
+		font-size: 0;
+		line-height: 0;
+	}
+	.user a{
+		@extend %header-text-style;
+		margin: 0 8px 0 0;
+		color: color(grey,60);
+	}
+	.user a:hover{
+		color: color(grey,100);
+	}
+	.separator{
+		@extend %kill;
+	}
+	#mail{
+		@extend %kill;
+	}
+	.message-count{
+		@include font(display,1);
+		display: block;
+		height: 17px;
+		width: 17px;
+		padding: 0;
+		border-radius: 100%;
+		margin: 0 2px;
+		font-size: 10px;
+		line-height: 17px;
+		text-align: center;
+		background: color(red);
+	}
+	#modmail{
+		display: none;
+		position: static;
+		top: 0;
+	}
+	#modmail.havemail{
+		@include font(display,1);
+		display: block;
+		height: 17px;
+		width: 17px;
+		padding: 0;
+		border-radius: 100%;
+		margin: 0 2px;
+		background: color(blue);
+		font-size: 0;
+		line-height: 17px;
+		text-align: center;
+		text-indent: 0;
+		color: color(grey,0);
+	}
+	#modmail.havemail::before{
+		content:"M";
+		font-size: 10px;
+	}
+	ul{
+		@extend %kill;
+	}
+	form{
+		@extend %header-text-style;
+		margin: 0 0 0 8px;
+	}
+	form a{
+		color: color(grey,60);
+		text-transform: capitalize;
+	}
+	form a:hover{
+		color: color(grey,100);
+		text-decoration: none;
+	}
+}

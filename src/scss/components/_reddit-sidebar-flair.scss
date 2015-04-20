@@ -1,0 +1,44 @@
+.titlebox .tagline .flairselectbtn{
+	&{
+		@extend %sidebar-button;
+		@extend %sidebar-button-text;
+		@include sideButtonPosition(3);
+		margin-left: -40px;
+		padding: 0 20px;
+		text-decoration: none;
+	}
+	&:after{
+		content: " Flair";
+	}
+	&::before{
+		content: "";
+		@include center(v);
+		position: absolute;
+		right: 20px;
+		display: block;
+		height: 17px;
+		width: 17px;
+		background-image: url("../img/logos-80x80.png");
+		background-position: 0 0;
+		background-size: 17px;
+		opacity: .4;
+	}
+	&:hover:before{
+		opacity: 1;
+	}
+}
+
+$pos-17:0;
+@each $team in $nfl-teams {
+	.titlebox .tagline .flair-#{map-get($team, name)} ~ .flairselectbtn::before{
+		background-position: 0 $pos-17;
+	}
+	$pos-17: $pos-17 - 17px;
+}
+.titlebox .tagline .flair{
+}
+.titlebox .tagline .flairselector{
+	position: absolute;
+	width: 300px !important;
+	margin-left: -75px;
+}
