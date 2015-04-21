@@ -47,6 +47,7 @@ $nfl-teams: (name:cardinals, abbr:ARI, url:azcardinals),
 // Fonts Info
 $f-stack1: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 $f-stack2: "Arial", "Helvetica", sans-serif;
+$f-stack3: monospace;
 $fonts:(
 	(type: display, variants:(
 		(name: $f-stack1, weight: 400, num: 0),
@@ -55,6 +56,10 @@ $fonts:(
 	(type: copy, variants:(
 		(name: $f-stack2, weight: 400, num: 0),
 		(name: $f-stack2, weight: 700, num: 1)
+	)),
+	(type: code, variants:(
+		(name: $f-stack3, weight: 400, num: 0),
+		(name: $f-stack3, weight: 700, num: 1)
 	))
 );
 

@@ -1,0 +1,26 @@
+.side{
+	&{
+		@extend %sidebar-width;
+		display: block;
+		padding: 0;
+		margin: (40px*6) 0 0;
+	}
+	.spacer{
+		margin: 0;
+	}
+	.create{
+		@extend %kill;
+	}
+	// Buttons
+	@import "./components/_reddit-sidebar/_search.scss";
+	@import "./components/_reddit-sidebar/_submit.scss";
+	@import "./components/_reddit-sidebar/_subscribe.scss";
+	@import "./components/_reddit-sidebar/_flair.scss";
+	@import "./components/_reddit-sidebar/_message-mods.scss";
+	@import "./components/_reddit-sidebar/_rules.scss";
+	
+	// Components
+	@import "./components/_reddit-sidebar/_image.scss";
+	@import "./components/_reddit-sidebar/_link-info.scss";
+	@import "./components/_reddit-sidebar/_stats.scss";
+}

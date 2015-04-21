@@ -1,9 +1,13 @@
 * {
 	box-sizing: border-box;
 }
-body{
-	padding: 0 40px;
+html{
+	height: auto;
+	background-image: linear-gradient(color(grey,10), color(grey,5));
+	background-color: color(grey,5);
+	background-repeat: no-repeat;
 }
-.content{
-	margin: 0;
+body{
+	width: auto;
+	margin: 0 40px 40px;
 }

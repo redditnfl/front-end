@@ -1,21 +1,22 @@
-.spacer:nth-child(1){
+&::before{
+	content: "";
 	display: block;
 	height: 200px;
 	width: 260px;
 	margin: 60px 20px 20px;
 	background: #eee;
 }
-.spacer:nth-child(3){
+.spacer:nth-child(1){
 	padding: 0 20px;
 }
-.spacer:nth-child(3)::before{
+.spacer:nth-child(1)::before{
 	content: "Headline";
 	@extend %headline;
 	font-size: 20px;
 	margin: 0 0 10px;
 	color: color(grey,100);
 }
-.spacer:nth-child(3)::after{
+.spacer:nth-child(1)::after{
 	content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper mattis dignissim. Nam ullamcorper augue dictum, dictum nulla porttitor, laoreet ipsum. Donec scelerisque eu ipsum vel tristique.";
 	@extend %body-copy;
 	display: block;

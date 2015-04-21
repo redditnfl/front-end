@@ -11,6 +11,6 @@
 #jumpToContent{
 	@extend %kill;
 }
-@import "./components/_reddit-header-topbar.scss";
-@import "./components/_reddit-header-navigation.scss";
-@import "./components/_reddit-header-userbar.scss";
+@import "./components/_reddit-header/_topbar.scss";
+@import "./components/_reddit-header/_navigation.scss";
+@import "./components/_reddit-header/_userbar.scss";

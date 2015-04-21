@@ -14,7 +14,7 @@
 }
 %body-copy{
 	@include font(copy,0);
-	font-size: 16px;
+	font-size: rem(14px);
 	letter-spacing: .05em;
 	line-height: 1.7em;
 }

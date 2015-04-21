@@ -18,12 +18,13 @@
 		display: block;
 		height: 17px;
 		width: 17px;
-		background-image: url("../img/logos-80x80.png");
+		background-image: url("../img/logos-80x80--grey.png");
 		background-position: 0 0;
 		background-size: 17px;
 		opacity: .4;
 	}
 	&:hover:before{
+		background-image: url("../img/logos-80x80.png");
 		opacity: 1;
 	}
 }
