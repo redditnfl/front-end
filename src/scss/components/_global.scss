@@ -3,9 +3,18 @@
 }
 html{
 	height: auto;
-	background-image: linear-gradient(color(grey,10), color(grey,5));
 	background-color: color(grey,5);
 	background-repeat: no-repeat;
+}
+html::before{
+	content:"";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	height: 80%;
+	width: 100%;
+	background: color(blue);
 }
 body{
 	width: auto;

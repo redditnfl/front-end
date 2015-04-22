@@ -1,38 +1,29 @@
-.usertext-edit{
-	&{
-		width: 100%;
-	}
-	textarea{
-	  min-width: 100%;
-	  height: 100px;
-	}
-}
-.expando{
+.comment{
 	&{}
 	.md{
 		padding: 0;
 		border: none;
 		background: none;
 	}
-	p{
+	form p{
 		@extend %body-copy;
 		margin: 10px 0 10px;
 		font-size: 14px;
 	}
-	.md h1{
+	form h1{
 		@extend %section-title;
-		font-size: rem(26px);
+		font-size: rem(18px);
 		margin: 10px 0;
 	}
-	.md h1:not(:first-of-type){
+	form h1:not(:first-of-type){
 		margin-top: 30px;
 	}
-	.md h2{
+	form h2{
 		@include font(display,1);
-		font-size: rem(20px);
+		font-size: rem(18px);
 		margin: 10px 0;
 	}
-	.md h3{
+	form h3{
 		@include font(display,0);
 		font-size: rem(18px);
 		letter-spacing: .2em;
@@ -43,5 +34,13 @@
 	}
 	.md table{
 		@extend %default-table;
+	}
+	
+	// Child comments
+	.comment .child{
+		border-color: color(grey,20);
+	}
+	.comment:hover .child{
+		border-color: color(grey,80);
 	}
 }
