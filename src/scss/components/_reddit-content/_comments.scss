@@ -37,10 +37,10 @@
 	}
 	
 	// Child comments
-	.comment .child{
+	> .child{
 		border-color: color(grey,20);
 	}
-	.comment:hover .child{
+	&:hover > .child{
 		border-color: color(grey,80);
 	}
 }
