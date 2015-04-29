@@ -4,7 +4,7 @@
 }
 
 // Color  Function
-@function color($color:black, $shade:0){
+@function color($color:grey, $shade:0){
 	@if($color == grey){
 		@if($shade == 0){ @return $nfl-0; }
 		@if($shade == 5){ @return darken($nfl-0,5); }

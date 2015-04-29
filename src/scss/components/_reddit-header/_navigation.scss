@@ -9,6 +9,7 @@
 	#header-img{
 		@extend %kill;
 	}
+	// reddit name container(ie, r/nfl in nav)
 	.pagename{
 		margin: 0;
 	}
@@ -22,14 +23,22 @@
 	.pagename a:hover{
 		text-decoration: none;
 	}
+	// Inner navigation container(ie, hot, rising, new)
 	.tabmenu{
 		display: flex;
 		margin: 0;
 	}
+	// Inner navigation list elements(ie, hot, rising, new)
 	.tabmenu li{
 		display: block;
 		margin: 0 5px;
 	}
+	.tabmenu li:nth-child(1n+3){
+		@include breakpoint(small){
+			display: none;
+		}
+	}
+	// Inner navigation links(ie, hot, rising, new)
 	.tabmenu li a{
 		@extend %header-text-style;
 		@include font(display, 0);

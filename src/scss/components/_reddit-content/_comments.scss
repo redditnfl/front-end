@@ -1,3 +1,21 @@
+.commentarea{
+	padding: 0;
+}
+.panestack-title{
+	&{
+		margin: 0 auto 5px 0;
+		border-bottom: none;
+	}
+	.title{
+		text-transform: capitalize;
+	}
+}
+.commentarea .menuarea{
+	margin: 0;
+}
+.commentarea>.usertext{
+	margin: 0;
+}
 .comment{
 	&{}
 	.md{
@@ -37,10 +55,10 @@
 	}
 	
 	// Child comments
-	> .child{
+	.child{
 		border-color: color(grey,20);
 	}
-	&:hover > .child{
+	.child:hover{
 		border-color: color(grey,80);
 	}
 }

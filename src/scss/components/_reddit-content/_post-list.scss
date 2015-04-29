@@ -18,6 +18,9 @@
 		color: color(blue);
 		vertical-align: text-bottom;
 	}
+	.thing .title > .title:visited{
+		color: color(grey,60);
+	}
 	.thing .title .domain{
 		font-size: 0;
 		color: color(grey,40);

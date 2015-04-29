@@ -9,6 +9,7 @@
 		float: right;
 		background: transparent;
 	}
+	// user name in navigation
 	.user{
 		font-size: 0;
 		line-height: 0;
@@ -21,12 +22,15 @@
 	.user a:hover{
 		color: color(grey,100);
 	}
+	// kill all pipes in navigation
 	.separator{
 		@extend %kill;
 	}
+	// kill mail box image navigation
 	#mail{
 		@extend %kill;
 	}
+	// style message counter in navigation
 	.message-count{
 		@include font(display,1);
 		display: block;
@@ -40,11 +44,13 @@
 		text-align: center;
 		background: color(red);
 	}
+	// kill modmail icon in navigation
 	#modmail{
 		display: none;
 		position: static;
 		top: 0;
 	}
+	// Show modmail info if user have modmail in navigation
 	#modmail.havemail{
 		@include font(display,1);
 		display: block;
@@ -64,12 +70,17 @@
 		content:"M";
 		font-size: 10px;
 	}
+	// Naivagiont preferences, I think. I kilt it
 	ul{
 		@extend %kill;
 	}
+	// Logout button in navigation
 	form{
 		@extend %header-text-style;
 		margin: 0 0 0 8px;
+		@include breakpoint(small){
+			display: none;
+		}
 	}
 	form a{
 		color: color(grey,60);

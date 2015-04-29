@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
 	sass = require("gulp-sass"),
+	sourcemaps = require('gulp-sourcemaps'),
 	plumber = require("gulp-plumber"),
 	prefix = require('gulp-autoprefixer'),
 	replace = require('gulp-replace'),
@@ -23,6 +24,7 @@ var gulp = require('gulp'),
 		return gulp.src(paths.src.scss+"/**/*.scss")
 		.pipe(plumber({errorHandler: errorAlert}))
 		.pipe(sass())
+		.pipe(sourcemaps.write('./maps'))
 		.pipe(prefix({browsers: ["last 2 version"]}))
 		.pipe(gulp.dest(paths.pub.css))
 	});

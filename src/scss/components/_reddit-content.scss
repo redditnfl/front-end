@@ -1,6 +1,6 @@
 .content{
 	&{
-		padding: 20px;
+		padding: 0 20px;
 		margin: 0;
 		background: color(grey,0);
 	}
@@ -10,6 +10,7 @@
 	
 	// Single post
 	@import "./components/_reddit-content/_self-post-body.scss";
+	@import "./components/_reddit-content/_post-info.scss";
 	
 	// Comments
 	@import "./components/_reddit-content/_comments.scss";

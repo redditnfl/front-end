@@ -18,7 +18,7 @@
 @mixin breakpoint($size){
   @each $point in $breakpoints{ // each loop
     @if($size == map-get($point, name)){ // checks size
-      @media (min-width: rem(map-get($point, size)*1px)){@content;} // runs breakpoint
+      @media (max-width: map-get($point, size) * 1px){@content;} // runs breakpoint
     }
   }
 }

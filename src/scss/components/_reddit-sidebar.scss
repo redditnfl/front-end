@@ -4,6 +4,10 @@
 		display: block;
 		padding: 0;
 		margin: (40px*6) 0 0;
+		// mobile styles
+		@include breakpoint(small){
+			display: none;
+		}
 	}
 	.spacer{
 		margin: 0;
@@ -23,4 +27,9 @@
 	@import "./components/_reddit-sidebar/_image.scss";
 	@import "./components/_reddit-sidebar/_link-info.scss";
 	@import "./components/_reddit-sidebar/_stats.scss";
+	@import "./components/_reddit-sidebar/_mod-tools.scss";
+	@import "./components/_reddit-sidebar/_moderators.scss";
+	
+	// Special stuff
+	@import "./components/_reddit-sidebar/_flair-based-header.scss";
 }

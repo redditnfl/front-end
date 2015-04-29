@@ -26,6 +26,10 @@
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: 80px;
+	// Mobile styles
+	@include breakpoint(small){
+		display: none;
+	}
 }
 
 // Teams logo header's unique code is 41(h4+h1)

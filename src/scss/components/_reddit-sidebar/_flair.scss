@@ -3,7 +3,7 @@
 		@extend %sidebar-button;
 		@extend %sidebar-button-text;
 		@include sideButtonPosition(3);
-		margin-left: -40px;
+		margin-left: -20px;
 		padding: 0 20px;
 		text-decoration: none;
 	}
