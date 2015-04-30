@@ -3,12 +3,13 @@ $nfl-blue: #1B487B;
 $nfl-red: #AA2E3A;
 $nfl-0: #FFF;
 $nfl-100: #272626;
-$nfl-gold: #C9A00F;
+$nfl-draft-gold: #C9A00F;
+$nfl-draft-black: #2F2E32;
 
 // Media Breaks
 $breakpoints: (name: max, size: 1700, num:20),
 							(name: medium, size:1040, num:10),
-							(name: small, size:900, num:0);
+							(name: small, size:1100, num:0);
 
 // NFL Teams
 $nfl-teams: (name:cardinals, abbr:ARI, url:azcardinals),
@@ -66,6 +67,8 @@ $fonts:(
 // Element Info
 $h-reddit-nav: 20px;
 $h-team-header:60px;
-$h-hero: 80px;
+$h-hero: 400px;
+$h-sidebar-pic: 450px;
 $h-sub-nav: 60px;
+$h-switchboard: (40px*6);
 $h-sidebar:;

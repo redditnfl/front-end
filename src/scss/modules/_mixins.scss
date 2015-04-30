@@ -68,5 +68,5 @@
 }
 
 @mixin sideButtonPosition($count){
-  top: $h-reddit-nav + $h-team-header + $h-sub-nav + $h-hero + (40px * $count);
+  top: $h-sidebar-pic + $h-reddit-nav + $h-team-header + $h-sub-nav + $h-hero + (40px * $count);
 }

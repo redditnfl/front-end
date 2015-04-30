@@ -3,7 +3,7 @@
 	display: block;
 	height: 200px;
 	width: 260px;
-	margin: 60px 20px 20px;
+	margin: 20px 20px 20px;
 	background: #eee;
 }
 .spacer:nth-child(1){
@@ -20,9 +20,10 @@
 	content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper mattis dignissim. Nam ullamcorper augue dictum, dictum nulla porttitor, laoreet ipsum. Donec scelerisque eu ipsum vel tristique.";
 	@extend %body-copy;
 	display: block;
-	margin-bottom: 60px;
+	margin-bottom: 120px;
+	padding-bottom: ($h-switchboard);
 	font-size: 14px;
 	line-height: 1.4em;
-	text-align: justify;
+	text-align: left;
 	color: color(grey,100);
 }
