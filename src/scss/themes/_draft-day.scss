@@ -82,11 +82,11 @@ a[title="join-the-discussion"]:after{
   height: 100%;
   width: 100%;
   background-color: $nfl-draft-black;
-  opacity: 0;
+  opacity: .4;
   transition: .6s;
 }
 a[title="join-the-discussion"]:focus::after,
 a[title="join-the-discussion"]:hover::after{
-  opacity: .7;
+  opacity: .8;
   transition: .6s;
 }
