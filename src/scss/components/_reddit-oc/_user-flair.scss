@@ -58,7 +58,7 @@
   width: 20px;
   margin: 0 4px 0 0;
   vertical-align: middle;
-  background: url("../img/logos-80x80--washed.png");
+  background-image: url("../img/logos-80x80.png");
   background-size: 100%;
 }
 
@@ -70,17 +70,22 @@ $pos-32: 0px;
   $thisName: map-get($team, name);
   $thisAbbr: map-get($team, abbr);
   $thisUrl: map-get($team, url);
-  a[href$="/r/#{$thisUrl}"]:before,
-  a[href$="/#{$thisAbbr}"]:before{
+  a[href$="/r/#{$thisUrl}"]::before,
+  a[href$="/#{$thisAbbr}"]::before{
 	@extend %team-link;
   }
-  .flair-#{$thisName}:before,
-  a[href$="/r/#{$thisUrl}"]:before,
-  a[href$="/#{$thisAbbr}"]:before{
+  .flair-#{$thisName}::before,
+  a[href$="/r/#{$thisUrl}"]::before,
+  a[href$="/#{$thisAbbr}"]::before,
+  a[href$="/#{to-upper-case(#{$thisUrl})}"]::before,
+  a[href$="/#{to-upper-case(#{$thisAbbr})}"]::before{
 	background-position: 0 $pos-20;
   }
-  .flair-#{$thisName}.official:before{
+  .flair-#{$thisName}.official::before{
 	background-position: 0 $pos-32;
+  }
+  .titlebox .tagline .flairselector .flair-#{$thisName}::before{
+	background-position: 0 (0 - $pos-32);
   }
   $pos-20: $pos-20 - 20px;
   $pos-32: $pos-32 - -32px;

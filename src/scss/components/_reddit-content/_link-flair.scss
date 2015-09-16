@@ -1,0 +1,141 @@
+%flairedTitle{
+  a.title::before{
+    @include font(display, 1);
+  }
+}
+%hasIcon{
+  .entry{
+    overflow: visible;
+  }
+  .linkflairlabel{display: none}
+  p.title{
+    position: relative;
+    overflow: visible;
+  }
+  p.title::before{
+    content: "";
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+		background-image: url("../img/link-flair.png");
+    background-size: 75px;
+    vertical-align: middle;
+  }
+}
+// Game Threads
+.linkflair-green{
+  @extend %flairedTitle;
+  @extend %hasIcon;
+  p.title::before{
+    background-position: 0 0;
+  }
+}
+// Trash Talk
+.linkflair-blue{
+  @extend %flairedTitle;
+  @extend %hasIcon;
+  p.title::before{
+    background-position: -25px 0;
+  }
+}
+// Power Rankings
+.linkflair-purple{
+  @extend %flairedTitle;
+  @extend %hasIcon;
+  p.title::before{
+    background-position: -25px -50px;
+  }
+}
+// Highlights
+.linkflair-orange{
+  @extend %flairedTitle;
+  @extend %hasIcon;
+  p.title::before{
+    background-position: 0px -25px;
+  }
+}
+// Injury
+.linkflair-grey{
+  @extend %flairedTitle;
+  @extend %hasIcon;
+  p.title::before{
+    background-position: 0px -75px;
+  }
+}
+// Complaints
+.linkflair-asphalt{
+  @extend %flairedTitle;
+  @extend %hasIcon;
+  p.title::before{
+    background-position: 0px -50px;
+  }
+}
+// Wagers and Bets
+.linkflair-turquoise{
+  @extend %flairedTitle;
+  @extend %hasIcon;
+  p.title::before{
+    background-position: -25px -25px;
+  }
+}
+// Roster Move
+.linkflair-yellow{
+  @extend %flairedTitle;
+  @extend %hasIcon;
+  p.title::before{
+    background-position: -25px -25px;
+  }
+}
+// Mod Post
+.linkflair-red{
+  @extend %flairedTitle;
+  @extend %hasIcon;
+  a.title::before{
+    content: "Official: ";
+  }
+  p.title::before{
+    background-position: -25px -75px;
+  }
+}
+.linkflair-rumor{
+  @extend %flairedTitle;
+  @extend %hasIcon;
+  p.title::before{
+    background-position: -50px -25px;
+  }
+}
+.linkflair-breaking-news{
+  @extend %flairedTitle;
+  @extend %hasIcon;
+  p.title::before{
+    background-position: -50px 0px;
+  }
+}
+// Serious Thread
+.linkflair-serious{
+  @extend %flairedTitle;
+  a.title{
+    color: $nfl-red;
+  }
+}
+.linkflair-misleading{
+  @extend %flairedTitle;
+  a.title{
+    text-decoration: line-through;
+  }
+}
+// Look Here
+.linkflair-generic{
+  @extend %flairedTitle;
+  a.title{
+    color: $nfl-100;
+  }
+}
+
+
+.linkflair .flairselector.drop-choices.active{
+  &{text-align: left;}
+  .title{display: none;}
+  .linkflairlabel{display: inline-block;}
+}

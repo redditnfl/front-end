@@ -4,10 +4,6 @@
 		display: block;
 		padding: 0;
 		margin: 0;
-		// mobile styles
-		@include breakpoint(small){
-			display: none;
-		}
 	}
 	.spacer{
 		margin: 0;
@@ -37,6 +33,12 @@
 			font-weight: 400;
 			text-transform: capitalize;
 		}
+	}
+	table em{
+		display: none;
+	}
+	ul li a[href="/r/NFL"]::before{
+		display: none;
 	}
 	// Buttons
 	@import "./components/_reddit-sidebar/_search.scss";

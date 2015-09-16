@@ -14,6 +14,16 @@
   }
 }
 
+// Media Breakpoint Mixin
+@mixin media($group, $id: general, $custom: ()){
+	@each $media in $media-stack{
+		@if($group == map-get($media, group) and $id == map-get($media, id)){
+			$rule: ;
+			@media #{map-get($media, rule) + $custom} { @content };
+		}
+	}
+}
+
 // Breakpoint Mixin
 @mixin breakpoint($size){
   @each $point in $breakpoints{ // each loop
@@ -68,5 +78,5 @@
 }
 
 @mixin sideButtonPosition($count){
-  top: $h-sidebar-pic + $h-reddit-nav + $h-team-header + $h-sub-nav + $h-hero + (40px * $count);
+  top: $sidebarTotalHeight + $h-reddit-nav + $h-team-header + $h-sub-nav + $h-hero + (40px * $count);
 }

@@ -1,28 +1,28 @@
 &::before{
 	content: "";
 	display: block;
-	height: 200px;
+	height: $sidebarPicHeight;
 	width: 260px;
 	margin: 20px 20px 20px;
-	background: #eee;
+	background-image: url($sidebarImage);
 }
 .spacer:nth-child(1){
 	padding: 0 20px;
 }
 .spacer:nth-child(1)::before{
-	content: "Headline";
 	@extend %headline;
+	content: $sidebarHeader;
 	font-size: 20px;
 	margin: 0 0 10px;
 	color: color(grey,100);
 }
 .spacer:nth-child(1)::after{
-	content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper mattis dignissim. Nam ullamcorper augue dictum, dictum nulla porttitor, laoreet ipsum. Donec scelerisque eu ipsum vel tristique.";
 	@extend %body-copy;
+	content: $sidebarText;
 	display: block;
-	margin-bottom: 120px;
-	padding-bottom: ($h-switchboard);
-	font-size: 14px;
+	margin-bottom: $h-switchboard + 40px;
+	padding-bottom: 20px;
+	font-size: 12px;
 	line-height: 1.4em;
 	text-align: left;
 	color: color(grey,100);

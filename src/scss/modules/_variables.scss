@@ -10,9 +10,18 @@ $nfl-draft-black: #2F2E32;
 $breakpoints: (name: max, size: 1700, num:20),
 			  (name: medium, size:1040, num:10),
 			  (name: small, size:1100, num:0);
+				
+				
+$media-stack:
+	(group: mobile, id: general, rule: "only screen and (max-width: 767px)"),
+	(group: tablet, id: general, rule: "only screen and (min-width: 768px)"),
+	(group: tablet, id: inbetween, rule: "only screen and (min-width: 768px) and (max-width:1024px)"),
+	(group: desktop, id: general, rule: "only screen and (min-width: 1200px)"),
+	(group: custom, id: screen, rule: "only screen ");
 
 // NFL Teams
-$nfl-teams: (name:cardinals, abbr:ARI, url:azcardinals),
+$nfl-teams: (name:nfl, abbr:NFL, url:nfl),
+			(name:cardinals, abbr:ARI, url:azcardinals),
 			(name:falcons, abbr:ATL, url:falcons),
 			(name:ravens, abbr:BAL, url:ravens),
 			(name:bills, abbr:BUF, url:buffalobills),
@@ -38,12 +47,14 @@ $nfl-teams: (name:cardinals, abbr:ARI, url:azcardinals),
 			(name:eagles, abbr:PHI, url:eagles),
 			(name:steelers, abbr:PIT, url:steelers),
 			(name:chargers, abbr:SD, url:chargers),
-			(name:forty-niners, abbr:SF, url:49ers),
+			(name:fortyniners, abbr:SF, url:49ers),
 			(name:seahawks, abbr:SEA, url:seahawks),
 			(name:rams, abbr:STL, url:stlouisrams),
 			(name:buccaneers, abbr:TB, url:buccaneers),
 			(name:titans, abbr:TEN, url:tennesseetitans),
-			(name:redskins, abbr:WAS, url:redskins);
+			(name:redskins, abbr:WAS, url:redskins),
+			(name:nfc, abbr:NFC, url:nfc),
+			(name:afc, abbr:AFC, url:afc);
 
 // Fonts Info
 $f-stack1: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
@@ -66,9 +77,9 @@ $fonts:(
 
 // Element Info
 $h-reddit-nav: 20px;
-$h-team-header:60px;
-$h-hero: 400px;
-$h-sidebar-pic: 320px;
+$h-team-header: 60px;
+$h-hero: 40px;
+$h-sidebar-pic: $sidebarTotalHeight;
 $h-sub-nav: 60px;
 $h-switchboard: (40px*6);
-$h-sidebar:;
+$t-important-links: $h-reddit-nav + $h-team-header + $h-hero + $h-sub-nav;

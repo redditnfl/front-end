@@ -38,8 +38,75 @@ $pos-17:0;
 }
 .titlebox .tagline .flair{
 }
-.titlebox .tagline .flairselector{
-	position: absolute;
-	width: 300px !important;
-	margin-left: -75px;
+.titlebox .tagline .flairselector.active{
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  z-index: 9 !important;
+  width: 184px !important;
+  transform: translate(-50%,-50%) !important;
+  border: none;
+  background-color: #fff;
+  box-shadow: none;
+}
+.titlebox .tagline .flairselector h2{
+  font-size: 0;
+  background: none;
+  color: inherit;
+}
+.titlebox .tagline .flairselector h2::before{
+  @extend %section-title;
+  content: "Pick A Team";
+  margin: 10px;
+}
+.titlebox .tagline .flairselector ul{
+  width: 52px !important;
+}
+.titlebox .tagline .flairselector ul:not(:last-child){
+  margin-right: 10px;
+}
+.titlebox .tagline .flairselector li{
+  width: 52px!important;
+  height: 52px!important;
+  padding: 10px;
+  border: none;
+  background: none;
+}
+.titlebox .tagline .flairselector li a {
+  display: none;
+}
+.titlebox .tagline .flairselector .flair{
+  height: 32px;
+  width: 32px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  font-size: 0;
+  opacity: .6;
+  transition: .3s;
+}
+.titlebox .tagline .flairselector .flair:hover{
+  background: none;
+  opacity: 1;
+}
+.titlebox .tagline .flairselector .flair:before{
+  height: 32px;
+  width: 32px;
+}
+.flairselection span{
+  margin-right: 20px;
+}
+.flairselection .author{
+  display: none;
+}
+.titlebox .tagline .flairselector.active + .userattrs{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: rgba($nfl-draft-black, .7);
 }

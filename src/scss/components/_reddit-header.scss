@@ -7,10 +7,6 @@
 	border: none;
 	margin-top: $h-reddit-nav + $h-team-header + $h-hero;
 	background: color(grey, 5);
-	// Mobile styles
-	@include breakpoint(small){
-		margin-top: $h-reddit-nav;
-	}
 }
 #jumpToContent{
 	@extend %kill;

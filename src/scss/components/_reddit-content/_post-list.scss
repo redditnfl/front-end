@@ -1,7 +1,14 @@
+.midcol {
+    position: relative;
+    z-index: 2;
+}
+.entry{
+	//padding-left: 70px;
+}
 .linklisting{
 	&{
 		width: auto;
-		margin-right: 300px;
+		//margin-right: 300px;
 	}
 	.thing{
 		display: block;
@@ -12,11 +19,12 @@
 		margin: 0 0 2px;
 	}
 	.thing .title > .title{
-		@include font(display, 1);
+		@include font(display, 0);
+		margin-bottom: 3px;
 		font-size: rem(16px);
 		line-height: 1.2em;
 		color: color(blue);
-		vertical-align: text-bottom;
+		vertical-align: middle;
 	}
 	.thing .title > .title:visited{
 		color: color(grey,60);
