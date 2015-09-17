@@ -19,7 +19,7 @@
 		margin: 0 0 2px;
 	}
 	.thing .title > .title{
-		@include font(display, 0);
+    font-weight: 400;
 		margin-bottom: 3px;
 		font-size: rem(16px);
 		line-height: 1.2em;

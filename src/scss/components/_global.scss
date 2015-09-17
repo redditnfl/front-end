@@ -18,7 +18,7 @@ html::before{
 }
 body{
 	width: auto;
-	margin: 0 40px 40px;
+	margin: 0 30px 30px;
 	// Mobile styles
 	@include breakpoint(small){
 		margin: 0;

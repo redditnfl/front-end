@@ -1,6 +1,6 @@
 %flairedTitle{
-  a.title::before{
-    @include font(display, 1);
+  .title > .title{
+    font-weight: 700;
   }
 }
 %hasIcon{
@@ -91,13 +91,14 @@
 .linkflair-red{
   @extend %flairedTitle;
   @extend %hasIcon;
-  a.title::before{
-    content: "Official: ";
+  .title > .title{
+    color: $nfl-red;
   }
   p.title::before{
     background-position: -25px -75px;
   }
 }
+// Rumor Thread
 .linkflair-rumor{
   @extend %flairedTitle;
   @extend %hasIcon;
@@ -105,11 +106,19 @@
     background-position: -50px -25px;
   }
 }
+// Breaking News Thread
 .linkflair-breaking-news{
   @extend %flairedTitle;
   @extend %hasIcon;
   p.title::before{
     background-position: -50px 0px;
+  }
+}
+// Misleading Thread
+.linkflair-misleading{
+  @extend %flairedTitle;
+  a.title{
+    text-decoration: line-through;
   }
 }
 // Serious Thread
@@ -119,16 +128,10 @@
     color: $nfl-red;
   }
 }
-.linkflair-misleading{
-  @extend %flairedTitle;
-  a.title{
-    text-decoration: line-through;
-  }
-}
 // Look Here
 .linkflair-generic{
   @extend %flairedTitle;
-  a.title{
+	.title > .title{
     color: $nfl-100;
   }
 }
