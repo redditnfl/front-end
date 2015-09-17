@@ -1,0 +1,18 @@
+.res-nightmode {
+    .side {
+        /* Most things in the sidebar are gray */
+        %sidebar-button-text,
+        .spacer:nth-child(1)::after {
+            color: gray;
+        }
+
+        %sidebar-button-text {
+            background-color: rgb(34, 34, 34);
+        }
+        %sidebar-button-text:hover,
+        %sidebar-button-text:focus{
+            color: lighten(gray, 15);
+            background-color: lighten(rgb(34, 34, 34), 5);
+        }
+    }
+}
