@@ -28,51 +28,20 @@
 	}
 	// kill mail box image navigation
 	#mail{
-		@extend %kill;
-	}
-	#mail.nohavemail{
-		font-size: 0;
 		display: block !important;
 		height: 17px;
 		width: 17px;
-		background: none;
-		margin-top: -3px;
-		overflow: visible;
-		margin: 0;
+		background-image: url("../img/reddit-icons.png");
 	}
-	// style message counter in navigation
-	.nohavemail::before{
-		content: "0";
-		@include font(display,1);
-		display: block;
-		height: 17px;
-		width: 17px;
-		padding: 0;
-		border-radius: 100%;
-		margin: -2px 0;
-		font-size: 10px;
-		line-height: 17px;
-		text-align: center;
-		background: $nfl-100;
-		color: #fff;
-	}
+	// Kill message count
 	.message-count{
-		@include font(display,1);
-		display: block;
-		height: 17px;
-		width: 17px;
-		padding: 0;
-		border-radius: 100%;
-		margin: 0 2px;
-		font-size: 10px;
-		line-height: 17px;
-		text-align: center;
-		background: color(red);
+		@extend %kill;
 	}
 	// kill modmail icon in navigation
 	#modmail{
 		position: static;
 		top: 0;
+		background-image: url()
 	}
 	// Show modmail info if user have modmail in navigation
 	#modmail{
