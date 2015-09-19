@@ -10,8 +10,7 @@ $nfl-draft-black: #2F2E32;
 $breakpoints: (name: max, size: 1700, num:20),
 			  (name: medium, size:1040, num:10),
 			  (name: small, size:1100, num:0);
-				
-				
+
 $media-stack:
 	(group: mobile, id: general, rule: "only screen and (max-width: 767px)"),
 	(group: tablet, id: general, rule: "only screen and (min-width: 768px)"),
@@ -81,5 +80,5 @@ $h-team-header: 60px;
 $h-hero: 40px;
 $h-sidebar-pic: $sidebarTotalHeight;
 $h-sub-nav: 60px;
-$h-switchboard: (40px*6);
+$h-switchboard-height: 0;
 $t-important-links: $h-reddit-nav + $h-team-header + $h-hero + $h-sub-nav;
