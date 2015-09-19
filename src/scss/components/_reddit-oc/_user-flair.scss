@@ -90,3 +90,16 @@ $pos-32: 0px;
   $pos-20: $pos-20 - 20px;
   $pos-32: $pos-32 - -32px;
 }
+
+/* Special flair */
+.flair-twitter, .flair-robot {
+    &:before {
+        background-image: url("../img/logos-special-80x80.png");
+    }
+}
+.flair-twitter:before {
+        background-position: 0 0;
+}
+.flair-robot:before {
+    background-position: 0 -20px;
+}
