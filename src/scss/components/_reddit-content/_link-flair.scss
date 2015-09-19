@@ -76,7 +76,7 @@
   @extend %flairedTitle;
   @extend %hasIcon;
   p.title::before{
-    background-position: -25px -25px;
+    background-position: -50px 0;
   }
 }
 // Roster Move
