@@ -72,20 +72,20 @@ $pos-32: 0px;
   $thisUrl: map-get($team, url);
   a[href$="/r/#{$thisUrl}"]::before,
   a[href$="/#{$thisAbbr}"]::before{
-	@extend %team-link;
+		@extend %team-link;
   }
   .flair-#{$thisName}::before,
   a[href$="/r/#{$thisUrl}"]::before,
   a[href$="/#{$thisAbbr}"]::before,
   a[href$="/#{to-upper-case(#{$thisUrl})}"]::before,
   a[href$="/#{to-upper-case(#{$thisAbbr})}"]::before{
-	background-position: 0 $pos-20;
+		background-position: 0 $pos-20;
   }
-  .flair-#{$thisName}.official::before{
-	background-position: 0 $pos-32;
+  .flair-#{$thisName}.flair-official::before{
+		background-position: 0 (0 - $pos-32);
   }
   .titlebox .tagline .flairselector .flair-#{$thisName}::before{
-	background-position: 0 (0 - $pos-32);
+		background-position: 0 (0 - $pos-32);
   }
   $pos-20: $pos-20 - 20px;
   $pos-32: $pos-32 - -32px;
