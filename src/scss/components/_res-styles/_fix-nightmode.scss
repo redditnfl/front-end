@@ -12,27 +12,27 @@ $resnm-teamlinks-bg: #2F2E31;
         }
 
         %sidebar-button-text {
-            background-color: $resnm-bg;
+            background: $resnm-bg;
         }
         %sidebar-button-text:hover,
         %sidebar-button-text:focus{
             color: lighten($resnm-fg, 15);
-            background-color: lighten($resnm-bg, 5);
+            background: lighten($resnm-bg, 5);
         }
         .linkinfo,
         input[type="text"] {
-            background-color: transparent;
+            background: transparent;
         }
     }
     #header {
-        background-color: $resnm-header;
+        background: $resnm-header;
         #header-bottom-right {
-            background-color: transparent;
+            background: transparent;
         }
         #sr-header-area {
-            background-color: $resnm-header;
+            background: $resnm-header;
             a, span, .drop-choices, #RESShortcutsEditContainer, #RESShortcutsEditContainer div {
-                background-color: transparent !important; /* RES sets explicit color on damn near everything. Stop it */
+                background: transparent !important; /* RES sets explicit color on damn near everything. Stop it */
             }
         }
     }
@@ -40,7 +40,7 @@ $resnm-teamlinks-bg: #2F2E31;
         background-image: url(../img/resnm-crown.png);
     }
     .side .titlebox .md hr+h4+h1+ul {
-        background-color: $resnm-teamlinks-bg;
+        background: $resnm-teamlinks-bg;
     }
     a[title="subreddit-rules"]::after,  /* Rules */
     #search input:nth-child(2),         /* Search */
@@ -70,5 +70,8 @@ $resnm-teamlinks-bg: #2F2E31;
             color: $resnm-fg;
             background: transparent;;
         }
+    }
+    .content .linkflair.linkflair-green hr+ul {
+        background: transparent;
     }
 }
