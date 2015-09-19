@@ -1,18 +1,74 @@
+$resnm-bg: #222;
+$resnm-fg: gray;
+$resnm-header: #666660;
+$resnm-teamlinks-bg: #2F2E31;
+
 .res-nightmode {
     .side {
         /* Most things in the sidebar are gray */
         %sidebar-button-text,
         .spacer:nth-child(1)::after {
-            color: gray;
+            color: $resnm-fg;
         }
 
         %sidebar-button-text {
-            background-color: rgb(34, 34, 34);
+            background-color: $resnm-bg;
         }
         %sidebar-button-text:hover,
         %sidebar-button-text:focus{
-            color: lighten(gray, 15);
-            background-color: lighten(rgb(34, 34, 34), 5);
+            color: lighten($resnm-fg, 15);
+            background-color: lighten($resnm-bg, 5);
+        }
+        .linkinfo,
+        input[type="text"] {
+            background-color: transparent;
+        }
+    }
+    #header {
+        background-color: $resnm-header;
+        #header-bottom-right {
+            background-color: transparent;
+        }
+        #sr-header-area {
+            background-color: $resnm-header;
+            a, span, .drop-choices, #RESShortcutsEditContainer, #RESShortcutsEditContainer div {
+                background-color: transparent !important; /* RES sets explicit color on damn near everything. Stop it */
+            }
+        }
+    }
+    #header-bottom-left .pagename a:before {
+        background-image: url(../img/resnm-crown.png);
+    }
+    .side .titlebox .md hr+h4+h1+ul {
+        background-color: $resnm-teamlinks-bg;
+    }
+    a[title="subreddit-rules"]::after,  /* Rules */
+    #search input:nth-child(2),         /* Search */
+    .subscribe-button a::after,         /* Subscribe */
+    .submit-text a::after,              /* Submit */
+    .sidecontentbox .helplink::after    /* Help */
+    { 
+        background-image: url(../img/resnm-icons.png);
+    }
+    %default-table {
+        thead{
+            color: $resnm-fg;
+            background: lighten($resnm-bg, 5);
+        }
+        tbody{}
+        tbody tr{
+            background: lighten($resnm-bg, 20);;
+            color: $resnm-fg;
+        }
+        tbody tr:nth-child(2n+2){
+            background: lighten($resnm-bg, 15);
+        }
+        td, th{
+            border: 1px solid lighten($resnm-bg, 30);;
+        }
+        tbody tr:hover td{
+            color: $resnm-fg;
+            background: transparent;;
         }
     }
 }
