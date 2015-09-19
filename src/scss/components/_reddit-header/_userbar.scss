@@ -83,4 +83,9 @@
 		color: color(grey,100);
 		text-decoration: none;
 	}
+    /* Move beta button a bit */
+    .beta-hint {
+        position: relative;
+        height: 14px;
+    }
 }
