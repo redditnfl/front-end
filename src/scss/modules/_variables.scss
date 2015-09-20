@@ -78,7 +78,7 @@ $fonts:(
 $h-reddit-nav: 20px;
 $h-team-header: 60px;
 $h-hero: 40px;
-$h-sidebar-pic: $sidebarTotalHeight;
+$h-sidebar-pic: $sidebarPicHeight;
 $h-sub-nav: 60px;
-$h-switchboard-height: (40px * 6) + 40;
+$h-switchboard-height: 0;
 $t-important-links: $h-reddit-nav + $h-team-header + $h-hero + $h-sub-nav;

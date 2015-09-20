@@ -3,7 +3,7 @@
 	display: block;
 	height: $sidebarPicHeight;
 	width: 260px;
-	margin: $h-switchboard-height 20px 20px;
+	margin: ($h-switchboard-height + 40px) 20px 20px;
 	background-image: url($sidebarImage);
 }
 .spacer:nth-child(1){
