@@ -49,6 +49,18 @@
 	height: 32px;
 	width: 32px;
   }
+  + .author {
+    color: white;
+    background: black;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    font-weight:700;
+    padding:2px 4px;
+    &:after {
+      content:" - Verified account";
+    }
+  }
 }
 // Link logos
 %team-link{
@@ -70,6 +82,8 @@ $pos-32: 0px;
   $thisName: map-get($team, name);
   $thisAbbr: map-get($team, abbr);
   $thisUrl: map-get($team, url);
+  $thisBg: map-get($team, bg);
+  $thisFg: map-get($team, fg);
   a[href$="/r/#{$thisUrl}"]::before,
   a[href$="/#{$thisAbbr}"]::before{
 		@extend %team-link;
@@ -81,8 +95,14 @@ $pos-32: 0px;
   a[href$="/#{to-upper-case(#{$thisAbbr})}"]::before{
 		background-position: 0 $pos-20;
   }
-  .flair-#{$thisName}.flair-official::before{
-		background-position: 0 (0 - $pos-32);
+  .flair-#{$thisName}.flair-official {
+    &:before{
+      background-position: 0 (0 - $pos-32);
+    }
+    + .author{
+        color: $thisFg;
+        background: $thisBg;
+    }
   }
   .titlebox .tagline .flairselector .flair-#{$thisName}::before{
 		background-position: 0 (0 - $pos-32);
