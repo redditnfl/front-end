@@ -1,0 +1,26 @@
+.res{
+	#viewImagesButton{
+		@extend %kill;
+	}
+	#RESAccountSwitcherIcon{
+		@extend %kill;
+	}
+	.userkarma{
+		@extend %kill;
+	}
+	#openRESPrefs{
+		@extend %kill;
+	}
+	#userbarToggle{
+		@extend %kill;
+	}
+	.totalvotes{
+		@extend %kill;
+	}
+	#header-bottom-right{
+		top: 0;
+		border-radius: 0;
+		bottom: auto;
+		height: 100%;
+	}
+}

@@ -1,0 +1,30 @@
+.side .titlebox .md hr + h3 + ul{
+  &{
+    position: absolute;
+    top: $t-important-links;
+    left: 40px;
+    width: 100%;
+    padding: 10px 380px 10px 20px;
+    margin: 0;
+    list-style: none;
+  }
+  &:after{
+    content:"";
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin-top: 10px;
+    background: #eee;
+  }
+  ul{
+    display: inline-block;
+    padding: 0;
+    margin: 0 10px 0 0;
+    list-style: none;
+  }
+  li{
+    display: inline-block;
+    margin: 0 10px 0 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,26 @@
+/* Aurelian by r/nfl */
+
+// Theme Controller
+@import "./_controls.scss";
+
+// Modules
+@import "./modules/_functions.scss";
+@import "./modules/_variables.scss";
+@import "./modules/_mixins.scss";
+@import "./modules/_placeholders.scss";
+
+// Patterns
+@import "./patterns/_typography.scss";
+@import "./patterns/_buttons.scss";
+@import "./patterns/_tables.scss";
+
+// Components
+@import "./components/_global.scss";
+@import "./components/_reddit-header.scss";
+@import "./components/_reddit-sidebar.scss";
+@import "./components/_reddit-oc.scss";
+@import "./components/_reddit-content.scss";
+@import "./components/_res.scss";
+
+// Themes
+//@import "./themes/_draft-day.scss";

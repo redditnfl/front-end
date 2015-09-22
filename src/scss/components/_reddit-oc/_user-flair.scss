@@ -1,0 +1,105 @@
+// Removes flair off listing pages, moderator box in sidebar, and posts on author
+.side .bottom .flair,
+.sidecontentbox .flair,
+#siteTable .flair{
+	@extend %kill;
+}
+// User flair
+// Flair wrapping element
+.flair{
+	display: inline-block;
+	height: 24px;
+	width: 28px;
+	padding: 1px 4px;
+	margin-right: 3px;
+	vertical-align: middle;
+	font-size: 10px;
+	line-height: 16px;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	background: transparent;
+	color: #222;
+	overflow: hidden;
+	white-space: nowrap;
+	// Flair wrap on hover
+	&:hover{
+		width: auto;
+		border-color:  #ddd;
+		background-color: #f5f5f5;
+		cursor: help;
+	}
+	// Flair logo element
+	&:before{
+		content: "";
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+		margin-right: 4px;
+		vertical-align: middle;
+		background-image: url(../img/logos-80x80.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+}
+// Official Flair
+.flair-official{
+  height: 36px;
+  width: 40px;
+  &:before{
+	height: 32px;
+	width: 32px;
+  }
+}
+// Link logos
+%team-link{
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 4px 0 0;
+  vertical-align: middle;
+  background-image: url("../img/logos-80x80.png");
+  background-size: 100%;
+}
+
+
+// Gets background position for all teams for flair, link images, and abbr images.
+$pos-20: 0px;
+$pos-32: 0px;
+@each $team in $nfl-teams{
+  $thisName: map-get($team, name);
+  $thisAbbr: map-get($team, abbr);
+  $thisUrl: map-get($team, url);
+  a[href$="/r/#{$thisUrl}"]::before,
+  a[href$="/#{$thisAbbr}"]::before{
+		@extend %team-link;
+  }
+  .flair-#{$thisName}::before,
+  a[href$="/r/#{$thisUrl}"]::before,
+  a[href$="/#{$thisAbbr}"]::before,
+  a[href$="/#{to-upper-case(#{$thisUrl})}"]::before,
+  a[href$="/#{to-upper-case(#{$thisAbbr})}"]::before{
+		background-position: 0 $pos-20;
+  }
+  .flair-#{$thisName}.flair-official::before{
+		background-position: 0 (0 - $pos-32);
+  }
+  .titlebox .tagline .flairselector .flair-#{$thisName}::before{
+		background-position: 0 (0 - $pos-32);
+  }
+  $pos-20: $pos-20 - 20px;
+  $pos-32: $pos-32 - -32px;
+}
+
+/* Special flair */
+.flair-twitter, .flair-robot {
+    &:before {
+        background-image: url("../img/logos-special-80x80.png");
+    }
+}
+.flair-twitter:before {
+        background-position: 0 0;
+}
+.flair-robot:before {
+    background-position: 0 -20px;
+}

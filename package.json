@@ -1,0 +1,29 @@
+{
+  "name": "r-nfl",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/redditnfl/design.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redditnfl/design/issues"
+  },
+  "homepage": "https://github.com/redditnfl/design",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-file-include": "^0.9.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-replace": "^0.5.3",
+    "gulp-sass": "^1.3.3",
+    "gulp-sourcemaps": "^1.5.2"
+  }
+}

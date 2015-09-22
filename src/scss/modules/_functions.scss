@@ -1,0 +1,29 @@
+@function rem($target, $context: 16px) {
+	@if $target == 0px { @return 0 }
+	@return $target / $context + 0rem;
+}
+
+// Color  Function
+@function color($color:grey, $shade:0){
+	@if($color == grey){
+		@if($shade == 0){ @return $nfl-0; }
+		@if($shade == 5){ @return darken($nfl-0,5); }
+		@if($shade == 10){ @return darken($nfl-0,10); }
+		@if($shade == 20){ @return darken($nfl-0,20); }
+		@if($shade == 40){ @return darken($nfl-0,40); }
+		@if($shade == 60){ @return lighten($nfl-100,40); }
+		@if($shade == 80){ @return lighten($nfl-100,20); }
+		@if($shade == 100){ @return $nfl-100; }
+	} @elseif($color == blue){
+		@if($shade == 0){ @return $nfl-blue; }
+	} @elseif($color == red){
+		@if($shade == 0){ @return $nfl-red; }
+	} @elseif($color == gold){
+		@if($shade == 0){ @return $nfl-gold; }
+	}
+}
+
+// Grid Function
+@function grid($columns:10, $grid:10){
+  @return ((100/$grid) * $columns) + 0%;
+}

@@ -1,0 +1,60 @@
+#header-bottom-left{
+	&{
+		display: flex;
+		align-items: center;
+		height: 60px;
+		float: left;
+		background: transparent;
+	}
+	#header-img{
+		@extend %kill;
+	}
+	// reddit name container(ie, r/nfl in nav)
+	.pagename{
+		margin: 0;
+	}
+	.pagename a{
+		@extend %header-text-style;
+		padding: 2px;
+		margin: 0 5px 0 0;
+		text-transform: uppercase;
+		color: color(red);
+	}
+	.pagename a:hover{
+		text-decoration: none;
+	}
+	// Inner navigation container(ie, hot, rising, new)
+	.tabmenu{
+		display: flex;
+		margin: 0;
+	}
+	// Inner navigation list elements(ie, hot, rising, new)
+	.tabmenu li{
+		display: block;
+		margin: 0 5px;
+	}
+	.tabmenu li:nth-child(1n+3){
+		@include breakpoint(small){
+			display: none;
+		}
+	}
+	// Inner navigation links(ie, hot, rising, new)
+	.tabmenu li a{
+		@extend %header-text-style;
+		@include font(display, 0);
+		padding: 2px;
+		border: 0;
+		letter-spacing: .05em;
+		text-align: left;
+		text-transform: capitalize;
+		background: transparent;
+		color: color(grey,60);
+	}
+	.tabmenu li a:hover,
+	.tabmenu li a:focus{
+		color: color(grey,100);
+	}
+	.tabmenu li.selected a{
+		color: color(grey,100);
+	}
+}
