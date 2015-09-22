@@ -5,6 +5,8 @@
 	width: 260px;
 	margin: ($h-switchboard-height + 40px) 20px 20px;
 	background-image: url($sidebarImage);
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 .spacer:nth-child(1){
 	padding: 0 20px;
