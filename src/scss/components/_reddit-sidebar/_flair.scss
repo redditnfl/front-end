@@ -43,7 +43,7 @@ $pos-17:0;
   top: 50% !important;
   left: 50% !important;
   z-index: 9 !important;
-  width: 184px !important;
+  width: 430px !important;
   transform: translate(-50%,-50%) !important;
   border: none;
   background-color: #fff;
@@ -60,10 +60,10 @@ $pos-17:0;
   margin: 10px;
 }
 .titlebox .tagline .flairselector ul{
-  width: 52px !important;
-}
-.titlebox .tagline .flairselector ul:not(:last-child){
-  margin-right: 10px;
+  display: inline!important;
+  float: none!important;
+  white-space: normal;
+  margin: 0;
 }
 .titlebox .tagline .flairselector li{
   width: 52px!important;
@@ -71,6 +71,7 @@ $pos-17:0;
   padding: 10px;
   border: none;
   background: none;
+  display: inline-block !important;
 }
 .titlebox .tagline .flairselector li a {
   display: none;
@@ -109,4 +110,8 @@ $pos-17:0;
   height: 100%;
   width: 100%;
   background: rgba($nfl-draft-black, .7);
+}
+div.flairoptionpane {
+    height: auto;
+    max-height: 400px;
 }
