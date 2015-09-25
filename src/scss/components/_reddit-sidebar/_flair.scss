@@ -38,6 +38,9 @@ $pos-17:0;
 }
 .titlebox .tagline .flair{
 }
+.flairselector .flair {
+  cursor: pointer;
+}
 .titlebox .tagline .flairselector.active{
   position: fixed !important;
   top: 50% !important;
