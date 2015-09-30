@@ -16,4 +16,7 @@
 		background: #333;
 		color: #fff;
 	}
+    a::before {
+        @extend %kill
+    }
 }

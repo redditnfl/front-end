@@ -1,6 +1,7 @@
 $resnm-bg: #222;
 $resnm-fg: gray;
 $resnm-header: #666660;
+$resnm-header-fg: color(grey,60);
 $resnm-teamlinks-bg: #2F2E31;
 
 .res-nightmode {
@@ -73,5 +74,19 @@ $resnm-teamlinks-bg: #2F2E31;
     }
     .content .linkflair.linkflair-green hr+ul {
         background: transparent;
+    }
+    #header-bottom-left .tabmenu {
+        li a {
+            color: mix($resnm-header, $resnm-header-fg);
+        }
+        li.selected a {
+            color: $resnm-header-fg;
+        }
+    }
+    .content {
+        pre {
+            background-color: lighten($resnm-bg, 15);
+            border: 1px solid lighten($resnm-bg, 30);
+        }
     }
 }
