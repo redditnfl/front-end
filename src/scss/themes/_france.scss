@@ -6,6 +6,9 @@
 	height: 100%;
 	width: 33%;
 }
+html{
+	background: #fff;
+}
 html::before{
 	@extend %flag;
 	left: 0;
