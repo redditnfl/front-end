@@ -6,16 +6,6 @@ html{
 	background: color(blue);
 	background-repeat: no-repeat;
 }
-html::before{
-	content:"";
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	height: 80%;
-	width: 100%;
-	background: color(blue);
-}
 body{
 	width: auto;
 	margin: 0 30px 30px;

@@ -1,0 +1,18 @@
+%flag{
+	content:"";
+	position: fixed;
+	top: 0;
+	z-index: -1;
+	height: 100%;
+	width: 33%;
+}
+html::before{
+	%extend %flag;
+	left: 0;
+	background: color(blue);
+}
+html::after{
+	%extend %flag;
+	right: 0;
+	background: color(red);
+}
