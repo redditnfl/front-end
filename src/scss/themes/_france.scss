@@ -6,13 +6,16 @@
 	height: 100%;
 	width: 33%;
 }
+html{
+	background: #fff;
+}
 html::before{
-	%extend %flag;
+	@extend %flag;
 	left: 0;
 	background: color(blue);
 }
 html::after{
-	%extend %flag;
+	@extend %flag;
 	right: 0;
 	background: color(red);
 }
