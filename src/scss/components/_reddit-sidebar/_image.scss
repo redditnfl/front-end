@@ -31,14 +31,16 @@
 
 @if($promoTarget){
 	&::before{
-		margin: ($h-switchboard-height + 40 + $promoHeight + 20px) 20px 20px;
+		margin: 492px 20px 20px;
 	}
 	a[title="#{$promoTarget}"]{
 		position: absolute;
-		top: ($h-switchboard-height + 40px);
+		top: 440px;
 		display: block;
 		height: $promoHeight;
 		width: 260px;
-		background: #333;
+		background-image: url($promoImage);
+		background-repeat: no-repeat;
+		background-size: 100%;
 	}
 }
