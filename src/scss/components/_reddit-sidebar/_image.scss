@@ -28,3 +28,17 @@
 	text-align: left;
 	color: color(grey,100);
 }
+
+@if($promoTarget){
+	&::before{
+		margin: ($h-switchboard-height + 40 + $promoHeight + 20px) 20px 20px;
+	}
+	a[title="#{$promoTarget}"]{
+		position: absolute;
+		top: ($h-switchboard-height + 40px) 20px 20px;
+		display: block;
+		height: $promoHeight;
+		width: 260px;
+		background: #333;
+	}
+}
