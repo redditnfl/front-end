@@ -35,7 +35,7 @@
 	}
 	a[title="#{$promoTarget}"]{
 		position: absolute;
-		top: ($h-switchboard-height + 40px) 20px 20px;
+		top: ($h-switchboard-height + 40px);
 		display: block;
 		height: $promoHeight;
 		width: 260px;
