@@ -28,3 +28,20 @@
 	text-align: left;
 	color: color(grey,100);
 }
+
+@if($promoTarget){
+	&::before{
+		margin: 492px 20px 20px;
+	}
+	a[title="#{$promoTarget}"]{
+		position: absolute;
+		top: 440px;
+		display: block;
+		height: $promoHeight;
+		width: 260px;
+		background-image: url($promoImage);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		font-size: 0;
+	}
+}
