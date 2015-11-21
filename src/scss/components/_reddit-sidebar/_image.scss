@@ -29,7 +29,7 @@
 	color: color(grey,100);
 }
 
-@if($promoTarget){
+@if($promoTarget != false){
 	&::before{
 		margin: 492px 20px 20px;
 	}
