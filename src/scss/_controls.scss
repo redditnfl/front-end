@@ -1,6 +1,7 @@
 $promoImage: "../img/AMA-berhe.jpg";
 $promoHeight: 212px;
-$promoTarget: "ama-berhe";
+$promoTarget: "ama-berhe"; // either link title or false
+$promoIsLink: true;
 
 $sidebarImage: "../img/SB-bears.jpg";
 $sidebarHeader: "Going For the Gould";
