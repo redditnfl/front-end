@@ -1,6 +1,6 @@
 .midcol {
     position: absolute;
-    left: 32px;
+    left: 13px;
     z-index: 2;
 }
 .entry{
@@ -13,6 +13,7 @@
 		//margin-right: 300px;
 	}
 	.thing{
+    position: relative;
 		display: block;
 		margin: 20px 0 20px;
 	}
