@@ -1,9 +1,11 @@
 .midcol {
-    position: relative;
+    position: absolute;
+    left: 32px;
     z-index: 2;
 }
 .entry{
 	//padding-left: 70px;
+  padding-left: 42px;
 }
 .linklisting{
 	&{
