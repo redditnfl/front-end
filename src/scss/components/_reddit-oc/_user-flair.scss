@@ -131,13 +131,13 @@ $pos-32: 0px;
 .tagline{
 	position: relative;
 }
-a.author.moderator::before {
+.comment .moderator::before {
 	@extend %team-link;
 	content: "";
 	position: absolute;
 	height: 20px;
 	width: 20px;
-	background: #222;
+	background-color: #FFF;
 	left: 25px;
 	top: 2px;
 }
