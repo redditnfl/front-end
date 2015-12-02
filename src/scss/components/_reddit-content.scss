@@ -13,9 +13,6 @@
 	@import "./components/_reddit-content/_self-post-body.scss";
 	@import "./components/_reddit-content/_game-thread.scss";
 	@import "./components/_reddit-content/_post-info.scss";
-	.single-page &{
-		@import "./components/_reddit-content/_single-page.scss";
-	}
 
 	// Comments
 	@import "./components/_reddit-content/_comments.scss";
