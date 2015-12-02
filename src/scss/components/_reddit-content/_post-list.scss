@@ -1,10 +1,12 @@
+// Only affects voting icons on POSTS
 .link > .midcol{
     position: absolute;
     left: 13px;
     z-index: 2;
 		width: 50px;
 }
-.entry{
+// Only affects titles on POSTS
+.link > .entry{
 	//padding-left: 70px;
   padding-left: 42px;
 }
