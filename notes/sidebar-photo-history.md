@@ -10,7 +10,7 @@
 | 8    | PIT  | 1                | Brown
 | 9    | CHI  | 1                | Cutler
 | 10   | TB	  | 1                | Martin
-| 11   |      |                  |        
+| 11   | SEA  | 1                | Wilson
 | 12   |      |                  |        
 | 13   |      |                  |        
 | 14   |      |                  |        
