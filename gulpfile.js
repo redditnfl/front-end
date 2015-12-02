@@ -23,12 +23,12 @@ var gulp = require('gulp'),
 	gulp.task("css", function(){
 		return gulp.src(paths.src.scss+"/**/*.scss")
 		.pipe(plumber({errorHandler: errorAlert}))
-		.pipe(sass({outputStyle: 'compressed'}))
+		.pipe(sass({outputStyle: 'expanded'}))
 		.pipe(sourcemaps.write('./maps'))
 		.pipe(prefix({browsers: ["last 2 version"]}))
 		.pipe(gulp.dest(paths.pub.css))
 	});
-	
+
 // Compile Markdown - run "gulp md"
 	gulp.task("md", function(){
 		return gulp.src(paths.src.markdown+"/**/*.md")
@@ -42,22 +42,22 @@ var gulp = require('gulp'),
 		return gulp.src(paths.src.img+"/*.*")
 		.pipe(gulp.dest(paths.pub.img));
 	});
-	
-	
+
+
 // Compile
 	gulp.task("compile", ["md", "css", "img"], function(){
 		return gulp.src("src/fake")
 		.pipe(notify({title: "Project Compiled!", message: "", sound: "Wuka"}))
 		.pipe(gulp.dest("src/fake"))
 	});
-	
+
 // Watch files
 	gulp.task("watch", function(){
 		gulp.watch(paths.src.scss+"/**/*.scss", ["css"]);
 		gulp.watch(paths.src.img+"/*", ["img"]);
 		gulp.watch(paths.src.markdown+"/**/*.md", ["md"]);
 	});
-	
+
 // Default take
 	gulp.task("default", ["watch", "compile"]);
 
@@ -81,7 +81,7 @@ var gulp = require('gulp'),
 		return gulp.src(paths.pub.img+"/*.*")
 		.pipe(gulp.dest(paths.reddit.img));
 	});
-	
+
 // Compile Reddit Safe Code
 	gulp.task("reddit-compile", ["reddit-md", "reddit-css", "reddit-img"], function(){
 		return gulp.src("src/fake")
