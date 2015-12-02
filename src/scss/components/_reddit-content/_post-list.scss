@@ -1,7 +1,8 @@
-.midcol {
+.link > .midcol{
     position: absolute;
     left: 13px;
     z-index: 2;
+		width: 50px;
 }
 .entry{
 	//padding-left: 70px;
@@ -38,7 +39,7 @@
 		vertical-align: text-bottom;
 		margin-top: -2px;
 	}
-	
+
 	.thing .title .domain::before{
 		content: "from ";
 		font-size: rem(10px);
@@ -61,7 +62,7 @@
 	.tagline a{
 		color: color(grey, 80);
 	}
-	
+
 	.buttons{
 	}
 	.buttons a{
