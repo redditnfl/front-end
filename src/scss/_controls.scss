@@ -1,7 +1,7 @@
 $promoImage: "../img/AMA-smoot.jpg";
 $promoHeight: 212px;
-$promoTarget: false; // either link title or false
-$promoIsLink: false;
+$promoTarget: "ama-smoot"; // either link title or false
+$promoIsLink: true;
 
 $sidebarImage: "../img/SB-seahawks.jpg";
 $sidebarHeader: "This Is Russell Wilson's Sidebar";
