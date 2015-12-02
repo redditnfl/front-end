@@ -8,6 +8,7 @@
 	&::before{
 		content: "Post Info";
 		@extend %section-title;
+		margin-top: 60px;
 	}
 	.date{
 		@include font(display,1);

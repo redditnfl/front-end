@@ -4,16 +4,19 @@
 		margin: 0 320px 0 0;
 		background: color(grey,0);
 	}
-	
+
 	// Post list
 	@import "./components/_reddit-content/_post-list.scss";
 	@import "./components/_reddit-content/_link-flair.scss";
-	
+
 	// Single post
 	@import "./components/_reddit-content/_self-post-body.scss";
 	@import "./components/_reddit-content/_game-thread.scss";
 	@import "./components/_reddit-content/_post-info.scss";
-	
+	.single-page &{
+		@import "./components/_reddit-content/_single-page.scss";
+	}
+
 	// Comments
 	@import "./components/_reddit-content/_comments.scss";
 }
