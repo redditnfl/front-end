@@ -5,9 +5,10 @@
 }
 %hasIcon{
   .entry{
-    overflow: visible;
   }
-  .linkflairlabel{display: none}
+  .linkflairlabel{
+		display: none
+	}
   p.title{
     position: relative;
     overflow: visible;
