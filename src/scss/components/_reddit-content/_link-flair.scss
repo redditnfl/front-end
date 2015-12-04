@@ -1,6 +1,6 @@
 %flairedTitle{
   .title > .title{
-    font-weight: 700;
+    font-weight: 700 !important;
   }
 }
 %hasIcon{
@@ -23,6 +23,12 @@
     background-size: 75px;
     vertical-align: middle;
   }
+}
+.stickied{
+  .title > .title{
+		color: $nfl-red !important;
+    font-weight: 700 !important;
+	}
 }
 // Game Threads
 .linkflair-green{
