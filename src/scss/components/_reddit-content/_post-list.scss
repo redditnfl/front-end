@@ -1,25 +1,26 @@
-.content .linklisting .thing{
+.link{
 	white-space: nowrap;
 }
 .link > .rank{
 	display: inline-block;
 	float: none;
-	vertical-align: middle;
+	vertical-align: text-top;
 }
 .link > .midcol{
 	position: relative;
 	z-index: 2;
 	display: inline-block;
 	float: none;
-	vertical-align: middle;
+	vertical-align: text-top;
 }
 .link > .entry{
 	position: relative;
 	z-index: 1;
 	display: inline-block;
 	width: 100%;
+	padding-right: 20px;
 	float: none;
-	vertical-align: top;
+	vertical-align: text-top;
 	white-space: normal;
 }
 
