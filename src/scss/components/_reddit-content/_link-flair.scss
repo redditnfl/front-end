@@ -26,7 +26,8 @@
 }
 .stickied{
   .title > .title{
-		color: $nfl-red;
+		color: $nfl-red !important;
+    font-weight: 700 !important;
 	}
 }
 // Game Threads
