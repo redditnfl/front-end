@@ -1,10 +1,29 @@
-// Only affects voting icons on POSTS
+.content .linklisting .thing{
+	white-space: nowrap;
+}
+.link > .rank{
+	display: inline-block;
+	float: none;
+	vertical-align: middle;
+}
 .link > .midcol{
+	position: relative;
 	z-index: 2;
+	display: inline-block;
+	float: none;
+	vertical-align: middle;
 }
-// Only affects titles on POSTS
-.link  .entry{
+.link > .entry{
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	width: 100%;
+	float: none;
+	vertical-align: top;
+	white-space: normal;
 }
+
+
 .linklisting{
 	&{
 		width: auto;
