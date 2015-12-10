@@ -1,0 +1,12 @@
+.side .titlebox .md > hr + h3 + h1 + h2 + table,
+.side .titlebox .md > hr + h3 + h1 + h2 + table + h2 + table,{
+	&{
+		font-size: 10px;
+	}
+	td{
+		padding: 4px;
+	}
+	tr:nth-child(6) td{
+		border-bottom-color: $nfl-red;
+	}
+}
