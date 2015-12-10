@@ -6,6 +6,11 @@
 	float: none;
 	vertical-align: text-top;
 }
+.link > .thumbnail{
+	float: none;
+	display: inline-block;
+	vertical-align: text-top;
+}
 .link > .midcol{
 	position: relative;
 	z-index: 2;
@@ -17,7 +22,7 @@
 	position: relative;
 	z-index: 1;
 	display: inline-block;
-	width: 100%;
+	width: 80%;
 	padding-right: 20px;
 	float: none;
 	vertical-align: text-top;

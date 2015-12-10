@@ -11,7 +11,7 @@
 | 9    | CHI  | 1                | Cutler
 | 10   | TB	  | 1                | Martin
 | 11   | SEA  | 1                | Wilson
-| 12   |      |                  |        
+| 12   | DAL  | 1                | Witten  
 | 13   |      |                  |        
 | 14   |      |                  |        
 | 15   |      |                  |        
