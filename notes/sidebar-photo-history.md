@@ -12,10 +12,10 @@
 | 10   | TB	  | 1                | Martin
 | 11   | SEA  | 1                | Wilson
 | 12   | DAL  | 1                | Witten  
-| 13   |      |                  |        
-| 14   |      |                  |        
-| 15   |      |                  |        
-| 16   |      |                  |        
+| 13   | DAL  | 2                | Witten
+| 14   | ???  | ?                | ???
+| 15   | ARI  | 1                | Johnson        
+| 16   | NYJ  | 1                | Bowles       
 | 17   |      |                  |        
 | WC   |      |                  |        
 | DV   |      |                  |        
