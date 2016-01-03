@@ -48,6 +48,7 @@
   &:before{
 	height: 32px;
 	width: 32px;
+    opacity: 1 !important;
   }
   + .author {
     color: white;
@@ -87,6 +88,8 @@ $pos-32: 0px;
   $thisUrl: map-get($team, url);
   $thisBg: map-get($team, bg);
   $thisFg: map-get($team, fg);
+  $thisEliminated: map-get($team, eliminated);
+
   a[href$="/r/#{$thisUrl}"]::before,
   a[href$="/#{$thisAbbr}"]::before{
 		@extend %team-link;
@@ -96,7 +99,10 @@ $pos-32: 0px;
   a[href$="/#{$thisAbbr}"]::before,
   a[href$="/#{to-upper-case(#{$thisUrl})}"]::before,
   a[href$="/#{to-upper-case(#{$thisAbbr})}"]::before{
-		background-position: 0 $pos-20;
+    background-position: 0 $pos-20;
+    @if $thisEliminated {
+        opacity: .4;
+    }
   }
   .flair-#{$thisName}.flair-official {
     &:before{
