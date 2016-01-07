@@ -16,7 +16,7 @@
 | 14   | ???  | ?                | ???
 | 15   | ARI  | 1                | Johnson        
 | 16   | NYJ  | 1                | Bowles       
-| 17   |      |                  |        
+| 17   | HOU  | 1                | Hopkins
 | WC   |      |                  |        
 | DV   |      |                  |        
 | CN   |      |                  |        
