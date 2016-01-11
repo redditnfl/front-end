@@ -17,7 +17,7 @@
 | 15   | ARI  | 1                | Johnson        
 | 16   | NYJ  | 1                | Bowles       
 | 17   | HOU  | 1                | Hopkins
-| WC   |      |                  |        
+| WC   | GB   | 1                | Packers D
 | DV   |      |                  |        
 | CN   |      |                  |        
 | PB   |      |                  |        
