@@ -18,7 +18,7 @@
 | 16   | NYJ  | 1                | Bowles       
 | 17   | HOU  | 1                | Hopkins
 | WC   | GB   | 1                | Packers D
-| DV   |      |                  |        
+| DV   | DEN  | 1                | Demaryius Thomas
 | CN   |      |                  |        
 | PB   |      |                  |        
 | SB   |      |                  |        
