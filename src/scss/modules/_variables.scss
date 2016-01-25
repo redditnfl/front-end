@@ -20,7 +20,7 @@ $media-stack:
 
 // NFL Teams
 $nfl-teams: (name:nfl, abbr:NFL, url:nfl, fg:#E3C764, bg:#4D4D55, eliminated: true),
-						(name:cardinals, abbr:ARI, url:azcardinals, fg:#FFFFFF, bg:#97233F, eliminated: false),
+						(name:cardinals, abbr:ARI, url:azcardinals, fg:#FFFFFF, bg:#97233F, eliminated: true),
 						(name:falcons, abbr:ATL, url:falcons, fg:#A71930, bg:#000000, eliminated: true),
 						(name:ravens, abbr:BAL, url:ravens, fg:#9E7C0C, bg:#241773, eliminated: true),
 						(name:bills, abbr:BUF, url:buffalobills, fg:#C60C30, bg:#00338D, eliminated: true),
@@ -38,7 +38,7 @@ $nfl-teams: (name:nfl, abbr:NFL, url:nfl, fg:#E3C764, bg:#4D4D55, eliminated: tr
 						(name:chiefs, abbr:KC, url:kansascitychiefs, fg:#FFB612, bg:#E31837, eliminated: true),
 						(name:dolphins, abbr:MIA, url:miamidolphins, fg:#F58220, bg:#008E97, eliminated: true),
 						(name:vikings, abbr:MIN, url:minnesotavikings, fg:#FFC62F, bg:#4F2683, eliminated: true),
-						(name:patriots, abbr:NE, url:patriots, fg:#C60C30, bg:#002244, eliminated: false),
+						(name:patriots, abbr:NE, url:patriots, fg:#C60C30, bg:#002244, eliminated: true),
 						(name:saints, abbr:NO, url:saints, fg:#9F8958, bg:#000000, eliminated: true),
 						(name:giants, abbr:NYG, url:nygiants, fg:#A71930, bg:#0B2265, eliminated: true),
 						(name:jets, abbr:NYJ, url:nyjets, fg:#FFFFFF, bg:#203731, eliminated: true),
