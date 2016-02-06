@@ -1,7 +1,27 @@
 html{
-	background-image: url("../img/#{$headerImage}");
+	background-color: #00abdf;
+}
+html::after{
+	content: "";
+	position: absolute;
+	top: 80px;
+	left: 0;
+	height: 500px;
+	width: 100%;
 	background-repeat: no-repeat;
-	background-position: center 80px;
+	background-image: url("../img/#{$headerImage}");
+	background-position: center;
+	z-index: -1;
+}
+html::before{
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100px;
+	background: #ee7642;
+	z-index: -2;
 }
 #header{
 	margin-top: $headerHeight;

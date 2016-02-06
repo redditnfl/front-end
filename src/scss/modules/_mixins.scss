@@ -78,6 +78,5 @@
 }
 
 @mixin sideButtonPosition($count){
-  top: $h-reddit-nav + $h-team-header + $h-sub-nav + $h-hero + (40px * $count);
-  $h-switchboard-height: $h-switchboard-height + 40px;
+	top: $headerSideOffset + $h-reddit-nav + $h-team-header + $h-sub-nav + $h-hero + (40px * $count);
 }
