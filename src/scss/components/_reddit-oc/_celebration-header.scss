@@ -1,7 +1,7 @@
 html{
 	background-image: url("../img/#{$headerImage}");
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center 80px;
 }
 #header{
 	margin-top: $headerHeight;
