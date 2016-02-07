@@ -1,5 +1,5 @@
 html{
-	background-color: #00abdf;
+	background-color: #3f4042;
 }
 html::after{
 	content: "";
@@ -12,16 +12,6 @@ html::after{
 	background-image: url("../img/#{$headerImage}");
 	background-position: center;
 	z-index: -1;
-}
-html::before{
-	content: "";
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100px;
-	background: #ee7642;
-	z-index: -2;
 }
 #header{
 	margin-top: $headerHeight;
