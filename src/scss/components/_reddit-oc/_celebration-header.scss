@@ -16,3 +16,21 @@ html::after{
 #header{
 	margin-top: $headerHeight;
 }
+a[title="Join The Discussion"]{
+	&{
+		position: absolute;
+		top: 412px;
+		left: 50%;
+		transform: translate(-50%,0);
+		display: block;
+		width: 200px;
+		height: 42px;
+		font-size: 0;
+		background: url("../img/BTN-discussion.png"); 
+		background-size: 400px;
+		background-position: left top;
+	}
+	&:hover{
+		background-position: right top;
+	}
+}
