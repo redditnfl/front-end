@@ -31,11 +31,11 @@
 
 @if($promoTarget != false){
 	&::before{
-		margin: 492px 20px 20px;
+		margin: ($promoHeight + $sidebarPicOffset + (40*$sidebarLinksCount) + 80px) 20px 20px;
 	}
 	a[title="#{$promoTarget}"]{
 		position: absolute;
-		top: 440px;
+		top: $promoTop;
 		display: block;
 		height: $promoHeight;
 		width: 260px;

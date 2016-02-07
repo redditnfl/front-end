@@ -1,0 +1,16 @@
+.usertext-body h2 a[href="/43n9pe"] {
+	&{
+		display: block;
+		height: 42px;
+		width: 200px;
+		margin: 40px auto 20px;
+		font-size: 0;
+		background-image: url("../img/BTN-hub.png");
+		background-position: top center;
+		background-size: 100%;
+	}
+	&:hover{
+		background-position: bottom center;
+	}
+}
+

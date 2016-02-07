@@ -1,0 +1,18 @@
+html{
+	background-color: #303133;
+}
+html::after{
+	content: "";
+	position: absolute;
+	top: 80px;
+	left: 0;
+	height: 500px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-image: url("../img/#{$headerImage}");
+	background-position: center;
+	z-index: -1;
+}
+#header{
+	margin-top: $headerHeight;
+}
