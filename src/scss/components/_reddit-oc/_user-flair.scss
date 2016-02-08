@@ -95,6 +95,15 @@ $pos-32: 0px;
   a[href$="/#{$thisAbbr}"]::before{
 		@extend %team-link;
   }
+
+  .flair-#{$thisName}{
+	@if $thisChampion {
+		width: 40px;
+		background-image: url("../img/logos-sb.png");
+		background-position: 0 0;
+		background-size: 40px;
+	}
+	}
   .flair-#{$thisName}::before,
   a[href$="/r/#{$thisUrl}"]::before,
   a[href$="/#{$thisAbbr}"]::before,
@@ -105,10 +114,10 @@ $pos-32: 0px;
         opacity: .4;
     }
     @if $thisChampion {
-			width: 55px;
+			width: 40px;
 		  background-image: url("../img/logos-sb.png");
 			background-position: 0 0;
-			background-size: 55px;
+			background-size: 100%;
     }
   }
   .flair-#{$thisName}.flair-official {
