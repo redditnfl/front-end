@@ -98,7 +98,7 @@ $pos-32: 0px;
 
   .flair-#{$thisName}{
 		@if $thisChampion {
-			width: 44px;
+			width: 40px;
 		}
 	}
   .flair-#{$thisName}::before,
@@ -111,7 +111,7 @@ $pos-32: 0px;
         opacity: .4;
     }
     @if $thisChampion {
-			width: 38px;
+			width: 28px;
 		  background-image: url("../img/logos-sb.png");
 			background-position: 0 0;
 			background-size: contain;
