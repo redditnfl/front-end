@@ -89,11 +89,18 @@ $pos-32: 0px;
   $thisBg: map-get($team, bg);
   $thisFg: map-get($team, fg);
   $thisEliminated: map-get($team, eliminated);
+  $thisChampion: map-get($team, champion);
 
   a[href$="/r/#{$thisUrl}"]::before,
   a[href$="/#{$thisAbbr}"]::before{
 		@extend %team-link;
   }
+
+  .flair-#{$thisName}{
+		@if $thisChampion {
+			width: 40px;
+		}
+	}
   .flair-#{$thisName}::before,
   a[href$="/r/#{$thisUrl}"]::before,
   a[href$="/#{$thisAbbr}"]::before,
@@ -102,6 +109,12 @@ $pos-32: 0px;
     background-position: 0 $pos-20;
     @if $thisEliminated {
         opacity: .4;
+    }
+    @if $thisChampion {
+			width: 28px;
+		  background-image: url("../img/logos-sb.png");
+			background-position: 0 0;
+			background-size: contain;
     }
   }
   .flair-#{$thisName}.flair-official {
