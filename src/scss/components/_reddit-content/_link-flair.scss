@@ -112,6 +112,9 @@
   p.title::before{
     background-position: -50px -25px;
   }
+  .entry p.title > a.title {
+      font-weight: 400 !important;
+  }
 }
 // Breaking News Thread
 .linkflair-breaking-news{
