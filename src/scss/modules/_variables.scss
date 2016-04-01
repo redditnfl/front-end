@@ -20,7 +20,7 @@ $media-stack:
 	(group: custom, id: screen, rule: "only screen ");
 
 // NFL Teams
-$nfl-teams: (name:nfl, abbr:NFL, url:nfl, fg:#E3C764, bg:#4D4D55, eliminated: false),
+$nfl-teams: (name:nfl, abbr:NFL, url:nfl, fg:$nfl-0, bg:$nfl-blue, eliminated: false),
 						(name:cardinals, abbr:ARI, url:azcardinals, fg:#FFFFFF, bg:#97233F, eliminated: false),
 						(name:falcons, abbr:ATL, url:falcons, fg:#A71930, bg:#000000, eliminated: false),
 						(name:ravens, abbr:BAL, url:ravens, fg:#9E7C0C, bg:#241773, eliminated: false),
