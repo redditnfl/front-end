@@ -78,6 +78,23 @@
   background-size: 100%;
 }
 
+// Cheaty moderator NFL flair
+a.author.moderator {
+    margin-left: -20px;
+    &:before {
+        display: inline-block;
+        content: "";
+        width: 20px;
+        height: 20px;
+        left: -6px; // Magic value
+        top: 7px; // Magic value
+        position: relative;
+        background-color: white;
+        background-image: url("../img/logos-80x80.png");
+        background-size: 100%;
+    }
+}
+
 
 // Gets background position for all teams for flair, link images, and abbr images.
 $pos-20: 0px;
