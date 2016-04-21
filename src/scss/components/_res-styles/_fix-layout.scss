@@ -30,4 +30,7 @@
     .RESDialogSmall > h3 {
         box-sizing: content-box;
     }
+    a.author.moderator::before {
+        left: -8px; // Magic value
+    }
 }

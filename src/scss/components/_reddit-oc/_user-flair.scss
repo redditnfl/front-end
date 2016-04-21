@@ -87,7 +87,7 @@ a.author.moderator {
         width: 20px;
         height: 20px;
         left: -6px; // Magic value
-        top: 7px; // Magic value
+        top: 8px; // Magic value - appears to differ 1px between FF and Chrome
         position: relative;
         background-color: white;
         background-image: url("../img/logos-80x80.png");
