@@ -162,3 +162,12 @@ $pos-32: 0px;
 .flair-robot:before {
     background-position: 0 -20px;
 }
+.flair-nflfilms {
+    &:before {
+        background-image: url("../img/nflfilms-80x80.png");
+    }
+    + .author{
+        color: $nfl-0 !important;
+        background: $nfl-blue;
+    }
+}
