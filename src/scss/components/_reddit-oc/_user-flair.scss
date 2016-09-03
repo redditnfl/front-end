@@ -4,6 +4,10 @@
 #siteTable .flair{
 	@extend %kill;
 }
+// Puts it back in the listing for moderators
+body.moderator #siteTable .flair{
+    display: inline-block !important;
+}
 // User flair
 // Flair wrapping element
 .flair{
