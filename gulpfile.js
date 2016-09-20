@@ -5,7 +5,10 @@ var gulp = require('gulp'),
 	prefix = require('gulp-autoprefixer'),
 	replace = require('gulp-replace'),
 	include = require('gulp-file-include'),
-	notify = require("gulp-notify");
+	notify = require("gulp-notify"),
+	fs = require("fs"),
+	through2 = require("through2"),
+	es = require("event-stream");
 
 // Default path
 	var paths = {
@@ -38,10 +41,21 @@ var gulp = require('gulp'),
 	});
 
 // Move Images - run "gulp img"
-	gulp.task("img", function(){
-		return gulp.src(paths.src.img+"/*.*")
-		.pipe(gulp.dest(paths.pub.img));
-	});
+    gulp.task("img", ["css"], function(){
+        fs.createReadStream(paths.pub.css+"/screen.css")
+        .pipe(es.split())
+        .pipe(through2.obj(function (chunk, enc, callback) {
+            var re = /\.\.\/img\/(.*).(png|jpg)/g;
+            if (m = re.exec(chunk)) {
+                this.push(paths.src.img + "/" + m[0]);
+            }
+            callback();
+        }))
+        .on('data', function(data) {
+            gulp.src(data).pipe(gulp.dest(paths.pub.img));
+        })
+        ;
+    });
 
 
 // Compile
