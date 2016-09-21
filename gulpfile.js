@@ -41,20 +41,18 @@ var gulp = require('gulp'),
 	});
 
 // Move Images - run "gulp img"
-    gulp.task("img", ["css"], function(){
-        fs.createReadStream(paths.pub.css+"/screen.css")
-        .pipe(es.split())
-        .pipe(through2.obj(function (chunk, enc, callback) {
-            var re = /\.\.\/img\/(.*).(png|jpg)/g;
-            if (m = re.exec(chunk)) {
-                this.push(paths.src.img + "/" + m[0]);
-            }
-            callback();
-        }))
-        .on('data', function(data) {
-            gulp.src(data).pipe(gulp.dest(paths.pub.img));
-        })
-        ;
+    gulp.task("img", ["css"], function(cb){
+        var file = fs.readFileSync(paths.pub.css+"/screen.css", { encoding: 'utf8' });
+        var re = /\.\.\/img\/(.*).(png|jpg)/g;
+        var globs = [];
+        while ((m = re.exec(file)) !== null) {
+            globs.push(paths.src.img + "/" + m[0])
+        }
+        gulp.src(globs)
+            .pipe(gulp.dest(paths.pub.img, { sync: true }))
+            .on('end', function() {
+                cb();
+            });
     });
 
 
