@@ -83,13 +83,7 @@ body.moderator #siteTable .flair{
 }
 
 // Cheaty moderator NFL flair
-div.comment a.author.moderator {
-    margin-left: -20px;
-    &:before {
-		display: none;
-    }
-}
-div.comment.noncollapsed a.author.moderator {
+div.comment.noncollapsed > .entry > .tagline > a.author.moderator {
     margin-left: -20px;
     &:before {
         display: inline-block;
