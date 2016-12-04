@@ -89,4 +89,7 @@ $resnm-teamlinks-bg: #2F2E31;
             border: 1px solid lighten($resnm-bg, 30);
         }
     }
+    .content .linklisting .thing .title .domain a, .content .linklisting .thing .title>.title {
+        color: lighten($nfl-blue, 20);
+    }
 }
