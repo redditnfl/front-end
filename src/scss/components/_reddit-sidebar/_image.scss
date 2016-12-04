@@ -31,7 +31,7 @@
 
 @if($promoTarget != false){
 	&::before{
-		margin: ($promoHeight + $sidebarPicOffset + (40*$sidebarLinksCount) + 80px) 20px 20px;
+		margin: ($promoHeight + $sidebarPicOffset + (40*$sidebarLinksCount) + 40px) 20px 20px;
 	}
 	a[title="#{$promoTarget}"]{
 		position: absolute;
