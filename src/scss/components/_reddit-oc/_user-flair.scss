@@ -70,6 +70,13 @@ body.moderator #siteTable .flair{
 #siteTable .tagline .flair-official {
   display: inline-block !important;
 }
+// Bandwagon flair
+.flair-bandwagon{
+	&:after {
+	  content:" - Bandwagon";
+	}
+}
+
 // Link logos
 %team-link{
   content: "";
@@ -138,7 +145,7 @@ $pos-32: 0px;
 			background-size: contain;
     }
   }
-  .flair-#{$thisName}.flair-official {
+  .flair-#{$thisName}.flair-official{
     &:before{
       background-position: 0 (0 - $pos-32);
     }
@@ -146,6 +153,10 @@ $pos-32: 0px;
         color: $thisFg !important;
         background: $thisBg;
     }
+  }
+  .flair-#{$thisName}.flair-bandwagon + .author{
+	color: $thisFg !important;
+	background: $thisBg;
   }
   .titlebox .tagline .flairselector .flair-#{$thisName}::before{
 		background-position: 0 (0 - $pos-32);
