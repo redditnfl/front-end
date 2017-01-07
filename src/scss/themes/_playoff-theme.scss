@@ -1,14 +1,14 @@
-$teamColor1: #a71930;
-$teamColor2: #c3c7ca;
-$gameHeader: "TOP-hou-oak.png";
-$gameTitle: "TOP-hou-oak-title.png";
+$teamColor1: #69be28;
+$teamColor2: #006db0;
+$gameHeader: "TOP-sea-det.png";
+$gameTitle: "TOP-sea-det-title.png";
 
 html{
 	background: linear-gradient(to right, $teamColor1 0%,$teamColor1 50%, $teamColor2 50%, $teamColor2 100%);
 }
 html::before{
 	$h: 117px;
-	$w: 536px;
+	$w: 561px;
 	content: "";
 	position: absolute;
 	top: (80px + $headerHeight) / 2 - 40px;
