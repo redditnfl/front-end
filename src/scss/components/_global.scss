@@ -17,3 +17,6 @@ body{
 a[title="faded"]{
 	opacity: .4 !important;
 }
+.md a em {
+    display: none;
+}
