@@ -1,18 +1,16 @@
+$headerHeight: 248;
+$headerSideOffset: 248;
+
 $promoImage: "../img/press-box-ad.jpg";
 $promoHeight: 156px;
 $promoTarget: "pb-latest"; //"32-32-link"; // either link title or false
 $promoIsLink: true;
-$promoTop: 440px;
+$promoTop: $headerSideOffset + 440px;
 
 $sidebarImage: "../img/SB-REG17-Giants-Packers.jpg";
 $sidebarHeader: "Familiar Faces";
 $sidebarText: "On Sunday, the New York Giants will travel to Lambeau to face the Green Bay Packers in the NFC Wild Card Round. The Packers came out on top in this year's regular season meeting, but the Giants infamously prevailed in the last two playoff games between these two teams. The stage is set for a critical NFC showdown.";
 $sidebarPicHeight: 173px;
 $sidebarPicOffset: 0;
-
-$showHeader: false;
-$headerHeight: 0;
-$headerSideOffset: 0;
-$headerImage: "TOP-superbowl.jpg";
 
 $sidebarLinksCount: 6;

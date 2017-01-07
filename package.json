@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/redditnfl/design",
   "devDependencies": {
+    "event-stream": "^3.3.4",
+    "fs": "0.0.1-security",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-file-include": "^0.9.0",
@@ -24,6 +26,7 @@
     "gulp-plumber": "^1.0.0",
     "gulp-replace": "^0.5.3",
     "gulp-sass": "^2.1.0",
-    "gulp-sourcemaps": "^1.5.2"
+    "gulp-sourcemaps": "^1.5.2",
+    "through2": "^2.0.3"
   }
 }

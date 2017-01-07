@@ -5,7 +5,11 @@
 	height: 60px;
 	padding: 0 20px;
 	border: none;
-	margin-top: $h-reddit-nav + $h-team-header + $h-hero;
+	@if $headerHeight{
+		margin-top: $h-reddit-nav + $h-team-header + $headerHeight;
+	} @else{
+		margin-top: $h-reddit-nav + $h-team-header + $h-hero;
+	}
 	background: color(grey, 5);
 }
 #jumpToContent{
