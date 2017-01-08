@@ -1,14 +1,14 @@
-$teamColor1: #73c72d;
-$teamColor2: #0277ba;
-$gameHeader: "TOP-sea-det.png";
-$gameTitle: "TOP-sea-det-title.png";
+$teamColor1: #ffbe0d;
+$teamColor2: #f88d23;
+$gameHeader: "TOP-pit-mia.png";
+$gameTitle: "TOP-pit-mia-title.png";
 
 html{
 	background: linear-gradient(to right, $teamColor1 0%,$teamColor1 50%, $teamColor2 50%, $teamColor2 100%);
 }
 html::before{
 	$h: 117px;
-	$w: 561px;
+	$w: 637px;
 	content: "";
 	position: absolute;
 	top: (80px + $headerHeight) / 2 - 40px;
@@ -43,7 +43,7 @@ a[title="TOP-cta"]{
 	height: $h;
 	width: $w;
 	background-repeat: no-repeat;
-	background-image: url("../img/TOP-cta-button.png");
+	background-image: url("../img/TOP-cta-button--wait.png");
 	background-position: top left;
 	font-size: 0;
 	&::before{display: none;}
