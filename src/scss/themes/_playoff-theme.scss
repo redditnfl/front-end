@@ -43,11 +43,9 @@ a[title="TOP-cta"]{
 	height: $h;
 	width: $w;
 	background-repeat: no-repeat;
-	background-image: url("../img/TOP-cta-button--wait.png");
+	background-image: url("../img/TOP-cta-button.png");
 	background-position: top left;
 	font-size: 0;
-	pointer-events: none;
-	cursor: default;
 	&::before{display: none;}
 	&:hover{
 		background-position: bottom left;
