@@ -1,16 +1,16 @@
-$headerHeight: 0;
-$headerSideOffset: 0;
+$headerHeight: false;
+$headerSideOffset: false;
 
 $promoImage: "../img/press-box-ad.jpg";
 $promoHeight: 156px;
 $promoTarget: "pb-latest"; //"32-32-link"; // either link title or false
-$promoIsLink: false;
-$promoTop: $headerSideOffset + 440px;
+$promoIsLink: true;
+$promoTop: 440px;
 
 $sidebarImage: "../img/SB-SB-WCW-Texans.jpg";
 $sidebarHeader: "Clowning Around";
 $sidebarText: "The Texans' defense lead the team to a win over the Oakland Raiders on Sunday. Jadaveon Clowney's first career interception set up an early 10-0 lead, and the rest of the defense piled up 3 sacks, 7 tackles for a loss, and 13 passes defended.";
 $sidebarPicHeight: 221px;
-$sidebarPicOffset: 60px;
+$sidebarPicOffset: 0;
 
 $sidebarLinksCount: 6;

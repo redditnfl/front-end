@@ -78,5 +78,9 @@
 }
 
 @mixin sideButtonPosition($count){
-	top: $headerSideOffset + $h-reddit-nav + $h-team-header + $h-sub-nav + $h-hero + (40px * $count);
+	@if $headerSideOffset {
+		top: $headerSideOffset + $h-reddit-nav + $h-team-header + $h-sub-nav + $h-hero + (40px * $count);
+	} @else {
+		top: $h-reddit-nav + $h-team-header + $h-sub-nav + $h-hero + (40px * $count);
+	}
 }
