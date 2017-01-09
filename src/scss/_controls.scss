@@ -1,5 +1,5 @@
-$headerHeight: 248;
-$headerSideOffset: 248;
+$headerHeight: false;
+$headerSideOffset: false;
 
 $promoImage: "../img/press-box-ad.jpg";
 $promoHeight: 156px;
@@ -7,10 +7,10 @@ $promoTarget: "pb-latest"; //"32-32-link"; // either link title or false
 $promoIsLink: false;
 $promoTop: $headerSideOffset + 440px;
 
-$sidebarImage: "../img/SB-REG17-Giants-Packers.jpg";
-$sidebarHeader: "Familiar Faces";
-$sidebarText: "On Sunday, the New York Giants will travel to Lambeau to face the Green Bay Packers in the NFC Wild Card Round. The Packers came out on top in this year's regular season meeting, but the Giants infamously prevailed in the last two playoff games between these two teams. The stage is set for a critical NFC showdown.";
-$sidebarPicHeight: 173px;
+$sidebarImage: "../img/SB-SB-WCW-Texans.jpg";
+$sidebarHeader: "Clowning Around";
+$sidebarText: "The Texans' defense lead the team to a win over the Oakland Raiders on Sunday. Jadaveon Clowney's first career interception set up an early 10-0 lead, and the rest of the defense piled up 3 sacks, 7 tackles for a loss, and 13 passes defended.";
+$sidebarPicHeight: 221px;
 $sidebarPicOffset: 60px;
 
 $sidebarLinksCount: 6;
