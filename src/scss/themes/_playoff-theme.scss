@@ -8,7 +8,7 @@ html{
 }
 html::before{
 	$h: 117px;
-	$w: 546px;
+	$w: 631px;
 	content: "";
 	position: absolute;
 	top: (80px + $headerHeight) / 2 - 40px;
