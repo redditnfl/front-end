@@ -1,16 +1,16 @@
 $headerHeight: 248px;
 $headerSideOffset: 248px;
 
-$promoImage: "../img/press-box-ad.jpg";
-$promoHeight: 156px;
-$promoTarget: "pb-latest"; //"32-32-link"; // either link title or false
+$promoImage: "../img/theme-discussion.png";
+$promoHeight: 124px;
+$promoTarget: "gt-latest"; //"32-32-link"; // either link title or false
 $promoIsLink: true;
-$promoTop: 440px;
+$promoTop: 440px + $headerSideOffset;
 
 $sidebarImage: "../img/SB-WCW-Seahawks.jpg";
 $sidebarHeader: "In Good Hands";
 $sidebarText: "A sometimes inconsistent Seahawks offense put on a show Saturday night. Thomas Rawls broke the single game franchise record for rushing yards, and relative unknown Paul Richardson put together a highlight reel of one-handed catches. Seattle hopes the offense can maintain that momentum as it travels to Atlanta for the divisional round.";
 $sidebarPicHeight: 149px;
-$sidebarPicOffset: 0;
+$sidebarPicOffset: 40px;
 
 $sidebarLinksCount: 6;
