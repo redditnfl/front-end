@@ -1,14 +1,14 @@
-$teamColor1: #9fbbc1;
-$teamColor2: #ffbe0a;
-$gameHeader: "TOP-dal-gb.png";
-$gameTitle: "TOP-dal-gb-title.png";
+$teamColor1: #d70300;
+$teamColor2: #ffbe0d;
+$gameHeader: "TOP-kc-pit.png";
+$gameTitle: "TOP-kc-pit-title.png";
 
 html{
 	background: linear-gradient(to right, $teamColor1 0%,$teamColor1 50%, $teamColor2 50%, $teamColor2 100%);
 }
 html::before{
 	$h: 117px;
-	$w: 631px;
+	$w: 560px;
 	content: "";
 	position: absolute;
 	top: (80px + $headerHeight) / 2 - 40px;
