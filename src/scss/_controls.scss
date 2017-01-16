@@ -1,9 +1,9 @@
-$headerHeight: 248px;
-$headerSideOffset: 248px;
+$headerHeight: false; //ex: 20px or false
+$headerSideOffset: false; //ex: 20px or false
 
 $promoImage: "../img/theme-discussion.png";
 $promoHeight: 124px;
-$promoTarget: "gt-latest"; //"32-32-link"; // either link title or false
+$promoTarget: false; //"32-32-link"; // either link title or false
 $promoIsLink: true;
 $promoTop: 440px + $headerSideOffset;
 
