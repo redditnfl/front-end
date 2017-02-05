@@ -26,7 +26,7 @@ var gulp = require('gulp'),
 	gulp.task("css", function(){
 		return gulp.src(paths.src.scss+"/**/*.scss")
 		.pipe(plumber({errorHandler: errorAlert}))
-		.pipe(sass({outputStyle: 'expanded'}))
+		.pipe(sass({outputStyle: 'compressed'}))
 		.pipe(sourcemaps.write('./maps'))
 		.pipe(prefix({browsers: ["last 2 version"]}))
 		.pipe(gulp.dest(paths.pub.css))

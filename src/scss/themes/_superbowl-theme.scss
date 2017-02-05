@@ -1,36 +1,57 @@
+// possible combos
+$group1: '1','2','3','4','5','6','7','8','9','0','a','b';
+$group2: 'c','d','e','f','g','h','i','j','k','l','m','n';
+$group3: 'o','p','q','r','s','t','u','v','w','x','y','z';
+$afterGroup1: '1','2','3','4','5','6','7';
+$afterGroup2: '8','9','0','a','b','c';
+
 html{
-	background-color: #303133;
+	background-color: #f1f1f1;
 }
-html::after{
-	content: "";
-	position: absolute;
-	top: 80px;
-	left: 0;
-	height: 500px;
-	width: 100%;
-	background-repeat: no-repeat;
-	background-image: url("../img/#{$headerImage}");
-	background-position: center;
-	z-index: -1;
-}
-#header{
-	margin-top: $headerHeight;
-}
-a[title="Join The Discussion"]{
-	&{
+form.logout {
+	%image-half{
+		content: "";
 		position: absolute;
-		top: 412px;
-		left: 50%;
-		transform: translate(-50%,0);
-		display: block;
-		width: 200px;
-		height: 42px;
-		font-size: 0;
-		background: url("../img/BTN-discussion.png"); 
-		background-size: 400px;
-		background-position: left top;
+		top: 80px;
+		height: 280px;
+		width: 50%;
+		pointer-events: none;
+		background-repeat: no-repeat;
 	}
-	&:hover{
-		background-position: right top;
+	a::before{
+		@extend %image-half;
+		left: 0;
+		background-position: top right;
+	}
+	a::after{
+		@extend %image-half;
+		right: 0;
+		background-position: top left;
+		background-image: url("../img/TOP-butler.png");
+	}
+	@each $i in $group1{
+		input[name="uh"][value^="#{$i}"] ~ a::before{
+			background-image: url("../img/TOP-ryan.png");
+		}
+	}
+	@each $i in $group2{
+		input[name="uh"][value^="#{$i}"] ~ a::before{
+			background-image: url("../img/TOP-freeman.png");
+		}
+	}
+	@each $i in $group3{
+		input[name="uh"][value^="#{$i}"] ~ a::before{
+			background-image: url("../img/TOP-jones.png");
+		}
+	}
+	@each $i in $afterGroup1{
+		input[name="uh"][value$="#{$i}"]~ a::after{
+			background-image: url("../img/TOP-brady.png");
+		}
+	}
+	@each $i in $afterGroup2{
+		input[name="uh"][value$="#{$i}"]~ a::after{
+			background-image: url("../img/TOP-edleman.png");
+		}
 	}
 }
