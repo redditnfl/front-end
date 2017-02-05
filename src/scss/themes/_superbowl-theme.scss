@@ -21,37 +21,30 @@ form.logout {
 	a::before{
 		@extend %image-half;
 		left: 0;
+		background-image: url("../img/TOP-trophy.png");
 		background-position: top right;
 	}
 	a::after{
 		@extend %image-half;
 		right: 0;
 		background-position: top left;
-		background-image: url("../img/TOP-butler.png");
 	}
 	@each $i in $group1{
-		input[name="uh"][value^="#{$i}"] ~ a::before{
-			background-image: url("../img/TOP-ryan.png");
-		}
-	}
-	@each $i in $group2{
-		input[name="uh"][value^="#{$i}"] ~ a::before{
-			background-image: url("../img/TOP-freeman.png");
-		}
-	}
-	@each $i in $group3{
-		input[name="uh"][value^="#{$i}"] ~ a::before{
-			background-image: url("../img/TOP-jones.png");
-		}
-	}
-	@each $i in $afterGroup1{
 		input[name="uh"][value$="#{$i}"]~ a::after{
 			background-image: url("../img/TOP-brady.png");
 		}
 	}
-	@each $i in $afterGroup2{
+	@each $i in $group2{
 		input[name="uh"][value$="#{$i}"]~ a::after{
 			background-image: url("../img/TOP-edleman.png");
+		}
+	}
+	@each $i in $group3{
+		input[name="uh"][value$="#{$i}"]~ a::after{
+			background-image: url("../img/TOP-edleman.png");
+		}
+		input[name="uh"][value^="#{$i}"] ~ a::before{
+			background-image: url("../img/TOP-butler.png");
 		}
 	}
 }
