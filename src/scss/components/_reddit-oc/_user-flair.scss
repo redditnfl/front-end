@@ -124,7 +124,7 @@ $pos-32: 0px;
 
   .flair-#{$thisName}{
 		@if $thisChampion {
-			width: 40px;
+			width: 38px;
 		}
 	}
   .flair-#{$thisName}::before,
@@ -138,7 +138,7 @@ $pos-32: 0px;
     }
     @if $thisChampion {
 			width: 28px;
-		  background-image: url("../img/logos-sb.png");
+			background-image: url("../img/logos-sb.png");
 			background-position: 0 0;
 			background-size: contain;
     }
@@ -153,7 +153,11 @@ $pos-32: 0px;
     }
   }
   .titlebox .tagline .flairselector .flair-#{$thisName}::before{
+	@if $thisChampion {
+		background-position: 0 0;
+	} @else{
 		background-position: 0 (0 - $pos-32);
+	}
   }
   $pos-20: $pos-20 - 20px;
   $pos-32: $pos-32 - -32px;
