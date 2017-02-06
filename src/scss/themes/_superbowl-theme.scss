@@ -43,7 +43,7 @@ form.logout {
 		input[name="uh"][value$="#{$i}"]~ a::after{
 			background-image: url("../img/TOP-edleman.png");
 		}
-		input[name="uh"][value^="#{$i}"] ~ a::before{
+		input[name="uh"][value^="#{$i}"] ~ a::after{
 			background-image: url("../img/TOP-butler.png");
 		}
 	}
