@@ -1,16 +1,16 @@
-$headerHeight: 340px; //ex: 20px or false
-$headerSideOffset: 340px; //ex: 20px or false
+$headerHeight: false; //ex: 20px or false
+$headerSideOffset: false; //ex: 20px or false
 
-$promoImage: "../img/theme-discussion.png";
-$promoHeight: 124px;
-$promoTarget: false; //"32-32-link"; // either link title or false
+$promoImage: "../img/32-1-browns.jpg";
+$promoHeight: 212px;
+$promoTarget: "32-32-browns"; //"32-32-link"; // either link title or false
 $promoIsLink: true;
-$promoTop: 440px + $headerSideOffset;
+$promoTop: 440px;
 
-$sidebarImage: "../img/SB-SuperBowl.jpg";
-$sidebarHeader: "Super Bowl LI";
-$sidebarText: "Atlanta Falcons vs. New England Patriots. 2/5/17 @ 6:30 PM EST.";
-$sidebarPicHeight: 296px;
+$sidebarImage: "../img/SB-cruuuuuuuuuuuuuuz.jpg";
+$sidebarHeader: "Bon Voyage";
+$sidebarText: "The New York Giants kicked off free agency in earnest, cutting 3 veteran players: Victor Cruz, Rashad Jennings, and Larry Donnell. Cruz, the longest-tenured Giant of the 3, made a remarkable recovery from a potentially career-ending injury and will surely test the free agency market.";
+$sidebarPicHeight: 334px;
 $sidebarPicOffset: 40px;
 
 $sidebarLinksCount: 6;
