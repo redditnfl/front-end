@@ -1,16 +1,19 @@
 $headerHeight: false; //ex: 20px or false
 $headerSideOffset: false; //ex: 20px or false
 
+// Promo Variables
 $promoImage: "../img/32-8-bengals.jpg";
 $promoHeight: 212px;
 $promoTarget: "32-32"; //ex: "32-32-link"; either link title or false
 $promoIsLink: true;
 $promoTop: 440px;
 
+// Sidebar Variables
 $sidebarImage: "../img/SB-thomas.jpg";
 $sidebarHeader: "Another Team's Treasure";
 $sidebarText: "The Miami Dolphins and Jacksonville Jaguars announced the first trade of the 2017 offseason. Both teams swapped players that were potential cuts. The Jaguars sent a 2017 7th for Branden Albert, while the Dolphins sent a 2018 7th for Julius Thomas.";
-$sidebarPicHeight: 171px; //width is always260px
+$sidebarPicHeight: 171px; //width is always 260px
 $sidebarPicOffset: 40px;
 
+// Links in sidebar
 $sidebarLinksCount: 6;
