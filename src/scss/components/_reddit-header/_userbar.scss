@@ -40,6 +40,9 @@
 	#mail.havemail{
 		background-position: -25px -50px;
 	}
+	#new_modmail{
+		margin: 3px 8px 0 0;
+	}
 	// Kill message count
 	.message-count{
 		@extend %kill;
