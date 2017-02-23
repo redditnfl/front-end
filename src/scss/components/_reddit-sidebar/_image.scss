@@ -29,22 +29,33 @@
 	color: color(grey,100);
 }
 
-@if($promoTarget != false){
-	&::before{
-		margin: ($promoHeight + $sidebarPicOffset + (40*$sidebarLinksCount) + 40px) 20px 20px;
-	}
-	a[title="#{$promoTarget}"]{
-		position: absolute;
-		top: $promoTop;
+
+$spaceAboveLinks: $h-reddit-nav + $h-team-header + $h-sub-nav + $h-hero;
+$spaceOfLinks: ($sidebarLinksCount * 40px) + 20px;
+@if $headerSideOffset{
+	$spaceAboveLinks: $spaceAboveLinks + $headerSideOffset ;
+}
+$totalPromoHeight: 0;
+
+@each $p in $promos {
+	a[title="#{map-get($p, target)}"]{
+		@if map-has-key($p, position) {
+			position: absolute;
+			top: $spaceAboveLinks + $totalPromoHeight + $spaceOfLinks;
+			$totalPromoHeight: $totalPromoHeight + map-get($p, height) + 20px;
+		} @else{
+			margin: 20px 0;
+		}
 		display: block;
-		height: $promoHeight;
+		height: map-get($p, height);
 		width: 260px;
-		background-image: url($promoImage);
+		background-image: url(map-get($p, image));
 		background-repeat: no-repeat;
 		background-size: 100%;
 		font-size: 0;
-		@if($promoIsLink == false){
-			pointer-events: none;
-		}
 	}
+}
+
+&::before{
+	margin: ($totalPromoHeight + $sidebarPicOffset + (40*$sidebarLinksCount) + 20px) 20px 20px;
 }
