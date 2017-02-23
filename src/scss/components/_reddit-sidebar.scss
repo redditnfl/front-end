@@ -40,6 +40,9 @@
 	ul li a[href="/r/NFL"]::before{
 		display: none;
 	}
+	.sponsor-300-250{
+		margin: 0 20px;
+	}
 	// Buttons
 	@import "./components/_reddit-sidebar/_search.scss";
 	@import "./components/_reddit-sidebar/_submit.scss";

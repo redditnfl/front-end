@@ -26,19 +26,19 @@
 	}
 }
 %sidebar-width{
-	width: 300px;
+	width: 340px;
 }
 %sidebar-button{
 	@extend %sidebar-width;
 	position: absolute;
 	display: block;
-	height: 40px;
+	height: 30px;
 }
 %sidebar-button-text{
 	@include font(display, 1);
 	font-size: 14px;
 	letter-spacing: .02em;
-	line-height: 40px;
+	line-height: 30px;
 	text-transform: capitalize;
 	background-color: color(grey,0);
 	color: color(grey,40);
@@ -46,6 +46,6 @@
 }
 %sidebar-button-text:hover,
 %sidebar-button-text:focus{
-	background-color: darken(color(grey,0),5);
+	background-color: #fff;
 	color: color(grey,100);
 }
