@@ -5,6 +5,9 @@
 		padding: 0;
 		margin: 0;
 	}
+	.md-container{
+		margin: 20px 0;
+	}
 	.spacer{
 		margin: 0;
 	}
@@ -44,13 +47,13 @@
 	@import "./components/_reddit-sidebar/_flair.scss";
 	@import "./components/_reddit-sidebar/_message-mods.scss";
 	@import "./components/_reddit-sidebar/_rules.scss";
-	
+
 	// Components
 	@import "./components/_reddit-sidebar/_link-info.scss";
 	@import "./components/_reddit-sidebar/_stats.scss";
 	@import "./components/_reddit-sidebar/_mod-tools.scss";
 	@import "./components/_reddit-sidebar/_moderators.scss";
-	
+
 	// Special stuff
 	@import "./components/_reddit-sidebar/_flair-based-header.scss";
 	@import "./components/_reddit-sidebar/_image.scss";
