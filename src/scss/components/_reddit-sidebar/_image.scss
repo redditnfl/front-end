@@ -2,7 +2,7 @@
 	content: "";
 	display: block;
 	height: $sidebarPicHeight;
-	width: 260px;
+	width: 300px;
 	margin: ((40*$sidebarLinksCount) + 40px) 20px 20px;
 	background-image: url($sidebarImage);
 	background-repeat: no-repeat;
@@ -31,7 +31,7 @@
 
 
 $spaceAboveLinks: $h-reddit-nav + $h-team-header + $h-sub-nav + $h-hero;
-$spaceOfLinks: ($sidebarLinksCount * 40px) + 20px;
+$spaceOfLinks: ($sidebarLinksCount * $sidebarLinksHeight) + 20px;
 @if $headerSideOffset{
 	$spaceAboveLinks: $spaceAboveLinks + $headerSideOffset ;
 }
@@ -48,7 +48,7 @@ $totalPromoHeight: 0;
 		}
 		display: block;
 		height: map-get($p, height);
-		width: 260px;
+		width: 300px;
 		background-image: url(map-get($p, image));
 		background-repeat: no-repeat;
 		background-size: 100%;
@@ -57,5 +57,5 @@ $totalPromoHeight: 0;
 }
 
 &::before{
-	margin: ($totalPromoHeight + $sidebarPicOffset + (40*$sidebarLinksCount) + 20px) 20px 20px;
+	margin: ($totalPromoHeight + $sidebarPicOffset + ($sidebarLinksCount * $sidebarLinksHeight) + 20px) 20px 20px;
 }

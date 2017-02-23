@@ -18,7 +18,7 @@
 #search input:nth-child(1):-ms-input-placeholder{color: color(grey,40); transition: color .3s ease-out;}
 #search input:nth-child(1):hover,
 #search input:nth-child(1):focus{
-	background: darken(color(grey,0),5);
+	background: color(grey,0);
 }
 #search input:nth-child(1):hover::-webkit-input-placeholder{color: color(grey,100);}
 #search input:nth-child(1):hover:-moz-placeholder{color: color(grey,100);}
