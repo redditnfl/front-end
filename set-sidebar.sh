@@ -30,27 +30,32 @@ fi
 set -e
 set -x
 
-IMAGEWIDTH=260
+IMAGEWIDTH=300
 BRANCH="r-nfldev"
 
 git checkout $BRANCH
+git pull
+
+if [ $? -gt 0 ]; then
+    exit 1
+fi
 
 temploc=$(mktemp --tmpdir sbpic.XXXXXX)
-temploc260=$(mktemp --tmpdir sbpic260.XXXXXX)
+temploc_sbwidth=$(mktemp --tmpdir sbpic_sbwidth.XXXXXX)
 finalloc=src/img/SB-$IMAGENAME.jpg
 DOUBLEIMAGEWIDTH=$(expr $IMAGEWIDTH \* 2)
 
 wget -O $temploc "$IMAGEURL"
 convert -resize "${DOUBLEIMAGEWIDTH}>x" "$temploc" "$finalloc"
-convert -resize "${IMAGEWIDTH}x" "$temploc" "$temploc260"
-HEIGHT=$(identify -format "%h" "$temploc260")
-rm -f "$temploc" "$temploc260"
+convert -resize "${IMAGEWIDTH}x" "$temploc" "$temploc_sbwidth"
+HEIGHT=$(identify -format "%h" "$temploc_sbwidth")
+rm -f "$temploc" "$temploc_sbwidth"
 
 sed -i src/scss/_controls.scss \
-    -e "s@^\$sidebarImage: .*@\$sidebarImage: \"../img/SB-$IMAGENAME.jpg\";@" \
-    -e "s@^\$sidebarHeader: .*@\$sidebarHeader: \"$TITLE\";@" \
-    -e "s@^\$sidebarText: .*@\$sidebarText: \"$TEXT\";@" \
-    -e "s@^\$sidebarPicHeight: .*@\$sidebarPicHeight: ${HEIGHT}px;@"
+    -e "s#^\$sidebarImage: .*#\$sidebarImage: \"../img/SB-$IMAGENAME.jpg\";#" \
+    -e "s#^\$sidebarHeader: .*#\$sidebarHeader: \"$TITLE\";#" \
+    -e "s#^\$sidebarText: .*#\$sidebarText: \"$TEXT\";#" \
+    -e "s#^\$sidebarPicHeight: .*#\$sidebarPicHeight: ${HEIGHT}px;#"
 
 git add "$finalloc"
 git add src/scss/_controls.scss
