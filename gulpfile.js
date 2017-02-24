@@ -43,7 +43,7 @@ var gulp = require('gulp'),
 // Move Images - run "gulp img"
     gulp.task("img", ["css"], function(cb){
         var file = fs.readFileSync(paths.pub.css+"/screen.css", { encoding: 'utf8' });
-        var re = /\.\.\/img\/(.*).(png|jpg)/g;
+        var re = /\.\.\/img\/(.*?).(png|jpg)/g;
         var globs = [];
         while ((m = re.exec(file)) !== null) {
             globs.push(paths.src.img + "/" + m[0])
