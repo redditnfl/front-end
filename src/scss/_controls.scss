@@ -4,7 +4,7 @@ $headerSideOffset: false; //ex: 20px or false
 // New Promo
 $promos: (
 	(
-		image: "../img/32-9-saints.jpg",
+		image: "../img/32-21-cardinals.jpg",
 		position: "top",
 		target: "32-32",
 		link: true,
@@ -19,10 +19,10 @@ $promos: (
 );
 
 // Sidebar Variables
-$sidebarImage: "../img/SB-thomas.jpg";
-$sidebarHeader: "Another Team's Treasure";
-$sidebarText: "The Miami Dolphins and Jacksonville Jaguars announced the first trade of the 2017 offseason. Both teams swapped players that were potential cuts. The Jaguars sent a 2017 7th for Branden Albert, while the Dolphins sent a 2018 7th for Julius Thomas.";
-$sidebarPicHeight: 197px; //width is always 260px
+$sidebarImage: "../img/SB-combine.jpg";
+$sidebarHeader: "NFL Scouting Combine";
+$sidebarText: "From 2/28 to 3/6, top NFL Draft prospects will be in Indianapolis, Indiana(not to to be confused with the one in Oklahoma), showcasing their physical traits.";
+$sidebarPicHeight: 300px; //width is always 260px
 $sidebarPicOffset: 0;
 
 // Links in sidebar
