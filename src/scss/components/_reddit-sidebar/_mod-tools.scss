@@ -3,14 +3,6 @@
 		padding: 0 20px;
 		margin: 60px 0;
 	}
-	.title{
-		font-size: 0;
-	}
-	.title::before{
-		content: "Moderation Tools";
-		@extend %section-title;
-		margin: 0;
-	}
 	.collapse-button{
 		border: 0;
 		background: transparent;
