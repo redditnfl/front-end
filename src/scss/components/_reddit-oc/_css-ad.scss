@@ -1,0 +1,58 @@
+.side .titlebox .md > hr + h4 + h2 + ul{
+	&{
+		list-style: none;
+		padding: 20px 0;
+		margin: 0;
+	}
+	li{
+		display: block;
+		width: 100%;
+	}
+	a[title="ad-css-cta-0"]{
+		display: block;
+		height: 324px;
+		width: 100%;
+		background: #333;
+		background-image: url(../img/AD-css.jpg);
+		background-size: 600px;
+		pointer-events: none;
+	}
+	a[title="ad-css-cta-1"]{
+		display: block;
+		height: 50px;
+		width: 100%;
+		background: #333;
+		background-image: url(../img/AD-css.jpg);
+		background-position: 0 -324px;
+		background-size: 600px;
+		&:hover{
+			background-position: -300px -324px;
+		}
+	}
+	a[title="ad-css-cta-2"]{
+		display: block;
+		margin-top: 10px;
+		height: 50px;
+		width: 100%;
+		background: #333;
+		background-image: url(../img/AD-css.jpg);
+		background-position: 0 -385px;
+		background-size: 600px;
+		&:hover{
+			background-position: -300px -385px;
+		}
+	}
+	a[title="ad-css-cta-3"]{
+		display: block;
+		margin-top: 10px;
+		height: 20px;
+		width: 100%;
+		background: #333;
+		background-image: url(../img/AD-css.jpg);
+		background-position: 0 -445px;
+		background-size: 600px;
+		&:hover{
+			background-position: -300px -445px;
+		}
+	}
+}
