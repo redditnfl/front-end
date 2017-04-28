@@ -1,28 +1,57 @@
-$headerHeight: false; //ex: 20px or false
-$headerSideOffset: false; //ex: 20px or false
+$headerHeight: 300px; //ex: 20px or false
+$headerSideOffset: 300px; //ex: 20px or false
 
 // New Promo
 $promos: (
-	// (
-	// 	image: "../img/AMA-pff2.jpg",
-	// 	position: "top",
-	// 	target: "AMA-1",
-	// 	link: true,
-	// 	height: 244px
-	// ),
 	(
-		image: "../img/AD-twitter.png",
-		target: "AD_twitter",
+		image: "../img/DRAFT-side-hub.jpg",
+		position: "top",
+		target: "spot-1",
 		link: true,
-		height: 150px
+		height: 50px
+	),
+	(
+		image: "../img/DRAFT-side-live.jpg",
+		position: "top",
+		target: "spot-2",
+		link: true,
+		height: 50px
+	),
+	(
+		image: "../img/DRAFT-side-open.jpg",
+		position: "top",
+		target: "spot-6",
+		link: true,
+		height: 50px
+	),
+	(
+		image: "../img/DRAFT-side-nfln.jpg",
+		position: "top",
+		target: "spot-3",
+		link: true,
+		height: 50px
+	),
+	(
+		image: "../img/DRAFT-side-espn.jpg",
+		position: "top",
+		target: "spot-4",
+		link: true,
+		height: 50px
+	),
+	(
+		image: "../img/DRAFT-side-blank.jpg",
+		position: "top",
+		target: "spot-7",
+		link: true,
+		height: 20px
 	),
 );
 
 // Sidebar Variables
-$sidebarImage: "../img/SB-Rooney.jpg";
+$sidebarImage: false;
 $sidebarHeader: "";
 $sidebarText: "";
-$sidebarPicHeight: 488px;
+$sidebarPicHeight: 0;
 $sidebarPicOffset: 0;
 
 // Links in sidebar

@@ -1,0 +1,54 @@
+// possible combos
+$chars: '1','2','3','4','5','6','7','8','9','0','a','b', 'c','d','e','f','g','h','i','j','k','l','m','n', 'o','p','q','r','s','t','u','v','w','x','y','z';
+
+html{
+	background-color: #000000;
+}
+form.logout {
+	a::after{
+		content: "";
+		position: absolute;
+		top: 80px;
+		height: 100%;
+		width: 100%;
+		pointer-events: none;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		right: 0;
+		background-position: top center;
+		z-index: -1;
+	}
+	$index: 0;
+	@each $i in $chars{
+		$index: $index+1;
+		@if($index%7 == 6){
+			input[name="uh"][value$="#{$i}"]~ a::after{
+				background-image: url("../img/DRAFT-header-blue-2.png");
+			}
+		} @else if($index%7 == 5){
+			input[name="uh"][value$="#{$i}"]~ a::after{
+				background-image: url("../img/DRAFT-header-blue.png");
+			}
+		} @else if($index%7 == 4){
+			input[name="uh"][value$="#{$i}"]~ a::after{
+				background-image: url("../img/DRAFT-header-green.png");
+			}
+		} @else if($index%7 == 3){
+			input[name="uh"][value$="#{$i}"]~ a::after{
+				background-image: url("../img/DRAFT-header-orange.png");
+			}
+		} @else if($index%7 == 2){
+			input[name="uh"][value$="#{$i}"]~ a::after{
+				background-image: url("../img/DRAFT-header-purple.png");
+			}
+		} @else if($index%7 == 1){
+			input[name="uh"][value$="#{$i}"]~ a::after{
+				background-image: url("../img/DRAFT-header-red.png");
+			}
+		} @else if($index%7 == 0){
+			input[name="uh"][value$="#{$i}"]~ a::after{
+				background-image: url("../img/DRAFT-header-yellow.png");
+			}
+		}
+	}
+}

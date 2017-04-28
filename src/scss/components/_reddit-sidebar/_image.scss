@@ -1,32 +1,37 @@
 &::before{
 	content: "";
 	display: block;
-	height: $sidebarPicHeight;
 	width: 300px;
+	height: 10px;
 	margin: ((40*$sidebarLinksCount) + 40px) 20px 20px;
-	background-image: url($sidebarImage);
-	background-repeat: no-repeat;
-	background-size: 100%;
 }
-.spacer:nth-child(1){
-	padding: 0 20px;
-}
-.spacer:nth-child(1)::before{
-	@extend %headline;
-	content: $sidebarHeader;
-	font-size: 20px;
-	margin: 0 0 10px;
-	color: color(grey,100);
-}
-.spacer:nth-child(1)::after{
-	@extend %body-copy;
-	content: $sidebarText;
-	display: block;
-	padding-bottom: 20px;
-	font-size: 12px;
-	line-height: 1.4em;
-	text-align: left;
-	color: color(grey,100);
+@if($sidebarImage){
+	&::before{
+		height: $sidebarPicHeight;
+		background-image: url($sidebarImage);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+	.spacer:nth-child(1){
+		padding: 0 20px;
+	}
+	.spacer:nth-child(1)::before{
+		@extend %headline;
+		content: $sidebarHeader;
+		font-size: 20px;
+		margin: 0 0 10px;
+		color: color(grey,100);
+	}
+	.spacer:nth-child(1)::after{
+		@extend %body-copy;
+		content: $sidebarText;
+		display: block;
+		padding-bottom: 20px;
+		font-size: 12px;
+		line-height: 1.4em;
+		text-align: left;
+		color: color(grey,100);
+	}
 }
 
 
