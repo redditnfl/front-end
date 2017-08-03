@@ -1,57 +1,28 @@
-$headerHeight: 300px; //ex: 20px or false
-$headerSideOffset: 300px; //ex: 20px or false
+$headerHeight: false; //ex: 20px or false
+$headerSideOffset: false; //ex: 20px or false
 
 // New Promo
 $promos: (
+	// (
+	// 	image: "../img/DRAFT-side-hub.jpg",
+	// 	position: "top",
+	// 	target: "spot-1",
+	// 	link: true,
+	// 	height: 50px
+	// ),
 	(
-		image: "../img/DRAFT-side-hub.jpg",
-		position: "top",
-		target: "spot-1",
+		image: "../img/AD-twitter.png",
+		target: "AD_twitter",
 		link: true,
-		height: 50px
-	),
-	(
-		image: "../img/DRAFT-side-live.jpg",
-		position: "top",
-		target: "spot-2",
-		link: true,
-		height: 50px
-	),
-	(
-		image: "../img/DRAFT-side-open.jpg",
-		position: "top",
-		target: "spot-6",
-		link: true,
-		height: 50px
-	),
-	(
-		image: "../img/DRAFT-side-nfln.jpg",
-		position: "top",
-		target: "spot-3",
-		link: true,
-		height: 50px
-	),
-	(
-		image: "../img/DRAFT-side-espn.jpg",
-		position: "top",
-		target: "spot-4",
-		link: true,
-		height: 50px
-	),
-	(
-		image: "../img/DRAFT-side-blank.jpg",
-		position: "top",
-		target: "spot-7",
-		link: true,
-		height: 20px
+		height: 150px
 	),
 );
 
 // Sidebar Variables
-$sidebarImage: false;
-$sidebarHeader: "";
-$sidebarText: "";
-$sidebarPicHeight: 0;
+$sidebarImage: "../img/SB-HOF.jpg";
+$sidebarHeader: "Greatest Paint on Turf";
+$sidebarText: "HOF Rams/Cardinals QB Kurt Warner and Cowboys owner Jerry Jones will be inducted into the Hall of Fame in this year's class. The first pre-season football game kicks off between Arizona and Dallas tonight.";
+$sidebarPicHeight: 225px;
 $sidebarPicOffset: 0;
 
 // Links in sidebar
