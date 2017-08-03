@@ -1,7 +1,7 @@
 #search{
 	@extend %sidebar-button;
 	@include sideButtonPosition(0);
-	margin-left: 20px;
+	margin-left: -20px;
 }
 #search input:nth-child(1){
 	@extend %sidebar-button-text;
