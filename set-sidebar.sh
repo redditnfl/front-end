@@ -54,7 +54,7 @@ rm -f "$temploc" "$temploc_sbwidth"
 sed -i src/scss/_controls.scss \
     -e "s#^\$sidebarImage: .*#\$sidebarImage: \"../img/SB-$IMAGENAME.jpg\";#" \
     -e "s#^\$sidebarHeader: .*#\$sidebarHeader: \"$TITLE\";#" \
-    -e "s#^\$sidebarText: .*#\$sidebarText: \"$TEXT\";#" \
+    -e "s|^\$sidebarText: .*|\$sidebarText: \"$TEXT\";|" \
     -e "s#^\$sidebarPicHeight: .*#\$sidebarPicHeight: ${HEIGHT}px;#"
 
 git add "$finalloc"
