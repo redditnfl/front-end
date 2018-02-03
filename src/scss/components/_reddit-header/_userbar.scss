@@ -26,6 +26,9 @@
 	.separator{
 		@extend %kill;
 	}
+	a#chat {
+		margin-right: 10px;
+	}
 	// kill mail box image navigation
 	#mail{
 		display: inline-block !important;
