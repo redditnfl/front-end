@@ -1,4 +1,4 @@
-$banner_height: 477;
+$banner_height: 476;
 html{ background: #000 !important; }
 html:before{
 	content: "";
@@ -6,7 +6,7 @@ html:before{
 	top: 80px;
 	left: 0;
 	z-index: -2;
-	height: 476px;
+	height: 470px;
 	width: 100%;
 	background-color: transparent;
 	background-image: url("../img/VAL-default.jpg");
@@ -21,7 +21,7 @@ html:before{
 	top: 80px;
 	left: 0;
 	z-index: -1;
-	height: $banner_height * 1px;
+	height: 470px;
 	width: 100%;
 	background-color: transparent;
 	background-position: center;
@@ -73,7 +73,7 @@ $nfl-valentines:
 	$team_div: map-get($team, div);
 	$team_pos: map-get($team, pos);
 	.side .tagline > .flair.flair-#{$team_name}{
-		background-position: center ( ( ($banner_height * $team_pos) - 1 ) - 0px );
+		background-position: center ( ($banner_height * $team_pos) * -1px );
 		background-image: url("../img/VAL-#{$team_conf}-#{$team_div}.jpg");
 	}
 }
