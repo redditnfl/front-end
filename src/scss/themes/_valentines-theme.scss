@@ -1,0 +1,36 @@
+
+html{ background: #000 !important; }
+html:before{
+	content: "";
+	position: absolute;
+	top: 80px;
+	left: 0;
+	z-index: -2;
+	height: 476px;
+	width: 100%;
+	background-color: transparent;
+	background-image: url("../img/VAL-default.jpg");
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+// This is our team specific element
+.side .tagline>.flair{
+	display: block;
+	position: absolute;
+	top: 80px;
+	left: 0;
+	z-index: -1;
+	height: 476px;
+	width: 100%;
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-size: 0;
+}
+@each $team in $nfl-teams{
+	$thisAbbr: map-get($team, abbr);
+	.side .tagline > .flair.flair-#{$thisName}{
+		background-image: url("../img/VAL-#{$thisAbbr}.jpg");
+	}
+}
