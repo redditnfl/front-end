@@ -69,7 +69,7 @@ $nfl-valentines:
 	$team_div: map-get($team, div);
 	$team_pos: map-get($team, pos);
 	.side .tagline > .flair.flair-#{$team_name}{
-		background-position: center ( ( $banner_height * $team_pos ) * 1px );
+		background-position: center -( ( ($banner_height * $team_pos) - 1 ) * 1px );
 		background-image: url("../img/VAL-#{$team_conf}-#{$team_div}.jpg");
 	}
 }
