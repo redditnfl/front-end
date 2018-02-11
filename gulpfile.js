@@ -8,7 +8,8 @@ var gulp = require('gulp'),
 	notify = require("gulp-notify"),
 	fs = require("fs"),
 	through2 = require("through2"),
-	es = require("event-stream");
+	es = require("event-stream"),
+    filesExist = require('files-exist');
 
 // Default path
 	var paths = {
@@ -48,7 +49,7 @@ var gulp = require('gulp'),
         while ((m = re.exec(file)) !== null) {
             globs.push(paths.src.img + "/" + m[0])
         }
-        gulp.src(globs)
+        gulp.src(filesExist(globs))
             .pipe(gulp.dest(paths.pub.img, { sync: true }))
             .on('end', function() {
                 cb();
