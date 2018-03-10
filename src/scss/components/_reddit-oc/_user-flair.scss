@@ -117,8 +117,8 @@ $pos-32: 0px;
   $thisEliminated: map-get($team, eliminated);
   $thisChampion: map-get($team, champion);
 
-  a[href*="/r/#{$thisUrl}"]::before,
-  a[href*="/#{$thisAbbr}"]::before{
+  .md a[href*="/r/#{$thisUrl}"]::before,
+  .md a[href*="/#{$thisAbbr}"]::before{
 		@extend %team-link;
   }
 
@@ -128,10 +128,10 @@ $pos-32: 0px;
 		}
 	}
   .flair-#{$thisName}::before,
-  a[href*="/r/#{$thisUrl}"]::before,
-  a[href*="/#{$thisAbbr}"]::before,
-  a[href*="/#{to-upper-case(#{$thisUrl})}"]::before,
-  a[href*="/#{to-upper-case(#{$thisAbbr})}"]::before{
+  .md a[href*="/r/#{$thisUrl}"]::before,
+  .md a[href*="/#{$thisAbbr}"]::before,
+  .md a[href*="/#{to-upper-case(#{$thisUrl})}"]::before,
+  .md a[href*="/#{to-upper-case(#{$thisAbbr})}"]::before{
     background-position: 0 $pos-20;
     @if $thisEliminated {
         opacity: .4;
