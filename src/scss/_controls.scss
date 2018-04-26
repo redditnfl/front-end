@@ -3,6 +3,12 @@ $headerSideOffset: false; //ex: 20px or false
 
 // New Promo
 $promos: (
+	(
+		image: "../img/thomahawk_vsfinal2_high.jpg",
+		target: "SB_Thomas",
+		height: 157px,
+		position: true
+	)
 );
 
 // Sidebar Variables
