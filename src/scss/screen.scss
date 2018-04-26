@@ -25,3 +25,20 @@
 // Post Types
 @import "./post-types/_thread-trashtalk.scss";
 @import "./post-types/_thread-pressbox.scss";
+
+// Themes
+@import "./themes/_draft_theme.scss";
+
+// yeah, no reddit new button
+#sr-header-area div.redesign-beta-optin{
+	display: none;
+	opacity: 0;
+	position: absolute;
+	left: -9999px;
+	z-index: -1000;
+	visibility: hidden;
+	height: 0;
+	overflow: hidden;
+	width: 0;
+	pointer-events: none;
+}

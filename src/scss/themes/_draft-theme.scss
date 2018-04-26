@@ -23,31 +23,31 @@ form.logout {
 		$index: $index+1;
 		@if($index%7 == 6){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/DRAFT-header-blue-2.png");
+				background-image: url("../img/BANNER-default-2018.png");
 			}
 		} @else if($index%7 == 5){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/DRAFT-header-blue.png");
+				background-image: url("../img/BANNER-default-2018.png");
 			}
 		} @else if($index%7 == 4){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/DRAFT-header-green.png");
+				background-image: url("../img/BANNER-default-2018.png");
 			}
 		} @else if($index%7 == 3){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/DRAFT-header-orange.png");
+				background-image: url("../img/BANNER-default-2018.png");
 			}
 		} @else if($index%7 == 2){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/DRAFT-header-purple.png");
+				background-image: url("../img/BANNER-default-2018.png");
 			}
 		} @else if($index%7 == 1){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/DRAFT-header-red.png");
+				background-image: url("../img/BANNER-default-2018.png");
 			}
 		} @else if($index%7 == 0){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/DRAFT-header-yellow.png");
+				background-image: url("../img/BANNER-default-2018.png");
 			}
 		}
 	}
