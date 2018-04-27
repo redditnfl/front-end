@@ -54,7 +54,7 @@ form.logout {
 }
 .side .md ul:first-child{
 	position: absolute;
-	top: 305px;
+	top: 338px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 100%;
@@ -70,52 +70,52 @@ form.logout {
 a[title="DRAFT-live-thread"]{
 	&{
 		display: block;
-		width: 244px;
-		height: 88px;
+		width: 209px;
+		height: 76px;
 		background-image: url("../img/draft-buttons.png");
 		background-position: 0 0;
 		font-size: 0;
 	}
 	&:hover{
-		background-position: 0 -89px;
+		background-position: 0 -76px;
 	}
 }
 a[title="DRAFT-espn-thread"]{
 	&{
 		display: block;
-		width: 258px;
-		height: 88px;
+		width: 222px;
+		height: 76px;
 		background-image: url("../img/draft-buttons.png");
-		background-position: -255px 0;
+		background-position: -218px 0;
 		font-size: 0;
 	}
 	&:hover{
-		background-position: -255px -89px;
+		background-position: -218px -76px;
 	}
 }
 a[title="DRAFT-nfln-thread"]{
 	&{
 		display: block;
-		width: 259px;
-		height: 88px;
+		width: 222px;
+		height: 76px;
 		background-image: url("../img/draft-buttons.png");
-		background-position: -523px 0;
+		background-position: -448px 0;
 		font-size: 0;
 	}
 	&:hover{
-		background-position: -523px -89px;
+		background-position: -448px -76px;
 	}
 }
 a[title="DRAFT-discussion-thread"]{
 	&{
 		display: block;
-		width: 375px;
-		height: 88px;
+		width: 322px;
+		height: 76px;
 		background-image: url("../img/draft-buttons.png");
-		background-position: -793px 0;
+		background-position: -678px 0;
 		font-size: 0;
 	}
 	&:hover{
-		background-position: -793px -89px;
+		background-position: -678px -76px;
 	}
 }
