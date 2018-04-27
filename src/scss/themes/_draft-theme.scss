@@ -39,7 +39,7 @@ form.logout {
 		$index: $index+1;
 		@if($index%7 == 6){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/BANNER-vea-2018.png");
+				background-image: url("../img/BANNER-vea-2018.jpg");
 			}
 		} @else if($index%7 == 5){
 			input[name="uh"][value$="#{$i}"]~ a::after{
@@ -55,15 +55,15 @@ form.logout {
 			}
 		} @else if($index%7 == 2){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/BANNER-chubb-2018.png");
+				background-image: url("../img/BANNER-chubb-2018.jpg");
 			}
 		} @else if($index%7 == 1){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/BANNER-smith-2018.png");
+				background-image: url("../img/BANNER-smith-2018.jpg");
 			}
 		} @else if($index%7 == 0){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/BANNER-rosen-2018.png");
+				background-image: url("../img/BANNER-rosen-2018.jpg");
 			}
 		}
 	}
