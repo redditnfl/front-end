@@ -63,7 +63,7 @@ form.logout {
 			}
 		} @else if($index%7 == 0){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/BANNER-default-2018.png");
+				background-image: url("../img/BANNER-rosen-2018.png");
 			}
 		}
 	}
