@@ -55,7 +55,7 @@ form.logout {
 			}
 		} @else if($index%7 == 2){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/BANNER-default-2018.png");
+				background-image: url("../img/BANNER-chubb-2018.png");
 			}
 		} @else if($index%7 == 1){
 			input[name="uh"][value$="#{$i}"]~ a::after{
