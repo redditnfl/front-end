@@ -54,6 +54,38 @@ form.logout {
 }
 .side .md ul:first-child{
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 305px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+.side .md ul:first-child li{
+	display: inline-block;
+}
+a[title="DRAFT-live-thread"]{
+	display: block;
+	width: 244px;
+	height: 88px;
+	background-image: url("../img/draft-buttons.png");
+}
+a[title="DRAFT-espn-thread"]{
+	display: block;
+	width: 258px;
+	height: 88px;
+	background-image: url("../img/draft-buttons.png");
+}
+a[title="DRAFT-nfln-thread"]{
+	display: block;
+	width: 258px;
+	height: 88px;
+	background-image: url("../img/draft-buttons.png");
+}
+a[title="DRAFT-discussion-thread"]{
+	display: block;
+	width: 374px;
+	height: 88px;
+	background-image: url("../img/draft-buttons.png");
 }
