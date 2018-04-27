@@ -43,15 +43,15 @@ form.logout {
 			}
 		} @else if($index%7 == 5){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/BANNER-default-2018.png");
+				background-image: url("../img/BANNER-barkley-2018.png");
 			}
 		} @else if($index%7 == 4){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/BANNER-default-2018.png");
+				background-image: url("../img/BANNER-darnold-2018.png");
 			}
 		} @else if($index%7 == 3){
 			input[name="uh"][value$="#{$i}"]~ a::after{
-				background-image: url("../img/BANNER-default-2018.png");
+				background-image: url("../img/BANNER-ward-2018.png");
 			}
 		} @else if($index%7 == 2){
 			input[name="uh"][value$="#{$i}"]~ a::after{
