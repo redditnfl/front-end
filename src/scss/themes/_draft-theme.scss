@@ -57,6 +57,7 @@ form.logout {
 	top: 305px;
 	left: 50%;
 	transform: translateX(-50%);
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -64,28 +65,57 @@ form.logout {
 }
 .side .md ul:first-child li{
 	display: inline-block;
+	padding: 0 10px;
 }
 a[title="DRAFT-live-thread"]{
-	display: block;
-	width: 244px;
-	height: 88px;
-	background-image: url("../img/draft-buttons.png");
+	&{
+		display: block;
+		width: 244px;
+		height: 88px;
+		background-image: url("../img/draft-buttons.png");
+		background-position: 0 0;
+		font-size: 0;
+	}
+	&:hover{
+		background-position: 0 -89px;
+	}
 }
 a[title="DRAFT-espn-thread"]{
-	display: block;
-	width: 258px;
-	height: 88px;
-	background-image: url("../img/draft-buttons.png");
+	&{
+		display: block;
+		width: 258px;
+		height: 88px;
+		background-image: url("../img/draft-buttons.png");
+		background-position: -255px 0;
+		font-size: 0;
+	}
+	&:hover{
+		background-position: -255px -89px;
+	}
 }
 a[title="DRAFT-nfln-thread"]{
-	display: block;
-	width: 258px;
-	height: 88px;
-	background-image: url("../img/draft-buttons.png");
+	&{
+		display: block;
+		width: 259px;
+		height: 88px;
+		background-image: url("../img/draft-buttons.png");
+		background-position: -523px 0;
+		font-size: 0;
+	}
+	&:hover{
+		background-position: -523px -89px;
+	}
 }
 a[title="DRAFT-discussion-thread"]{
-	display: block;
-	width: 374px;
-	height: 88px;
-	background-image: url("../img/draft-buttons.png");
+	&{
+		display: block;
+		width: 375px;
+		height: 88px;
+		background-image: url("../img/draft-buttons.png");
+		background-position: -793px 0;
+		font-size: 0;
+	}
+	&:hover{
+		background-position: -793px -89px;
+	}
 }
