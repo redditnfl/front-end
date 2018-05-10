@@ -4,7 +4,6 @@ $wht: #fff;
 html{
 	background-color: $blk;
 }
-
 #header-bottom-left .pagename a:before{
 	background-color: $blk;
 	background-image: url("../img/crown-final.jpg");
@@ -16,14 +15,13 @@ html{
     animation-iteration-count: infinite;
 }
 #header-bottom-left .pagename a{
-	color: $blk
+	color: $blk;
 }
 .side .titlebox .md hr+h4+h1+ul{
 	background-color: $wht;
 }
 .side,
 .header-bottom-right{
-	filter: grayscale(100%);
 }
 
 $image_amount: 72;
