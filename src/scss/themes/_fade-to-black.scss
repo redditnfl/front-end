@@ -5,12 +5,12 @@ html{
 }
 
 #header-bottom-left .pagename a:before{
-	background-image: url("../images/crown-final.png");
+	background-image: url("../img/crown-final.png");
 	background-position: 0px 0px;
 	background-size: 80px;
 	background-repeat: no-repeat;
     animation-name: crown-animation;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
 }
 
