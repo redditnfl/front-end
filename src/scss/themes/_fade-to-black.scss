@@ -1,0 +1,43 @@
+$blk: #000;
+$wht: #fff;
+
+html{
+	background-color: $blk;
+}
+#header-bottom-left .pagename a:before{
+	background-color: $blk;
+	background-image: url("../img/crown-final.jpg");
+	background-position: 0px 0px;
+	background-size: 80px;
+	background-repeat: no-repeat;
+    animation-name: crown-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+#header-bottom-left .pagename a{
+	color: $blk;
+}
+.side .titlebox .md hr+h4+h1+ul{
+	background-color: $wht;
+}
+.side,
+.header-bottom-right{
+}
+
+$image_amount: 72;
+$image_height: 80px;
+$image_count: 0;
+$animation_increment: 100 / $image_amount;
+
+@keyframes crown-animation{
+	@while ($image_count <= $image_amount) {
+		$this_count: $image_count;
+		#{$animation_increment * $image_count * 1%} {
+			background-position: 0px -#{$image_count * $image_height};
+		}
+		$image_count: $image_count + 1;
+		#{($animation_increment * $image_count * 1%) - .01} {
+			background-position: 0px -#{$this_count * $image_height};
+		}
+	}
+}
