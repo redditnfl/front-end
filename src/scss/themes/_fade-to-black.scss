@@ -1,10 +1,12 @@
 $blk: #000;
+$wht: #fff;
 
 html{
-	background: #000;
+	background-color: $blk;
 }
 
 #header-bottom-left .pagename a:before{
+	background-color: $blk;
 	background-image: url("../img/crown-final.jpg");
 	background-position: 0px 0px;
 	background-size: 80px;
@@ -12,6 +14,16 @@ html{
     animation-name: crown-animation;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+}
+#header-bottom-left .pagename a{
+	color: $blk
+}
+.side .titlebox .md hr+h4+h1+ul{
+	background-color: $wht;
+}
+.side,
+.header-bottom-right{
+	filter: grayscale(100%);
 }
 
 $image_amount: 72;
