@@ -1,4 +1,4 @@
-hr+h4+h3+table {
+.md hr+h4+h3+table {
     strong { }
     em {
         display: block;
@@ -6,5 +6,8 @@ hr+h4+h3+table {
     }
     td {
         vertical-align: top;
+    }
+    a:before {
+        display: none;
     }
 }
