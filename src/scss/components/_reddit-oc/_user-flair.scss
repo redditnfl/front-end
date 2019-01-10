@@ -71,8 +71,12 @@ body.moderator #siteTable .flair{
   display: inline-block !important;
 }
 // Bandwagon flair
-.flair-bandwagon::before{
-	background-image: url(../img/logos-80x80--gold.png);
+.flair-bandwagon {
+  width: 48px;
+  &::before{
+    background-image: url(../img/logos-160x80--bw.png);
+    width: 40px;
+  }
 }
 
 // Link logos
