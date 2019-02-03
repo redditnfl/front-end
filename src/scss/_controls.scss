@@ -1,5 +1,5 @@
 $headerHeight: 280px; //ex: 20px or false
-$headerSideOffset: false; //ex: 20px or false
+$headerSideOffset: $headerHeight; //ex: 20px or false
 
 // New Promo
 $promos: (
