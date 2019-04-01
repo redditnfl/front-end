@@ -2,10 +2,12 @@ html{
 	background-color: #000000;
 }
 
-html::before,
-html::after{
+body::before,
+body::after{
 	content: "";
 	position: absolute;
+	top: 0;
+	left: 0;
 	z-index: -1;
 	height: 700px;
 	width: 100%;
@@ -16,10 +18,10 @@ html::after{
 	background-size: cover
 }
 
-html::before{
+body::before{
+	background-color: red;
 }
-html::after{
-	background-image: url("../img/HEAD-maroon.png");
+body::after{
 }
 #header{
 }
