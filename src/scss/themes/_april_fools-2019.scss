@@ -1,0 +1,27 @@
+html{
+	background-color: #000000;
+}
+
+html::before,
+html::after{
+	content: "";
+	position: absolute;
+	z-index: -1;
+	height: 700px;
+	width: 100%;
+	margin-top: 0;
+	background-color: #000000;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover
+}
+
+html::before{
+	background-image: url("../img/HEAD-maroon-5.png");
+}
+html::after{
+	background-image: url("../img/HEAD-spongebob.png");
+}
+#header{
+	background: #000000;
+}
