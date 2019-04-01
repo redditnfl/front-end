@@ -23,7 +23,6 @@ body::before{
 }
 body::after{
 	display: none;
-	background-color: red;
 	background-image: url("../img/HEAD-sb.jpg");
 	animation-name: fade-out;
 	animation-duration: 4s;
