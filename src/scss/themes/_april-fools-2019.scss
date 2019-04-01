@@ -19,11 +19,12 @@ body::after{
 }
 
 body::before{
-	background-image: url("../img/HEAD-maroon.png");
+	background-image: url("../img/HEAD-m5.jpg");
 }
 body::after{
 	display: none;
 	background-color: red;
+	background-image: url("../img/HEAD-sb.jpg");
 	animation-name: fade-out;
 	animation-duration: 4s;
 	animation-iteration-count: 1;
