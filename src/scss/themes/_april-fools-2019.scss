@@ -19,9 +19,23 @@ body::after{
 }
 
 body::before{
-	background-color: red;
 }
 body::after{
+	display: none;
+	background-color: red;
+	animation-name: fade-out;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+body.hot-page::after{
+	display: block;
 }
 #header{
+}
+
+@keyframes fade-out {
+  0% {opacity: 1;}
+  80% {opacity: 1;}
+  100% {opacity: 0;}
 }
