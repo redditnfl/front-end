@@ -22,7 +22,11 @@
   height: 80px;
   width: 80px;
 	margin-left: -40px;
-	background-image: url(../img/crown.png);
+	@if($crownImage){
+		background-image: url($crownImage);
+	} @else{
+		background-image: url(../img/crown.png);
+	}
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: 80px;
