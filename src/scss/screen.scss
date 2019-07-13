@@ -1,36 +1,42 @@
-/* Aurelian by r/nfl */
+// functions
+@import "functions/collect-maps";
 
-// Theme Controller
-@import "./_controls.scss";
+// variables
+@import "variables/image-map";
+@import "variables/teams-nfl";
+@import "variables/link-flair";
 
-// Modules
-@import "./modules/_functions.scss";
-@import "./modules/_variables.scss";
-@import "./modules/_mixins.scss";
-@import "./modules/_placeholders.scss";
+$all-teams: map-collect($nfl-teams);
 
-// Patterns
-@import "./patterns/_typography.scss";
-@import "./patterns/_buttons.scss";
-@import "./patterns/_tables.scss";
+// theme controller
+@import "controls";
 
-// Components
-@import "./components/_global.scss";
-@import "./components/_reddit-header.scss";
-@import "./components/_reddit-sidebar.scss";
-@import "./components/_reddit-oc.scss";
-@import "./components/_reddit-content.scss";
-@import "./components/_res.scss";
+// base theme
+@import "r-aafb-base-theme/theme/index";
 
-// Post Types
-@import "./post-types/_thread-trashtalk.scss";
-@import "./post-types/_thread-pressbox.scss";
-@import "./post-types/_thread-top-100.scss";
+// essential modules
+@import "modules/remove-subreddit-stats";
+@import "modules/sidebar-padding";
+@import "modules/user-flair";
+@import "modules/rankers-flair";
+@import "modules/official-flair";
+@import "modules/link-flair";
+@import "modules/teams-header";
+@import "modules/utility-icons";
+@import "modules/utility-text";
+
+// modules
+@import "modules/flair-selection-index";
+@import "modules/game-thread";
+
+// states
+@import "states/res";
 
 // Themes
+@import "themes/basic-theme";
 
 // yeah, no reddit new button
-#sr-header-area div.redesign-beta-optin{
+#sr-header-area .redesign-beta-optin{
 	display: none;
 	opacity: 0;
 	position: absolute;

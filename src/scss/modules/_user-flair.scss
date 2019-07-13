@@ -1,0 +1,109 @@
+// Removes flair off listing pages, moderator box in sidebar, and posts on author
+.side .bottom .flair,
+.sidecontentbox .flair,
+#siteTable .flair{
+	@extend %kill;
+}
+// Puts it back in the listing for moderators
+body.moderator #siteTable .flair{
+	display: inline-block !important;
+}
+// User flair
+// Flair wrapping element
+%flair-element{
+	content: "";
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	margin-right: 4px;
+	vertical-align: middle;
+	background-image: url(#{$team-icons});
+	background-repeat: repeat;
+	background-size: 100%;
+}
+.flair{
+	&{
+		position: relative;
+		display: inline-block;
+		height: 29px;
+		width: 28px;
+		padding: 1px 4px;
+		margin-right: 3px;
+		vertical-align: middle;
+		font-size: 10px;
+		line-height: 16px;
+		border: 1px solid transparent;
+		border-radius: 3px;
+		background: transparent;
+		color: #222;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	// Flair wrap on hover
+	&:hover{
+		width: auto;
+		border-color:  #ddd;
+		background-color: #f5f5f5;
+		cursor: help;
+	}
+	// Flair logo element
+	&::before{
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+	}
+}
+
+#siteTable .tagline .flair-official {
+	display: inline-block !important;
+}
+
+
+$pos-100:  0%;
+@each $team in $nfl-teams{
+	$league: map-get($team, league);
+	$name: map-get($team, name);
+	$abbr: map-get($team, abbr);
+	$url: map-get($team, url);
+	$bg: map-get($team, bg);
+	$status_eliminated: map-get($team, eliminated);
+	$status_champion: map-get($team, eliminated);
+
+	.md a[href*="/r/#{$url}"],
+	.md a[href*="/r/#{to-lower-case($url)}"],
+	.md a[href*="/r/#{to-upper-case($url)}"],
+	.md a[href*="/#{to-upper-case($abbr)}"],
+	.flair-#{to-lower-case($name)}{
+		&{}
+		&::before{
+			@extend %flair-element;
+			background-position: 0 $pos-100;
+			@if $status_eliminated{
+				opacity: .4;
+			}
+			@if $status_champion{
+				// multiple css backgrounds to be added at a later time
+			}
+		}
+	}
+	.side .titlebox .tagline .flair-#{to-lower-case($name)} + .flairselectbtn::before{
+		background-position: 0 $pos-100;
+	}
+	.flair-#{to-lower-case($name)}.flair-official + .author {
+		background: $bg;
+	}
+	$pos-100: $pos-100 - 100%;
+}
+
+/* Special flair */
+.flair-twitter, .flair-robot {
+	&:before {
+		background-image: url(#{$special-icons});
+	}
+}
+.flair-twitter:before {
+	background-position: 0 0;
+}
+.flair-robot:before {
+	background-position: 0 -20px;
+}

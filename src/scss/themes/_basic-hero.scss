@@ -1,0 +1,32 @@
+$color-1: #3F195F;
+$color-2: #F7B744;
+
+html{
+	background-color: $color-1;
+}
+html::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	height: 400%;
+	width: 100%;
+	margin-top: 80px;
+	background-color: transparent;
+	background-image: url("../img/header-atl-arz.png");
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+html::before{
+	content: "";
+	position: fixed;
+	top: 0;
+	width: 50%;
+	right: 0;
+	z-index: -1;
+	height: 100%;
+	background-color: $color-2;
+}
+#header{
+	background: #fff;
+}

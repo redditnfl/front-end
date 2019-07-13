@@ -1,0 +1,11 @@
+@function map-collect($maps...) {
+	$collection: ();
+
+	@each $map in $maps {
+		@each $team in $map {
+			$collection: append($collection, $team);
+		}
+	}
+
+	@return $collection;
+}

@@ -1,0 +1,65 @@
+.link{
+	&{}
+	.thumbnail{
+		height: 50px;
+		width: 50px;
+		background-image: url(#{$post-icons});
+		background-position: 0 (-100% * 12);
+		background-repeat: repeat;
+		background-size: 100%;
+		margin: 0 10px;
+	}
+	.linkflairlabel{
+		display: none;
+	}
+}
+.flairsample-left{
+	&{}
+	.linkflairlabel{
+		display: block;
+	}
+	.title{
+		display: none;
+	}
+}
+.thumbnail{
+	width: 50px;
+	height: 50px;
+}
+.self .thumbnail{
+	background-position: 0 (-100% * 11);
+}
+// stickied flair
+.stickied .title{
+	font-weight: bold !important;
+}
+
+$pos-100:  0%;
+@each $item in $link-flair{
+	$class: map-get($item, class);
+	$color: map-get($item, color);
+	$bold: map-get($item, bold);
+
+	.linkflair-#{$class}{
+		@if($color or $bold){
+			.title{
+				@if($color){
+					color: $color !important;
+				}
+				@if($bold){
+					font-weight: bold !important;
+				}
+			}
+		}
+		.thumbnail{
+			&{
+				background-position: 0 $pos-100;
+			}
+			img{
+				display: none;
+			}
+		}
+	}
+
+	$pos-100: $pos-100 - 100%;
+}

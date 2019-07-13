@@ -1,0 +1,187 @@
+$size: 30px;
+%default-icon{
+	&{
+		display: block;
+		height: $size;
+		width: $size;
+		margin: 0 0 0 10px;
+		font-size: 0;
+		overflow: hidden;
+		background-image: url($reddit-icons);
+		background-size: $size*2;
+		transition: opacity .3s ease-out;
+		opacity: .7;
+	}
+	&:hover{
+		opacity: 1;
+	}
+}
+@function pos($lng,$lat){
+	@return (0-($size*$lng)) (0-($size*$lat));
+}
+
+// vote arrows
+.arrow{
+	display: block;
+	height: 20px;
+	width: 20px;
+	font-size: 0;
+	overflow: hidden;
+	background-image: url($reddit-icons);
+	background-size: 40px;
+	transition: opacity .3s ease-out;
+}
+
+// upvote arrow
+.arrow.up{
+	background-image: url($reddit-icons);
+	background-position: 0 0;
+}
+.arrow.upmod{
+	background-image: url($reddit-icons);
+	background-position: -20px 0;
+}
+.link .score.likes{
+	color: #C13A2C;
+}
+// down arrow
+.arrow.down{
+	background-image: url($reddit-icons);
+	background-position: 0 -20px;
+}
+.arrow.downmod{
+	background-image: url($reddit-icons);
+	background-position: -20px -20px;
+}
+.link .score.dislikes{
+	color: #2D81BC;
+}
+
+
+// user
+#header-bottom-right .user a{
+	@extend %default-icon;
+	background-position: pos(0,2);
+}
+
+// inbox
+#header-bottom-right #mail{
+	&{
+		@extend %default-icon;
+		transform: translateY(-2px);
+		background-position: pos(0,3);
+	}
+	&.havemail{
+		opacity: 1;
+		background-position: pos(1,3);
+	}
+}
+
+// chat
+#header-bottom-right a#chat{
+	&{
+		@extend %default-icon;
+		transform: translateY(-2px);
+		background-position: pos(0,4);
+	}
+	&.active{
+		opacity: 1;
+		background-position: pos(1,4);
+	}
+}
+
+// old modmail
+#header-bottom-right #modmail{
+	&{
+		@extend %default-icon;
+		background-position: pos(0,5);
+	}
+	&.havemail{
+		opacity: 1;
+		background-position: pos(1,5);
+	}
+}
+
+// new modmail
+#header-bottom-right #new_modmail{
+	&{
+		@extend %default-icon;
+		transform: translateY(2px);
+		background-position: pos(0,6);
+	}
+	&.havemail{
+		opacity: 1;
+		background-position: pos(1,6);
+	}
+}
+
+// log out
+#header-bottom-right form a{
+	@extend %default-icon;
+	background-position: pos(0,7);
+}
+
+// search icon
+.side #search input:nth-child(2){
+	@extend %default-icon;
+	background-position: pos(0,8);
+	margin: 0;
+}
+
+// submit icon
+.side .submit-text a::after{
+	@extend %default-icon;
+	background-position: pos(0,9);
+	margin: 0;
+}
+
+// subscribe icon
+.side .subscribe-button a.add::after{
+	@extend %default-icon;
+	background-position: pos(0,10);
+	margin: 0;
+}
+
+// unsubscribe icon
+.side .subscribe-button a.remove::after{
+	@extend %default-icon;
+	background-position: pos(0,11);
+	margin: 0;
+}
+
+// message mods icon
+.side .sidecontentbox .helplink::after{
+	@extend %default-icon;
+	background-position: pos(0,12);
+	margin: 0;
+}
+
+// rules icon
+.side a[title=subreddit-rules]{
+	&{}
+	&::before{
+		display: none;
+	}
+	&::after{
+		@extend %default-icon;
+		background-position: pos(0,13);
+		margin: 0;
+		background-color: #fff;
+	}
+}
+
+// flair icon
+.side .titlebox .tagline .flairselectbtn::before {
+	right: 23px;
+	height: 25px;
+	width: 25px;
+	background-size: 17px;
+	opacity: .7;
+	background-size: 100%;
+	margin-top: -2px;
+}
+
+// remove later
+#sn-options{
+	display: none !important;
+}
