@@ -3,31 +3,31 @@ $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
 // New Promo
 $promos: (
-    (
-	 	image: "../img/sidebar-eli.jpg",
-	 	target: "ama-eli",
-	 	height: 200px,
-	 	position: true
-    ),
 	(
-	 	image: "../img/twitter-promo.png",
-	 	target: "ad-twitter",
-	 	height: 136px,
-	 	position: false
-    ),
+		image: "../img/sidebar-eli.jpg",
+		target: "ama-eli",
+		height: 200px,
+		position: true
+	),
 	(
-	 	image: "../img/pro-css.png",
-	 	target: "pro-css",
-	 	height: 105px,
-	 	position: false
-    ),
+		image: "../img/twitter-promo.png",
+		target: "ad-twitter",
+		height: 136px,
+		position: false
+	),
+	(
+		image: "../img/pro-css.png",
+		target: "pro-css",
+		height: 105px,
+		position: false
+	),
 );
 
 // Sidebar Variables
-$sidebarImage: "../img/SB-week-4.jpg";
+$sidebarImage: "../img/SB-williams.jpg";
 $sidebarHeader: "4 and 0-pollos";
 $sidebarText: "With wins by the Express and Legends this weekend, the only remaining zero in the AAF standings is in the loss column. Congratulations to the sole undefeated team in the AAF, the Orlando Apollos!";
-$sidebarPicHeight: 200px;
+$sidebarPicHeight: 376px;
 $sidebarPicOffset: 0;
 
 // Links in sidebar
