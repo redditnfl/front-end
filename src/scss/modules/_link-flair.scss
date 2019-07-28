@@ -1,17 +1,5 @@
 .link{
 	&{}
-	.thumbnail{
-		height: 50px;
-		width: 50px;
-		background-image: url(#{$post-icons});
-		background-position: 0 (-100% * 12);
-		background-repeat: repeat;
-		background-size: 100%;
-		margin: 0 10px;
-	}
-	.linkflairlabel{
-		display: none;
-	}
 }
 .flairsample-left{
 	&{}
@@ -22,12 +10,20 @@
 		display: none;
 	}
 }
-.thumbnail{
-	width: 50px;
-	height: 50px;
-}
-.self .thumbnail{
-	background-position: 0 (-100% * 11);
+.linkflair{
+	&{
+		position: relative;
+	}
+	&::before{
+		position: absolute;
+		left: 68px;
+		width: 50px;
+		height: 50px;
+		background-image: url(#{$post-icons});
+		background-position: 0 (-100% * 12);
+		background-repeat: repeat;
+		background-size: 100%;
+	}
 }
 // stickied flair
 .stickied .title{
@@ -39,6 +35,8 @@ $pos-100:  0%;
 	$class: map-get($item, class);
 	$color: map-get($item, color);
 	$bold: map-get($item, bold);
+	$icon: map-get($item, icon);
+
 
 	.linkflair-#{$class}{
 		@if($color or $bold){
@@ -51,15 +49,16 @@ $pos-100:  0%;
 				}
 			}
 		}
-		.thumbnail{
-			&{
+		@if($icon){
+			&:before{
+				content: "";
 				background-position: 0 $pos-100;
 			}
-			img{
-				display: none;
+			.midcol{
+				width: auto !important;
+				padding-right: 70px;
 			}
+			$pos-100: $pos-100 - 100%;
 		}
 	}
-
-	$pos-100: $pos-100 - 100%;
 }

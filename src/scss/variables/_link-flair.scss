@@ -1,45 +1,64 @@
 $link-flair: (
 	name: "ama",
-	class: "ama-thread"
+	class: "ama-thread",
+	icon: true
 ),(
 	name: "announcement",
-	class: "announcement-thread"
+	class: "announcement-thread",
+	icon: true
 ),(
-	name: "News",
-	class: "news-thread"
+	name: "news",
+	class: "news-thread",
+	icon: true
 ),(
 	name: "rumor",
-	class: "rumor-thread"
+	class: "rumor-thread",
+	icon: true
 ),(
 	name: "highlight",
-	class: "highlight-thread"
+	class: "highlight-thread",
+	icon: true
 ),(
 	name: "game",
-	class: "game-thread"
+	class: "game-thread",
+	icon: true
 ),(
 	name: "event",
-	class: "event-thread"
+	class: "event-thread",
+	icon: true
 ),(
 	name: "trash talk",
-	class: "trash-talk-thread"
+	class: "trash-talk-thread",
+	icon: true
 ),(
 	name: "free talk",
-	class: "free-talk-thread"
+	class: "free-talk-thread",
+	icon: true
 ),(
 	name: "original content",
-	class: "original-content-thread"
+	class: "original-content-thread",
+	icon: true
 ),(
 	name: "compliant",
 	class: "compliant-thread",
+	icon: true
 ),(
-	name: "serious",
-	class: "serious-thread",
-	bold: true
+	name: "wager",
+	class: "wager-thread",
+	icon: true
 ),(
 	name: "misleading",
 	class: "misleading-thread",
+	color: #bdc3c7,
+	icon: false
+),(
+	name: "serious",
+	bold: true,
+	class: "serious-thread",
+	icon: false
 ),(
 	name: "look here",
+	bold: true,
 	class: "generic-thread",
-	bold: true
+	icon: false
 );
