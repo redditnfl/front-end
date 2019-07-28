@@ -1,53 +1,45 @@
 $link-flair: (
-	name: "game thread",
-	class: "game-thread",
-	color: #429876,
-	bold: true,
+	name: "ama",
+	class: "ama-thread"
 ),(
-	name: "highlight",
-	class: "highlight",
-),(
-	name: "injury",
-	class: "injury",
-),(
-	name: "complaints",
-	class: "complaints",
-),(
-	name: "trash talk",
-	class: "trash-talk",
-	color: #81CEDF,
-),(
-	name: "original content",
-	class: "original-content",
-),(
-	name: "Meme Monday",
-	class: "meme-monday",
-),(
-	name: "Announcement",
-	class: "announcement",
-	color: #E74C3C,
-	bold: true,
+	name: "announcement",
+	class: "announcement-thread"
 ),(
 	name: "News",
-	class: "news",
+	class: "news-thread"
 ),(
-	name: "Pets",
-	class: "pets",
+	name: "rumor",
+	class: "rumor-thread"
 ),(
-	name: "Power Rankers",
-	class: "power-rankers",
+	name: "highlight",
+	class: "highlight-thread"
 ),(
-	name: "text",
-	class: "dose-not-exist",
+	name: "game",
+	class: "game-thread"
 ),(
-	name: "link",
-	class: "dose-not-exist",
+	name: "event",
+	class: "event-thread"
 ),(
-	name: "AMA",
-	class: "ama",
-	color: #87D37C,
-	bold: true,
+	name: "trash talk",
+	class: "trash-talk-thread"
 ),(
-	name: "AMA Ended :(",
-	class: "ama-over",
+	name: "free talk",
+	class: "free-talk-thread"
+),(
+	name: "original content",
+	class: "original-content-thread"
+),(
+	name: "compliant",
+	class: "compliant-thread",
+),(
+	name: "serious",
+	class: "serious-thread",
+	bold: true
+),(
+	name: "misleading",
+	class: "misleading-thread",
+),(
+	name: "look here",
+	class: "generic-thread",
+	bold: true
 );
