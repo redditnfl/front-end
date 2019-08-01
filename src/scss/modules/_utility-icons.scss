@@ -27,31 +27,31 @@ $size: 30px;
 	width: 20px;
 	font-size: 0;
 	overflow: hidden;
-	background-image: url($reddit-icons);
+	background-image: url($reddit-icons) !important;
 	background-size: 40px;
 	transition: opacity .3s ease-out;
 }
 
 // upvote arrow
 .arrow.up{
-	background-image: url($reddit-icons);
-	background-position: 0 0;
+	background-image: url($reddit-icons) !important;
+	background-position: 0 0 !important;
 }
 .arrow.upmod{
-	background-image: url($reddit-icons);
-	background-position: -20px 0;
+	background-image: url($reddit-icons) !important;
+	background-position: -20px 0 !important;
 }
 .link .score.likes{
 	color: #C13A2C;
 }
 // down arrow
 .arrow.down{
-	background-image: url($reddit-icons);
-	background-position: 0 -20px;
+	background-image: url($reddit-icons) !important;
+	background-position: 0 -20px !important;
 }
 .arrow.downmod{
-	background-image: url($reddit-icons);
-	background-position: -20px -20px;
+	background-image: url($reddit-icons) !important;
+	background-position: -20px -20px !important;
 }
 .link .score.dislikes{
 	color: #2D81BC;

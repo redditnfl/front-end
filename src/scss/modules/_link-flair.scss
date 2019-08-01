@@ -13,6 +13,7 @@
 .linkflair{
 	&{
 		position: relative;
+		overflow: visible !important;
 	}
 	&::before{
 		position: absolute;
@@ -28,6 +29,10 @@
 // stickied flair
 .stickied .title{
 	font-weight: bold !important;
+}
+.flairoptionpane .linkflair:before,
+.flairselection .linkflair:before{
+	display: none;
 }
 
 $pos-100:  0%;
