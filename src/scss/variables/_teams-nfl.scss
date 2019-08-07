@@ -427,4 +427,31 @@ $nfl-teams:
 		bg: #773141,
 		eliminated:  false,
 		champion:  false
-	);
+	),
+	(
+		league: "nfl",
+		name: "afc",
+		abbr: "AFC",
+		url: "afc",
+		color-1: #1B4734,
+		color-2: #F7B844,
+		color-3: #ED4434,
+		fg: #FFFFFF,
+		bg: #97233F,
+		eliminated:  false,
+		champion:  false
+	),
+	(
+		league: "nfl",
+		name: "nfc",
+		abbr: "NFC",
+		url: "nfc",
+		color-1: #1B4734,
+		color-2: #F7B844,
+		color-3: #ED4434,
+		fg: #FFFFFF,
+		bg: #97233F,
+		eliminated:  false,
+		champion:  false
+	)
+;
