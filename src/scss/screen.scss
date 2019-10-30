@@ -29,13 +29,14 @@ $all-teams: map-collect($nfl-teams);
 // modules
 @import "modules/flair-selection-index";
 @import "modules/game-thread";
+@import "modules/trash-talk-thread";
 
 // states
 @import "states/res";
 @import "states/nightmode";
 
 // Themes
-@import "themes/basic-theme";
+@import "themes/basic-hero";
 
 // yeah, no reddit new button
 #sr-header-area .redesign-beta-optin{
@@ -49,4 +50,9 @@ $all-teams: map-collect($nfl-teams);
 	overflow: hidden;
 	width: 0;
 	pointer-events: none;
+}
+
+// dear reddit, can you please for the love of god stop breaking ad layouts with your shit code?
+.native-ad-container{
+	margin: 0 auto !important;
 }
