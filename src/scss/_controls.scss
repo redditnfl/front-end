@@ -1,5 +1,5 @@
-$headerHeight: 275px; //ex: 40px or false
-$headerSideOffset: $headerHeight - 20px; //ex: 20px or false
+$headerHeight: 80px; //ex: 40px or false. 80px is new default
+$headerSideOffset: 20px; //ex: 20px or false
 
 // New Promo
 $promos: (
@@ -18,9 +18,9 @@ $promos: (
 );
 
 // Sidebar Variables
-$sidebarImage: "../img/SB-benson.jpg";
-$sidebarHeader: "Cedric Benson: 1982-2019";
-$sidebarText: "Former NFL running back Cedric Benson has passed away. Benson was a four-year starter with the Texas Longhorns and rushed for 5540 yards in college, then the sixth most rushing yards in NCAA D1 history and second most in Texas history. Benson was drafted 4th overall to the Chicago Bears in 2005 and spent parts of eight NFL seasons with the Bears, Bengals and Packers, with his best seasons happening with the Bengals. In his four seasons in Cincinnati, Benson rushed for over 1000 yards in three straight seasons. Benson was 36. Rest In Peace.";
+$sidebarImage: "../img/49ers.jpg";
+$sidebarHeader: "Sliding into 6-0";
+$sidebarText: "It wasn't pretty, it wasn't elegant, but is football really SUPPOSED to be pretty or elegant? The Niners and Washington played one of the shortest games in history in a mud pit/slip-n-slide, and the best thing that came out of the whole day was the photography. Mike Person looks like something from old Viking lore. God help the equipment managers. Credit: /u/courser";
 $sidebarPicHeight: 200px;
 $sidebarPicOffset: 0;
 
