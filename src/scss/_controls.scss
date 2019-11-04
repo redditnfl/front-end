@@ -1,5 +1,5 @@
 $headerHeight: 80px; //ex: 40px or false. 80px is new default
-$headerSideOffset: 20px; //ex: 20px or false
+$headerSideOffset: 60px; //ex: 20px or false
 
 // New Promo
 $promos: (
@@ -18,10 +18,10 @@ $promos: (
 );
 
 // Sidebar Variables
-$sidebarImage: "../img/49ers.jpg";
-$sidebarHeader: "Sliding into 6-0";
-$sidebarText: "It wasn't pretty, it wasn't elegant, but is football really SUPPOSED to be pretty or elegant? The Niners and Washington played one of the shortest games in history in a mud pit/slip-n-slide, and the best thing that came out of the whole day was the photography. Mike Person looks like something from old Viking lore. God help the equipment managers. Credit: /u/courser";
-$sidebarPicHeight: 200px;
+$sidebarImage: "../img/SB-delaney.jpg";
+$sidebarHeader: "";
+$sidebarText: "";
+$sidebarPicHeight: 0px;
 $sidebarPicOffset: 0;
 
 // Links in sidebar
