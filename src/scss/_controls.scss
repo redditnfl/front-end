@@ -1,5 +1,5 @@
-$headerHeight: 275px; //ex: 40px or false
-$headerSideOffset: $headerHeight - 20px; //ex: 20px or false
+$headerHeight: 80px; //ex: 40px or false. 80px is new default
+$headerSideOffset: 60px; //ex: 20px or false
 
 // New Promo
 $promos: (
@@ -18,10 +18,10 @@ $promos: (
 );
 
 // Sidebar Variables
-$sidebarImage: "../img/SB-benson.jpg";
-$sidebarHeader: "Cedric Benson: 1982-2019";
-$sidebarText: "Former NFL running back Cedric Benson has passed away. Benson was a four-year starter with the Texas Longhorns and rushed for 5540 yards in college, then the sixth most rushing yards in NCAA D1 history and second most in Texas history. Benson was drafted 4th overall to the Chicago Bears in 2005 and spent parts of eight NFL seasons with the Bears, Bengals and Packers, with his best seasons happening with the Bengals. In his four seasons in Cincinnati, Benson rushed for over 1000 yards in three straight seasons. Benson was 36. Rest In Peace.";
-$sidebarPicHeight: 200px;
+$sidebarImage: "../img/SB-delaney.jpg";
+$sidebarHeader: "";
+$sidebarText: "";
+$sidebarPicHeight: 0px;
 $sidebarPicOffset: 0;
 
 // Links in sidebar
