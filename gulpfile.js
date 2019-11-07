@@ -8,6 +8,8 @@ var include = require('gulp-file-include');
 var csso = require('gulp-csso');
 var clipboard = require("gulp-clipboard");
 
+var fs = fs = require('fs');
+var filter = require('gulp-filter');
 // assets
 
 // css
@@ -106,9 +108,21 @@ function get_file_paths(file_type){
 }
 
 // asset tasks
-gulp.task('build:assets', function(){
+gulp.task('build:assets', ["build:css"], function(){
+	var css_task_info = get_file_paths("css");
+	var file = fs.readFileSync(css_task_info.dist+"/screen.css", { encoding: 'utf8' });
+	var re = /%%(.*?)%%/g;
+	var patterns = [];
+	// Build a list of glob patterns for each file in use
+	while ((m = re.exec(file)) !== null) {
+		var pattern = '**/' + m[1] + '.*';
+		if (!patterns.includes(pattern)) {
+			patterns.push(pattern)
+		}
+	}
 	var task_info = get_file_paths("assets");
 	return gulp.src(task_info.src)
+	.pipe(filter(patterns))
 	.pipe(gulp.dest(task_info.dist));
 });
 
