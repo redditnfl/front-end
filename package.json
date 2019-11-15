@@ -35,6 +35,7 @@
     "gulp-postcss": "^7.0.1",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
+    "natives": "^1.1.6",
     "postcss-alias": "^2.0.0",
     "postcss-base64": "^0.7.1",
     "postcss-short-size": "^3.0.0",
