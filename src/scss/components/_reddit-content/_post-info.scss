@@ -1,9 +1,0 @@
-div.entry {
-    .stickied-tagline {
-        font-size: 0pt !important;
-        &::after {
-            content: "stickied post";
-            font-size: x-small;
-        }
-    }
-}

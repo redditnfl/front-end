@@ -1,26 +1,28 @@
-$headerHeight: 40px; //ex: 20px or false
-$headerSideOffset: $headerHeight - 40px; //ex: 20px or false
+$headerHeight: 80px; //ex: 40px or false. 80px is new default
+$headerSideOffset: 60px; //ex: 20px or false
 
 // New Promo
 $promos: (
-//     (
-//	 	image: "../img/SB-AD-Bortles.png",
-//	 	target: "SB_AD_Bortles",
-//	 	height: 300px,
-//	 	position: true
-//     ),
+	(
+		image: "../img/twitter-promo.png",
+		target: "ad-twitter",
+		height: 136px,
+		position: false
+	),
+	(
+		image: "../img/pro-css.png",
+		target: "pro-css",
+		height: 105px,
+		position: false
+	),
 );
 
 // Sidebar Variables
-$sidebarImage: "../img/SB-kidney.png";
-$sidebarHeader: "Albert Haynesworth is in 'dire need' of a kidney";
-$sidebarText: "Former Tennessee Titans and Washington Redskins Defensive Tackle Albert Haynesworth is suffering from kidney failure and is asking fans for a crucial gift. Haynesworth has been battling kidney disease for a number of years and announced his kidneys have 'finally failed' him on July 7 2019 via Instagram. If anyone is interested in donating a life-saving kidney, they're urged to call Vanderbilt Hospital at 615-936-0695 and dial extension 2.";
-$sidebarPicHeight: 299px;
+$sidebarImage: "../img/SB-delaney.jpg";
+$sidebarHeader: "";
+$sidebarText: "";
+$sidebarPicHeight: 0px;
 $sidebarPicOffset: 0;
-
-// Crown
-$pageBackground: #34495E;
-$crownImage: "../img/crown.png";
 
 // Links in sidebar
 $sidebarLinksHeight: 34px;

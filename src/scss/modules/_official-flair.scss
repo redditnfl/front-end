@@ -1,0 +1,36 @@
+// Official Flair
+.flair-official{
+	&{
+		height: 44px;
+		width: 44px !important;
+	}
+	&:hover{
+		width: auto !important;
+	}
+	&::before{
+		height: 40px;
+		width: 40px;
+		margin-right: 0 !important;
+		opacity: 1;
+	}
+	&::after{
+		display: none !important;
+	}
+	+ a.author {
+		&{
+			color: #fff !important;
+			border-radius:4px;
+			-moz-border-radius:4px;
+			-webkit-border-radius:4px;
+			font-weight:700;
+			padding:2px 4px;
+		}
+		&:after {
+			content:" - Verified account";
+		}
+	}
+}
+
+#siteTable .tagline .flair-official {
+	display: inline-block !important;
+}

@@ -1,0 +1,55 @@
+{
+	"color_theme": {
+		"theme_colors": {
+			"base": "#2D81BB",
+			"highlight": "#C1392C",
+		},
+		"body_background": {
+			"color": "#2D81BB",
+			"image": false
+		}
+	},
+	"name_and_icon": {
+		"community_name_format": "Hide",
+		"community_icon": {
+			"image": false,
+			"display": false
+		}
+	},
+	"banner": {
+		"height": "large",
+		"background": {
+			"color": "#2D81BB",
+			"image": false,
+		},
+		"additional_background_image": {
+			"image": false,
+			"hover_image": false,
+			"alignment": "center"
+		},
+		"mobile_banner_image": false
+	},
+	"menu": {
+		"link_color": {
+			"active": "#FFFFFF",
+			"inactive": "#BBBDBF",
+			"hover": "#FFFFFF"
+		},
+		"main_menu_background": {
+			"color": "#34495E",
+			"image": false,
+			"overlay": false
+		},
+		"submenu_background": "solid",
+		"submenu_color": "#373C3F"
+	},
+	"post": {
+		"title_color": "#212121",
+		"vote_icons": "standard",
+		"post_background": {
+			"color": "#ffffff",
+			"image": false
+		},
+		"link_preview": false
+	},
+}

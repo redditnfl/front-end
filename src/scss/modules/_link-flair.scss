@@ -1,0 +1,69 @@
+.link{
+	&{}
+}
+.flairsample-left{
+	&{}
+	.linkflairlabel{
+		display: block;
+	}
+	.title{
+		display: none;
+	}
+}
+.linkflair{
+	&{
+		position: relative;
+		overflow: visible !important;
+	}
+	&::before{
+		position: absolute;
+		left: 68px;
+		width: 50px;
+		height: 50px;
+		background-image: url(#{$post-icons});
+		background-position: 0 (-100% * 12);
+		background-repeat: repeat;
+		background-size: 100%;
+	}
+}
+// stickied flair
+.stickied .title{
+	font-weight: bold !important;
+}
+.flairoptionpane .linkflair:before,
+.flairselection .linkflair:before{
+	display: none;
+}
+
+$pos-100:  0%;
+@each $item in $link-flair{
+	$class: map-get($item, class);
+	$color: map-get($item, color);
+	$bold: map-get($item, bold);
+	$icon: map-get($item, icon);
+
+
+	.linkflair-#{$class}{
+		@if($color or $bold){
+			.title{
+				@if($color){
+					color: $color !important;
+				}
+				@if($bold){
+					font-weight: bold !important;
+				}
+			}
+		}
+		@if($icon){
+			&:before{
+				content: "";
+				background-position: 0 $pos-100;
+			}
+			.midcol{
+				width: auto !important;
+				padding-right: 70px;
+			}
+			$pos-100: $pos-100 - 100%;
+		}
+	}
+}

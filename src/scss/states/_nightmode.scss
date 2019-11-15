@@ -1,0 +1,68 @@
+$resnm-bg: #333333;
+$resnm-bg-alt: #262626;
+$resnm-font: #ccc;
+$resnm-grey: #666;
+
+.res-nightmode {
+	&{}
+	#header,
+	.side .titlebox .md hr+h4+h1+ul::before{
+		background-color: $resnm-bg !important;
+	}
+	.side .login-form input,
+	.side .sidecontentbox .helplink,
+	.side .sidecontentbox .helplink:before,
+	.side .submit-text a, .side .subscribe-button a,
+	.side .titlebox .tagline .flairselectbtn,
+	.side a[title=subreddit-rules],
+	.side a[title=subreddit-rules]::after{
+		background-color: $resnm-bg-alt !important;
+	}
+	.side #search input:nth-child(1){
+		background-color: $resnm-bg;
+		border-color: lighten($resnm-bg, 10)
+	}
+	.titlebox .usertext .md table thead{
+		background: $resnm-grey;
+		border-color: $resnm-grey;
+	}
+	.titlebox .usertext .md table tbody tr{
+		color: $resnm-font;
+		background: $resnm-bg;
+	}
+	.usertext .md table tbody tr:nth-child(2n+2) {
+		background: $resnm-bg-alt;
+	}
+	.titlebox .usertext .md table tbody td{
+		border-color: $resnm-grey;
+	}
+	.side .sidecontentbox .helplink::before,
+	.side .submit-text a::before,
+	.side .subscribe-button a.add::before,
+	.side .subscribe-button a.remove::before,
+	.side .titlebox .tagline .flairselectbtn::after,
+	.side a[title=subreddit-rules]::before{
+		background-position-x: -210px;
+	}
+	#header-bottom-right #mail,
+	#header-bottom-right #modmail,
+	#header-bottom-right #new_modmail,
+	#header-bottom-right .user a,
+	#header-bottom-right a#chat,
+	#header-bottom-right form a,
+	.side .sidecontentbox .helplink::after,
+	.side .submit-text a::after,
+	.side .subscribe-button a.add::after,
+	.side .subscribe-button a.remove::after,
+	.side a[title=subreddit-rules]::after,
+	.side #search input:nth-child(2){
+		background-position-x: 100%;
+	}
+	.side .spacer:nth-child(1)::before,
+	.side .spacer:nth-child(1)::after{
+		color: $resnm-font;
+	}
+	#sr-header-area{
+		background-color: $resnm-bg !important;
+	}
+}

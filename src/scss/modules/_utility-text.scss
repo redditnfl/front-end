@@ -1,0 +1,132 @@
+$bg-cell-height: 50px;
+$bg-cell-width: 334px/2;
+%default-text{
+	&{
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		transform: translateY(-50%);
+		display: inline-block;
+		height: 14px;
+		background-image: url($utility-text);
+		background-size: 420px;
+		width: 200px;
+		transition: opacity .3s ease-out;
+		opacity: .7;
+	}
+	&:hover{
+		opacity: 1;
+	}
+}
+@function pos($lng,$lat){
+	@return (0-($bg-cell-width*$lng)) (0-($bg-cell-height*$lat));
+}
+
+// page name
+#header-bottom-left .pagename a{
+	&{
+		font-size: 0;
+	}
+	&::after{
+		content: "";
+		font-size: 0;
+		overflow: hidden;
+		background-image: url($utility-text);
+		transition: opacity .3s ease-out;
+		display: inline-block;
+		height: 16px;
+		width: 60px;
+		background-size: 420px;
+	}
+}
+
+// submit text
+.side .submit-text a{
+	&{
+		position: relative;
+		font-size: 0;
+	}
+	&::before{
+		@extend %default-text;
+		content: "";
+		background-position: pos(0,1);
+	}
+}
+
+// join text
+.side .subscribe-button{
+	&{
+		font-size: 0;
+		width: 340px;
+	}
+	a.add{
+		font-size: 0;
+	}
+	a.add::before{
+		@extend %default-text;
+		content: "";
+		background-position: pos(0,2);
+	}
+}
+
+// leave text
+.side .subscribe-button{
+	&{
+		font-size: 0;
+		width: 340px;
+	}
+	a.remove{
+		font-size: 0;
+	}
+	a.remove::before{
+		@extend %default-text;
+		content: "";
+		background-position: pos(0,3);
+	}
+}
+
+// flair text
+.side .titlebox .tagline .flairselectbtn{
+	&{
+		font-size: 0;
+	}
+	&::after{
+		@extend %default-text;
+		content: "";
+		background-position: pos(0,4);
+	}
+}
+
+// mods text
+.side .sidecontentbox .helplink{
+	&{
+		font-size: 0;
+	}
+	&::before{
+		@extend %default-text;
+		content: "";
+		background-position: pos(0,5);
+	}
+}
+
+// rules text
+.side a[title=subreddit-rules]{
+	&{
+		font-size: 0;
+	}
+	&::before{
+		@extend %default-text;
+		content: "";
+		background-position: pos(0,6);
+	}
+}
+
+.side #search input:nth-child(1){
+	width: 300px;
+	padding: 0 10px;
+	margin-left: 20px;
+	background: #F6F7F8;
+	border: 1px solid #EDEFF1;
+	border-radius: 6px;
+	font-weight: 400;
+}

@@ -1,121 +1,178 @@
-var gulp = require('gulp'),
-	sass = require("gulp-sass"),
-	sourcemaps = require('gulp-sourcemaps'),
-	plumber = require("gulp-plumber"),
-	prefix = require('gulp-autoprefixer'),
-	replace = require('gulp-replace'),
-	include = require('gulp-file-include'),
-	notify = require("gulp-notify"),
-	fs = require("fs"),
-	through2 = require("through2"),
-	es = require("event-stream"),
-    filesExist = require('files-exist');
+// global
+var gulp = require('gulp');
+var notify = require('gulp-notify');
+var plumber = require('gulp-plumber');
+var fileinclude = require('gulp-file-include');
+var replace = require('gulp-replace');
+var include = require('gulp-file-include');
+var csso = require('gulp-csso');
+var clipboard = require("gulp-clipboard");
 
-// Default path
-	var paths = {
-		src: {parentPath: "./src/"},
-		pub: {parentPath: "./pub/"},
-		reddit: {parentPath: "./reddit/"}
-	};
+var fs = fs = require('fs');
+var filter = require('gulp-filter');
+// assets
 
-// Create project paths
-	createPath("scss", "css");
-	createPath("img");
-	createPath("markdown");
+// css
+var postcss = require('gulp-postcss');
+var sass = require('gulp-sass');
+var autoprefixer = require('autoprefixer');
+var pcss_size = require('postcss-short-size');
+var pcss_alias = require('postcss-alias');
+var pcss_base_64 = require('postcss-base64');
+var pcss_media_query_packer = require('css-mqpacker');
 
-// Compile CSS - run "gulp css"
-	gulp.task("css", function(){
-		return gulp.src(paths.src.scss+"/**/*.scss")
+var post_process = [
+	autoprefixer({browsers: ['last 3 versions']}),
+	pcss_size(),
+	pcss_base_64(),
+	pcss_base_64(),
+	pcss_media_query_packer({ sort: true })
+];
+
+var file_paths = {
+	src: {
+		assets: "./src/assets/",
+		css: "./src/scss/",
+		js: "./src/js/",
+		html: "./src/md/",
+		modules: "./src/modules/"
+	},
+	dist: {
+		assets: "./dist/assets/",
+		css: "./dist/assets/css/",
+		js: "./dist/assets/js/",
+		html: "./dist/"
+	}
+};
+
+var file_names = {
+	assets: {
+		compile: ['**/*.*', '**/_*.*'],
+		ignore: [],
+		watch: ['**/*.*', '**/_*.*']
+	},
+	css: {
+		compile: ['**/*.scss', '**/*.css'],
+		ignore: [],
+		watch: ['**/*.scss', '**/*.css']
+	},
+	js: {
+		compile: ['**/*.js', '**/*.json'],
+		ignore: ['**/_*.js'],
+		watch: ['**/*.js', '**/*.json', '**/_*.js']
+	},
+	html: {
+		compile: ['**/*.md'],
+		ignore: ['**/_*.md'],
+		watch: ['**/*.md', '**/_*.md']
+	}
+}
+
+// params:
+// 		file_type: name of object in file_names, file_paths.src and file_paths.dist
+// returns:
+// 		src: an array of file locations for gulp tasks
+// 		dist: a file location for completed tasks
+// 		watch: an array of file locations for watch tasks
+function get_file_paths(file_type){
+	var src_path = file_paths.src[file_type];
+	var modules_path = file_paths.src.modules;
+	var dist_path = file_paths.dist[file_type];
+	var names = file_names[file_type+''];
+
+	function get_source(){
+		var arr = [];
+		names.compile.forEach(function(item){
+			arr.push(src_path+item);
+		});
+		names.ignore.forEach(function(item){
+			arr.push("!"+src_path+item);
+		});
+		return arr;
+	}
+	function get_watch(){
+		var arr = [];
+		names.watch.forEach(function(item){
+			arr.push(src_path+item);
+			arr.push(modules_path+item);
+		});
+		return arr;
+	}
+
+
+	return{
+		src: get_source(),
+		dist: dist_path,
+		watch: get_watch()
+	}
+}
+
+// asset tasks
+gulp.task('build:assets', ["build:css"], function(){
+	var css_task_info = get_file_paths("css");
+	var file = fs.readFileSync(css_task_info.dist+"/screen.css", { encoding: 'utf8' });
+	var re = /%%(.*?)%%/g;
+	var patterns = [];
+	// Build a list of glob patterns for each file in use
+	while ((m = re.exec(file)) !== null) {
+		var pattern = '**/' + m[1] + '.*';
+		if (!patterns.includes(pattern)) {
+			patterns.push(pattern)
+		}
+	}
+	var task_info = get_file_paths("assets");
+	return gulp.src(task_info.src)
+	.pipe(filter(patterns))
+	.pipe(gulp.dest(task_info.dist));
+});
+
+// css tasks
+gulp.task('build:css', function(){
+	var task_info = get_file_paths("css");
+	return gulp.src(task_info.src)
 		.pipe(plumber({errorHandler: errorAlert}))
-		.pipe(sass({outputStyle: 'expanded'}))
-		.pipe(sourcemaps.write('./maps'))
-		.pipe(prefix({browsers: ["last 2 version"]}))
-		.pipe(gulp.dest(paths.pub.css))
-	});
-
-// Compile Markdown - run "gulp md"
-	gulp.task("md", function(){
-		return gulp.src(paths.src.markdown+"/**/*.md")
-		.pipe(plumber({errorHandler: errorAlert}))
-		.pipe(include('@@'))
-		.pipe(gulp.dest(paths.pub.markdown))
-	});
-
-// Move Images - run "gulp img"
-    gulp.task("img", ["css"], function(cb){
-        var file = fs.readFileSync(paths.pub.css+"/screen.css", { encoding: 'utf8' });
-        var re = /\.\.\/img\/(.*?).(png|jpg)/g;
-        var globs = [];
-        while ((m = re.exec(file)) !== null) {
-            globs.push(paths.src.img + "/" + m[0])
-        }
-        gulp.src(filesExist(globs))
-            .pipe(gulp.dest(paths.pub.img, { sync: true }))
-            .on('end', function() {
-                cb();
-            });
-    });
-
-
-// Compile
-	gulp.task("compile", ["md", "css", "img"], function(){
-		return gulp.src("src/fake")
-		.pipe(notify({title: "Project Compiled!", message: "", sound: "Wuka"}))
-		.pipe(gulp.dest("src/fake"))
-	});
-
-// Watch files
-	gulp.task("watch", function(){
-		gulp.watch(paths.src.scss+"/**/*.scss", ["css"]);
-		gulp.watch(paths.src.img+"/*", ["img"]);
-		gulp.watch(paths.src.markdown+"/**/*.md", ["md"]);
-	});
-
-// Default take
-	gulp.task("default", ["watch", "compile"]);
-
-// Reddit safe CSS
-	gulp.task("reddit-css", ["css"], function(){
-		return gulp.src(paths.pub.css+"/*.css")
+		.pipe(sass({
+			outputStyle: 'expanded',
+			noCache: true,
+			includePaths: [
+				"./node_modules",
+				file_paths.src.modules
+			]
+		}))
+		.pipe(postcss(post_process))
+		.pipe(csso())
 		.pipe(replace("../img/", "%%"))
 		.pipe(replace(".jpg", "%%"))
 		.pipe(replace(".png", "%%"))
-		.pipe(gulp.dest(paths.reddit.css));
-	});
+		.pipe(replace("-webkit-box-align:center;", ""))
+		.pipe(replace("-moz-box-align:center;", ""))
+		.pipe(replace("-webkit-gradient(", "linear-gradient("))
+		.pipe(clipboard())
+		.pipe(gulp.dest(task_info.dist));
+});
 
-// Reddit Safe Markdown
-	gulp.task("reddit-md", ["md"], function(){
-		return gulp.src(paths.pub.markdown+"/*.md")
-		.pipe(gulp.dest(paths.reddit.markdown));
-	});
+// html tasks
+gulp.task('build:html', function(){
+	var task_info = get_file_paths("html");
+	return gulp.src(task_info.src)
+		.pipe(plumber({errorHandler: errorAlert}))
+		.pipe(fileinclude({prefix: '@', basepath: file_paths.src.modules}))
+		.pipe(gulp.dest(task_info.dist));
+});
 
-// Reddit Safe Images
-	gulp.task("reddit-img", ["img"], function(){
-		return gulp.src(paths.pub.img+"/*.*")
-		.pipe(gulp.dest(paths.reddit.img));
-	});
 
-// Compile Reddit Safe Code
-	gulp.task("reddit-compile", ["reddit-md", "reddit-css", "reddit-img"], function(){
-		return gulp.src("src/fake")
-		.pipe(notify({title: "Project Compiled!", message: "", sound: "Wuka"}))
-		.pipe(gulp.dest("src/fake"))
-	});
+// global functions
+function errorAlert(error){
+	notify.onError({title: 'Gulp Error', message: 'Check your terminal', sound: 'Sosumi'})(error);
+	console.log(error.toString());
+	this.emit('end');
+};
 
-// Error function
-	function errorAlert(error){
-		notify.onError({title: "Gulp Error", message: "Check your terminal", sound: "Sosumi"})(error);
-		console.log(error.toString());
-		this.emit("end");
-	};
+// global tasks
+gulp.task('build', ['build:html','build:css','build:assets']);
 
-// Create project paths
-	function createPath(srcPath, pubPath){
-		if(pubPath === undefined){
-			var pubPath = srcPath;
-		}
-		// Final paths
-		paths.src[srcPath+""] = paths.src.parentPath+srcPath;
-		paths.pub[pubPath+""] = paths.pub.parentPath+pubPath;
-		paths.reddit[pubPath+""] = paths.reddit.parentPath+pubPath;
-	}
+gulp.task('default', ['build'], function() {
+	gulp.watch(get_file_paths("html").watch, [ 'build:html' ]);
+	gulp.watch(get_file_paths("css").watch, [ 'build:css' ]);
+	gulp.watch(get_file_paths("assets").watch, [ 'build:assets' ]);
+});

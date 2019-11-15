@@ -1,0 +1,33 @@
+$color-1: #EEB25B;
+$color-2: #0B1628;
+
+html{
+	background-color: $color-1;
+}
+html::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	height: 275px;
+	width: 100%;
+	margin-top: 80px;
+	background-color: transparent;
+	background-image: url("../img/hero.png");
+	background-position: center top;
+	background-size: 1440px;
+	background-repeat: no-repeat;
+}
+html::before{
+	content: "";
+	position: fixed;
+	top: 0;
+	width: 50%;
+	right: 0;
+	z-index: -1;
+	height: 100%;
+	background-color: $color-2;
+}
+#header{
+	background: #fff;
+}

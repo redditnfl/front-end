@@ -1,32 +1,45 @@
 {
-  "name": "r-nfl",
-  "version": "0.0.0",
+  "name": "r-aafb_theme",
+  "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/redditnfl/design.git"
+    "url": "git+https://github.com/hmphry/prototyping.git"
   },
-  "author": "",
+  "keywords": [
+    "HMPHRY"
+  ],
+  "author": "HMPHRY",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/redditnfl/design/issues"
+    "url": "https://github.com/hmphry/prototyping/issues"
   },
-  "homepage": "https://github.com/redditnfl/design",
+  "homepage": "https://github.com/hmphry/prototyping#readme",
   "devDependencies": {
-    "event-stream": "^3.3.4",
-    "fs": "0.0.1-security",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-file-include": "^0.9.0",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.0.0",
-    "gulp-replace": "^0.5.3",
-    "gulp-sass": "^2.1.0",
-    "gulp-sourcemaps": "^1.5.2",
-    "through2": "^2.0.3"
-  }
+    "autoprefixer": "^8.6.5",
+    "browserslist": "^3.2.8",
+    "caniuse-lite": "^1.0.30000938",
+    "css-mqpacker": "^6.0.2",
+    "electron-to-chromium": "^1.3.113",
+    "gulp": "^3.9.1",
+    "gulp-clipboard": "^0.1.3",
+    "gulp-csso": "^3.0.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-filter": "^6.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "natives": "^1.1.6",
+    "postcss-alias": "^2.0.0",
+    "postcss-base64": "^0.7.1",
+    "postcss-short-size": "^3.0.0",
+    "r-aafb-base-theme": "^4.0.0"
+  },
+  "dependencies": {}
 }
