@@ -1,6 +1,7 @@
 name: Node CI
 
 on:
+  
   push:
     branches:
       - master
@@ -43,3 +44,7 @@ jobs:
       with:
         name: themedata
         path: dist
+    - name: Deploy (once it works)
+      uses: redditnfl/publish-reddit-stylesheet-action
+      with:
+        subreddit: nflopendev
