@@ -45,6 +45,6 @@ jobs:
         name: themedata
         path: dist
     - name: Deploy (once it works)
-      uses: redditnfl/publish-reddit-stylesheet-action
+      uses: redditnfl/publish-reddit-stylesheet-action@21eb9634
       with:
         subreddit: nflopendev
