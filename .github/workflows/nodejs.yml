@@ -17,13 +17,28 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
-    - name: npm install and build
+    - name: Cache node modules
+      id: cache-node-modules
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-build-${{ env.cache-name }}-
+          ${{ runner.OS }}-build-
+          ${{ runner.OS }}-
+    - name: npm install
+      if: steps.cache-node-modules.outputs.cache-hit != 'true'
       run: |
         npm ci
+      env:
+        CI: true
+    - name: npm build
+      run: |
         npm run build --if-present
       env:
         CI: true
-    - name: Theme data
+    - name: Save theme data
       uses: actions/upload-artifact@v1
       with:
         name: themedata
