@@ -14,10 +14,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
+    
     - name: Cache node modules
       id: cache-node-modules
       uses: actions/cache@v1
@@ -28,23 +30,36 @@ jobs:
           ${{ runner.OS }}-build-${{ env.cache-name }}-
           ${{ runner.OS }}-build-
           ${{ runner.OS }}-
+    
     - name: npm install
       if: steps.cache-node-modules.outputs.cache-hit != 'true'
       run: |
         npm ci
       env:
         CI: true
+    
     - name: npm build
       run: |
         npm run build --if-present
       env:
         CI: true
+        
     - name: Save theme data
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v1.0.0
       with:
         name: themedata
         path: dist
+        
+# The next step is just here to control the location
+    
+    - name: Download theme data
+      uses: actions/download-artifact@v1.0.0
+      with:
+        name: themedata
+        path: downloaded_theme
+    
     - name: Deploy (once it works)
-      uses: redditnfl/publish-reddit-stylesheet-action@046c964
+      uses: redditnfl/publish-reddit-stylesheet-action@035cc35
       with:
         subreddit: nflopendev
+        path: downloaded_theme
