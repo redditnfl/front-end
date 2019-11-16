@@ -58,7 +58,18 @@ jobs:
         name: themedata
         path: downloaded_theme
     
-    - name: Deploy (once it works)
+    - name: Deploy to nflopendev
+      if: github.ref == 'refs/heads/develop'
+      uses: redditnfl/publish-reddit-stylesheet-action@c3319e3
+      with:
+        subreddit: nflopendev
+        path: downloaded_theme
+      env:
+        praw_client_id: ${{ secrets.style_publisher_praw_client_id }}
+        praw_client_secret: ${{ secrets.style_publisher_praw_client_secret }}
+        praw_refresh_token: ${{ secrets.style_publisher_praw_refresh_token }}
+    - name: Deploy to nfl
+      if: github.ref == 'refs/heads/master'
       uses: redditnfl/publish-reddit-stylesheet-action@c3319e3
       with:
         subreddit: nflopendev
