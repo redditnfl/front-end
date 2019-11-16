@@ -1,0 +1,80 @@
+name: Node CI
+
+on:
+  
+  push:
+    branches:
+      - master
+      - develop
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+    
+    - name: Cache node modules
+      id: cache-node-modules
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-build-${{ env.cache-name }}-
+          ${{ runner.OS }}-build-
+          ${{ runner.OS }}-
+    
+    - name: npm install
+      if: steps.cache-node-modules.outputs.cache-hit != 'true'
+      run: |
+        npm ci
+      env:
+        CI: true
+    
+    - name: npm build
+      run: |
+        npm run build --if-present
+      env:
+        CI: true
+        
+    - name: Save theme data
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: themedata
+        path: dist
+        
+# The next step is just here to control the location
+    
+    - name: Download theme data
+      uses: actions/download-artifact@v1.0.0
+      with:
+        name: themedata
+        path: downloaded_theme
+    
+    - name: Deploy to nflopendev
+      if: github.ref == 'refs/heads/develop'
+      uses: redditnfl/publish-reddit-stylesheet-action@v1.0.0
+      with:
+        subreddit: nflopendev
+        path: downloaded_theme
+      env:
+        praw_client_id: ${{ secrets.style_publisher_praw_client_id }}
+        praw_client_secret: ${{ secrets.style_publisher_praw_client_secret }}
+        praw_refresh_token: ${{ secrets.style_publisher_praw_refresh_token }}
+    - name: Deploy to nfl
+      if: github.ref == 'refs/heads/master'
+      uses: redditnfl/publish-reddit-stylesheet-action@v1.0.0
+      with:
+        subreddit: nflopendev
+        path: downloaded_theme
+      env:
+        praw_client_id: ${{ secrets.style_publisher_praw_client_id }}
+        praw_client_secret: ${{ secrets.style_publisher_praw_client_secret }}
+        praw_refresh_token: ${{ secrets.style_publisher_praw_refresh_token }}
