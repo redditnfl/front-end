@@ -59,7 +59,9 @@ jobs:
         path: downloaded_theme
     
     - name: Deploy (once it works)
-      uses: redditnfl/publish-reddit-stylesheet-action@035cc35
+      uses: redditnfl/publish-reddit-stylesheet-action@50ec14a
       with:
         subreddit: nflopendev
         path: downloaded_theme
+      env:
+        praw_client_id: ${{ secrets.style_publisher_praw_client_id }}
