@@ -50,7 +50,11 @@ jobs:
         name: themedata
         path: dist
         
-# The next step is just here to control the location
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
     - name: Download theme data
       uses: actions/download-artifact@v1.0.0
       with:
