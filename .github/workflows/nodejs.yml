@@ -59,7 +59,7 @@ jobs:
     
     - name: Deploy to nflopendev
       if: github.ref == 'refs/heads/develop'
-      uses: redditnfl/publish-reddit-stylesheet-action@4dfa402
+      uses: redditnfl/publish-reddit-stylesheet-action@b5e37d4
       with:
         subreddit: nflopendev
         path: downloaded_theme
