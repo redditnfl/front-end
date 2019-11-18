@@ -50,8 +50,12 @@ jobs:
         name: themedata
         path: dist
         
-# The next step is just here to control the location
-    
+  deploy:
+
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
     - name: Download theme data
       uses: actions/download-artifact@v1.0.0
       with:
@@ -60,7 +64,7 @@ jobs:
     
     - name: Deploy to nflopendev
       if: github.ref == 'refs/heads/develop'
-      uses: redditnfl/publish-reddit-stylesheet-action@v1.0.0
+      uses: redditnfl/publish-reddit-stylesheet-action@v1.1.0
       with:
         subreddit: nflopendev
         path: downloaded_theme
@@ -68,11 +72,12 @@ jobs:
         praw_client_id: ${{ secrets.style_publisher_praw_client_id }}
         praw_client_secret: ${{ secrets.style_publisher_praw_client_secret }}
         praw_refresh_token: ${{ secrets.style_publisher_praw_refresh_token }}
+
     - name: Deploy to nfl
       if: github.ref == 'refs/heads/master'
-      uses: redditnfl/publish-reddit-stylesheet-action@v1.0.0
+      uses: redditnfl/publish-reddit-stylesheet-action@v1.1.0
       with:
-        subreddit: nflopendev
+        subreddit: nfl
         path: downloaded_theme
       env:
         praw_client_id: ${{ secrets.style_publisher_praw_client_id }}
