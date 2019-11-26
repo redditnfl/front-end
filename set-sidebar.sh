@@ -31,7 +31,7 @@ set -e
 set -x
 
 IMAGEWIDTH=300
-BRANCH="r-nfldev"
+BRANCH="develop"
 
 git checkout $BRANCH
 git pull
@@ -42,7 +42,7 @@ fi
 
 temploc=$(mktemp --tmpdir sbpic.XXXXXX)
 temploc_sbwidth=$(mktemp --tmpdir sbpic_sbwidth.XXXXXX)
-finalloc=src/img/SB-$IMAGENAME.jpg
+finalloc=src/assets/temp-img/SB-$IMAGENAME.jpg
 DOUBLEIMAGEWIDTH=$(expr $IMAGEWIDTH \* 2)
 
 wget -O $temploc "$IMAGEURL"
