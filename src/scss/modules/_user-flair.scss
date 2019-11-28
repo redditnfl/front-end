@@ -96,14 +96,15 @@ $pos-100:  0%;
 }
 
 /* Special flair */
-.flair-twitter, .flair-robot {
-	&:before {
-		background-image: url(#{$special-icons});
-	}
+%special-flair-element {
+    @extend %flair-element;
+    background-image: url(#{$special-icons});
 }
 .flair-twitter:before {
+    @extend %special-flair-element;
 	background-position: 0 0;
 }
 .flair-robot:before {
+    @extend %special-flair-element;
 	background-position: 0 -20px;
 }
