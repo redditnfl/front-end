@@ -1,8 +1,4 @@
-.link{
-	&{}
-}
 .flairsample-left{
-	&{}
 	.linkflairlabel{
 		display: block;
 	}
@@ -41,8 +37,6 @@ $pos-100:  0%;
 	$color: map-get($item, color);
 	$bold: map-get($item, bold);
 	$icon: map-get($item, icon);
-
-
 	.linkflair-#{$class}{
 		@if($color or $bold){
 			.title{

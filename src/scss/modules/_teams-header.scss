@@ -8,13 +8,11 @@
 	// kill all header elements follow hr and h4
 	@for $i from 1 through 6{
 		+ h#{$i}{
-				@extend %kill;
+			@extend %kill;
 		}
 	}
 }
-
 #header-bottom-left .pagename{
-	&{}
 	a::before{
 		content: "";
 		position: absolute;

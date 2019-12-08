@@ -19,18 +19,15 @@
 	+ a.author {
 		&{
 			color: #fff !important;
-			border-radius:4px;
-			-moz-border-radius:4px;
-			-webkit-border-radius:4px;
-			font-weight:700;
-			padding:2px 4px;
+			border-radius: 4px;
+			font-weight: 700;
+			padding: 2px 4px;
 		}
 		&:after {
-			content:" - Verified account";
+			content: " - Verified account";
 		}
 	}
 }
-
 #siteTable .tagline .flair-official {
 	display: inline-block !important;
 }
