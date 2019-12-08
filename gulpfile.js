@@ -171,7 +171,7 @@ function errorAlert(error){
 // global tasks
 gulp.task('build', ['build:html','build:css','build:assets']);
 
-gulp.task('default', ['build'], function() {
+gulp.task('watch', ['build'], function() {
 	gulp.watch(get_file_paths("html").watch, [ 'build:html' ]);
 	gulp.watch(get_file_paths("css").watch, [ 'build:css' ]);
 	gulp.watch(get_file_paths("assets").watch, [ 'build:assets' ]);

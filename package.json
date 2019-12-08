@@ -1,17 +1,18 @@
 {
-  "name": "r-aafb_theme",
+  "name": "r-nfl_theme",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "build": "gulp build"
+    "build": "node_modules/gulp/bin/gulp.js build",
+    "watch": "node_modules/gulp/bin/gulp.js watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hmphry/prototyping.git"
   },
   "keywords": [
-    "HMPHRY"
+    "rnfl"
   ],
   "author": "HMPHRY",
   "license": "ISC",
