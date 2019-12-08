@@ -12,7 +12,8 @@
     "url": "git+https://github.com/hmphry/prototyping.git"
   },
   "keywords": [
-    "rnfl"
+    "rnfl",
+    "reddit"
   ],
   "author": "HMPHRY",
   "license": "ISC",
@@ -39,8 +40,12 @@
     "natives": "^1.1.6",
     "postcss-alias": "^2.0.0",
     "postcss-base64": "^0.7.1",
+    "postcss-scss": "^2.0.0",
     "postcss-short-size": "^3.0.0",
-    "r-aafb-base-theme": "^4.0.0"
+    "r-aafb-base-theme": "^4.0.0",
+    "stylelint": "^12.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "11": "0.0.1"
+  }
 }

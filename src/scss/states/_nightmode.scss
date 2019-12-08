@@ -2,9 +2,7 @@ $resnm-bg: #333333;
 $resnm-bg-alt: #262626;
 $resnm-font: #ccc;
 $resnm-grey: #666;
-
 .res-nightmode {
-	&{}
 	#header,
 	.side .titlebox .md hr+h4+h1+ul::before{
 		background-color: $resnm-bg !important;

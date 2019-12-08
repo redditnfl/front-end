@@ -22,7 +22,7 @@ $size: 30px;
 
 // vote arrows
 .comment .midcol {
-    width: auto;
+	width: auto;
 }
 .arrow{
 	display: block;
@@ -161,7 +161,6 @@ $size: 30px;
 
 // rules icon
 .side a[title=subreddit-rules]{
-	&{}
 	&::before{
 		display: none;
 	}

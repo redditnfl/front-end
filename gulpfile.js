@@ -1,35 +1,37 @@
 // global
-var gulp = require('gulp');
-var notify = require('gulp-notify');
-var plumber = require('gulp-plumber');
-var fileinclude = require('gulp-file-include');
-var replace = require('gulp-replace');
-var include = require('gulp-file-include');
-var csso = require('gulp-csso');
-var clipboard = require("gulp-clipboard");
+const gulp = require('gulp');
+const notify = require('gulp-notify');
+const plumber = require('gulp-plumber');
+const fileinclude = require('gulp-file-include');
+const replace = require('gulp-replace');
+const include = require('gulp-file-include');
+const csso = require('gulp-csso');
+const clipboard = require("gulp-clipboard");
 
-var fs = fs = require('fs');
-var filter = require('gulp-filter');
+const fs = require('fs');
+const filter = require('gulp-filter');
 // assets
 
 // css
-var postcss = require('gulp-postcss');
-var sass = require('gulp-sass');
-var autoprefixer = require('autoprefixer');
-var pcss_size = require('postcss-short-size');
-var pcss_alias = require('postcss-alias');
-var pcss_base_64 = require('postcss-base64');
-var pcss_media_query_packer = require('css-mqpacker');
+const syntax_scss = require('postcss-scss');
+const postcss = require('gulp-postcss');
+const sass = require('gulp-sass');
+const autoprefixer = require('autoprefixer');
+const pcss_size = require('postcss-short-size');
+const pcss_alias = require('postcss-alias');
+const pcss_base_64 = require('postcss-base64');
+const pcss_media_query_packer = require('css-mqpacker');
+const stylelint = require('stylelint');
 
-var post_process = [
-	autoprefixer({browsers: ['last 3 versions']}),
+const post_process = [
+	autoprefixer(),
 	pcss_size(),
 	pcss_base_64(),
 	pcss_base_64(),
 	pcss_media_query_packer({ sort: true })
 ];
 
-var file_paths = {
+const file_paths = {
 	src: {
 		assets: "./src/assets/",
 		css: "./src/scss/",
@@ -45,7 +47,7 @@ var file_paths = {
 	}
 };
 
-var file_names = {
+const file_names = {
 	assets: {
 		compile: ['**/*.*', '**/_*.*'],
 		ignore: [],
@@ -75,13 +77,13 @@ var file_names = {
 // 		dist: a file location for completed tasks
 // 		watch: an array of file locations for watch tasks
 function get_file_paths(file_type){
-	var src_path = file_paths.src[file_type];
-	var modules_path = file_paths.src.modules;
-	var dist_path = file_paths.dist[file_type];
-	var names = file_names[file_type+''];
+	const src_path = file_paths.src[file_type];
+	const modules_path = file_paths.src.modules;
+	const dist_path = file_paths.dist[file_type];
+	const names = file_names[file_type+''];
 
 	function get_source(){
-		var arr = [];
+		const arr = [];
 		names.compile.forEach(function(item){
 			arr.push(src_path+item);
 		});
@@ -91,7 +93,7 @@ function get_file_paths(file_type){
 		return arr;
 	}
 	function get_watch(){
-		var arr = [];
+		const arr = [];
 		names.watch.forEach(function(item){
 			arr.push(src_path+item);
 			arr.push(modules_path+item);
@@ -109,18 +111,18 @@ function get_file_paths(file_type){
 
 // asset tasks
 gulp.task('build:assets', ["build:css"], function(){
-	var css_task_info = get_file_paths("css");
-	var file = fs.readFileSync(css_task_info.dist+"/screen.css", { encoding: 'utf8' });
-	var re = /%%(.*?)%%/g;
-	var patterns = [];
+	const css_task_info = get_file_paths("css");
+	const file = fs.readFileSync(css_task_info.dist+"/screen.css", { encoding: 'utf8' });
+	const re = /%%(.*?)%%/g;
+	const patterns = [];
 	// Build a list of glob patterns for each file in use
 	while ((m = re.exec(file)) !== null) {
-		var pattern = '**/' + m[1] + '.*';
+		const pattern = '**/' + m[1] + '.*';
 		if (!patterns.includes(pattern)) {
 			patterns.push(pattern)
 		}
 	}
-	var task_info = get_file_paths("assets");
+	const task_info = get_file_paths("assets");
 	return gulp.src(task_info.src)
 	.pipe(filter(patterns))
 	.pipe(gulp.dest(task_info.dist));
@@ -128,9 +130,10 @@ gulp.task('build:assets', ["build:css"], function(){
 
 // css tasks
 gulp.task('build:css', function(){
-	var task_info = get_file_paths("css");
+	const task_info = get_file_paths("css");
 	return gulp.src(task_info.src)
 		.pipe(plumber({errorHandler: errorAlert}))
+		.pipe(postcss([stylelint], {syntax: syntax_scss}))
 		.pipe(sass({
 			outputStyle: 'expanded',
 			noCache: true,
@@ -153,7 +156,7 @@ gulp.task('build:css', function(){
 
 // html tasks
 gulp.task('build:html', function(){
-	var task_info = get_file_paths("html");
+	const task_info = get_file_paths("html");
 	return gulp.src(task_info.src)
 		.pipe(plumber({errorHandler: errorAlert}))
 		.pipe(fileinclude({prefix: '@', basepath: file_paths.src.modules}))

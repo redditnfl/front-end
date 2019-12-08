@@ -1,0 +1,25 @@
+{
+	"rules": {
+		"at-rule-no-vendor-prefix": true,
+		"at-rule-semicolon-newline-after": "always",
+		"block-closing-brace-newline-after": "always",
+		"block-no-empty": true,
+		"color-named": "never",
+		"color-no-invalid-hex": true,
+		"comment-empty-line-before": "always",
+		"comment-no-empty": true,
+		"declaration-colon-space-before": "never",
+		"declaration-colon-space-after": "always",
+		"indentation": ["tab", {
+			"indentInsideParens": ["once-at-root-twice-in-block"]
+		}],
+		"property-case": "lower",
+		"property-no-vendor-prefix": true,
+		"rule-empty-line-before": ["never"],
+		"selector-type-case": "lower",
+		"string-no-newline": true,
+		"unit-whitelist": ["px", "%", "s"],
+		"value-keyword-case": "lower",
+		"value-no-vendor-prefix": true
+	}
+}

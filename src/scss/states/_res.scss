@@ -23,14 +23,14 @@
 		bottom: auto;
 		height: 100%;
 	}
-    #RESShortcutsEditContainer, #RESShortcutsSort, #RESShortcutsRight, #RESShortcutsLeft, #RESShortcutsAdd, #RESShortcutsTrash {
-        color: #fff;
-        background: #333;
-    }
-    .RESDialogSmall > h3 {
-        box-sizing: content-box;
-    }
-    a.author.moderator::before {
-        left: -8px; // Magic value
-    }
+	#RESShortcutsEditContainer, #RESShortcutsSort, #RESShortcutsRight, #RESShortcutsLeft, #RESShortcutsAdd, #RESShortcutsTrash {
+		color: #fff;
+		background: #333;
+	}
+	.RESDialogSmall > h3 {
+		box-sizing: content-box;
+	}
+	a.author.moderator::before {
+		left: -8px; // Magic value
+	}
 }

@@ -42,7 +42,7 @@ body.moderator #siteTable .flair{
 	// Flair wrap on hover
 	&:hover{
 		width: auto;
-		border-color:  #ddd;
+		border-color: #ddd;
 		background-color: #f5f5f5;
 		cursor: help;
 	}
@@ -53,12 +53,9 @@ body.moderator #siteTable .flair{
 		height: 20px;
 	}
 }
-
 #siteTable .tagline .flair-official {
 	display: inline-block !important;
 }
-
-
 $pos-100:  0%;
 @each $team in $nfl-teams{
 	$league: map-get($team, league);
@@ -68,13 +65,11 @@ $pos-100:  0%;
 	$bg: map-get($team, bg);
 	$status_eliminated: map-get($team, eliminated);
 	$status_champion: map-get($team, eliminated);
-
 	.md a[href*="/r/#{$url}"],
 	.md a[href*="/r/#{to-lower-case($url)}"],
 	.md a[href*="/r/#{to-upper-case($url)}"],
 	.md a[href*="/#{to-upper-case($abbr)}"],
 	.flair-#{to-lower-case($name)}{
-		&{}
 		&::before{
 			@extend %flair-element;
 			background-position: 0 $pos-100;
@@ -97,14 +92,14 @@ $pos-100:  0%;
 
 /* Special flair */
 %special-flair-element {
-    @extend %flair-element;
-    background-image: url(#{$special-icons});
+	@extend %flair-element;
+	background-image: url(#{$special-icons});
 }
 .flair-twitter:before {
-    @extend %special-flair-element;
+	@extend %special-flair-element;
 	background-position: 0 0;
 }
 .flair-robot:before {
-    @extend %special-flair-element;
+	@extend %special-flair-element;
 	background-position: 0 -20px;
 }
