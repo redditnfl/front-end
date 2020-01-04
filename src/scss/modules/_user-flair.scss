@@ -103,3 +103,22 @@ $pos-100:  0%;
 	@extend %special-flair-element;
 	background-position: 0 -20px;
 }
+
+// bandwagon flair
+.flair.flair-bandwagon{
+	&{
+		width: 48px;
+	}
+	&:hover{
+		width: auto;
+	}
+	&::before{
+		margin-right: 22px;
+	}
+	&::after{
+		content: "🎉";
+		position: absolute;
+		top: 11%;
+		left: 28px;
+	}
+}
