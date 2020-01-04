@@ -116,9 +116,16 @@ $pos-100:  0%;
 		margin-right: 22px;
 	}
 	&::after{
-		content: "🎉";
+		content: "";
 		position: absolute;
 		top: 11%;
 		left: 28px;
+		display: block;
+		width: 15px;
+		height: 15px;
+		background-image: url("../img/bandwagon.png");
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 }
