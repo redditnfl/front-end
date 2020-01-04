@@ -1,5 +1,5 @@
-$headerHeight: 80px; //ex: 40px or false. 80px is new default
-$headerSideOffset: 60px; //ex: 20px or false
+$headerHeight: 220px; //ex: 40px or false. 80px is new default
+$headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
 // New Promo
 $promos: (
