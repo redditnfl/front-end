@@ -1,5 +1,5 @@
-$color-1: #6890c5;
-$color-2: #ffffff;
+$color-1: #eeeeee;
+$color-2: #eaeaea;
 html{
 	background-color: $color-1;
 }
@@ -12,7 +12,7 @@ html::after{
 	width: 100%;
 	margin-top: 80px;
 	background-color: transparent;
-	background-image: url("../img/hero-ten-ne.png");
+	background-image: url("../img/hero-min-no.png");
 	background-position: center top;
 	background-size: 1440px;
 	background-repeat: no-repeat;
