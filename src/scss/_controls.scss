@@ -1,14 +1,16 @@
 $headerHeight: 80px; //ex: 40px or false. 80px is new default
-$headerSideOffset: 60px; //ex: 20px or false
+$headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
 // New Promo
 $promos: (
+/*
 	(
 		image: "../img/sidebar-AR.jpg",
 		target: "ad-aaron-rodgers",
 		height: 200px,
 		position: true
 	),
+    */
 	(
 		image: "../img/twitter-promo.png",
 		target: "ad-twitter",
@@ -24,10 +26,10 @@ $promos: (
 );
 
 // Sidebar Variables
-$sidebarImage: "../img/SB-REG14-Dolphins.jpg";
-$sidebarHeader: "Philly's Special";
-$sidebarText: "Miami Dolphins punter Matt Haack threw a touchdown pass to kicker Jason Sanders during the Dolphins 37-31 upset over the Philadelphia Eagles that some are calling one of the best trick plays this season. While Miami was eliminated from Playoff contention over the weekend, at least fans of the team can fondly remember this fun moment.";
-$sidebarPicHeight: 169px;
+$sidebarImage: "../img/SB-POST-WC-Henry.jpg";
+$sidebarHeader: "A Titan-ic Game";
+$sidebarText: "The Tennessee Titans have advanced to the AFC Divisional Round after defeating the defending Super Bowl champions, the New England Patriots, 20-13 at Gillette Stadium. The Titans took control of the game on the ground, led by RB Derrick Henry. Henry toted the rock 34 times in the game and rushed for 182 yards, setting the Titans postseason franchise record. Tennessee will head to Baltimore next weekend and the Houston Texans, who were victorious in the early Saturday matchup with the Buffalo Bills, will head to Kansas City.";
+$sidebarPicHeight: 200px;
 $sidebarPicOffset: 0;
 
 // Links in sidebar
