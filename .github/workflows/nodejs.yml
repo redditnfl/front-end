@@ -64,7 +64,7 @@ jobs:
     
     - name: Deploy to nflopendev
       if: github.ref == 'refs/heads/develop'
-      uses: redditnfl/publish-reddit-stylesheet-action@v1.1.0
+      uses: redditnfl/publish-reddit-stylesheet-action@v1.2.0
       with:
         subreddit: nflopendev
         path: downloaded_theme
@@ -75,7 +75,7 @@ jobs:
 
     - name: Deploy to nfl
       if: github.ref == 'refs/heads/master'
-      uses: redditnfl/publish-reddit-stylesheet-action@v1.1.0
+      uses: redditnfl/publish-reddit-stylesheet-action@v1.2.0
       with:
         subreddit: nfl
         path: downloaded_theme
