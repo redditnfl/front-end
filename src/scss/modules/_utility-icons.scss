@@ -67,6 +67,14 @@ $size: 30px;
 	background-position: pos(0,2);
 }
 
+//snoo notes
+
+#header-bottom-right a#sn-show-options{
+	&{
+	color:46d160;
+	}
+}
+
 // inbox
 #header-bottom-right #mail{
 	&{
