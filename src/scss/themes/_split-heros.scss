@@ -1,0 +1,43 @@
+$color-1: #040404;
+html{
+	background-color: $color-1;
+}
+html::before,
+html::after{
+	content: "";
+	position: absolute;
+	top: 20px;
+	z-index: -1;
+	height: 600px;
+	margin-top: 80px;
+	background-color: transparent;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+html::before{
+	left: 0;
+	right: 50%;
+	background-image: url("../img/HERO-sf-min-1.jpg");
+	background-position: left top;
+}
+html::after{
+	right: 0;
+	left: 50%;
+	background-image: url("../img/HERO-sf-min-2.jpg");
+	background-position: right top;
+}
+a[title="ad-gamethread"]{
+	position: absolute;
+	top: 140px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 135px;
+	width: 360px;
+	background-image: url("../img/HERO-sf-min-3.jpg");
+	background-position: center center;
+	font-size: 0;
+	pointer-events: none;
+}
+#header{
+	background: #fff;
+}
