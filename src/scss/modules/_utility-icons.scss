@@ -68,12 +68,7 @@ $size: 30px;
 }
 
 //snoo notes
-
-#header-bottom-right a#sn-show-options{
-	&{
-	color:46d160;
-	}
-}
+#header-bottom-right a#sn-show-options{ color: #46d160; }
 
 // inbox
 #header-bottom-right #mail{
@@ -189,9 +184,4 @@ $size: 30px;
 	opacity: .7;
 	background-size: 100%;
 	margin-top: -2px;
-}
-
-// remove later
-#sn-options{
-	display: none !important;
 }
