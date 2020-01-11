@@ -2,7 +2,6 @@ $color-1: #040404;
 html{
 	background-color: $color-1;
 }
-
 html::before,
 html::after{
 	content: "";
@@ -12,6 +11,7 @@ html::after{
 	height: 600px;
 	margin-top: 80px;
 	background-color: transparent;
+	background-size: 100%;
 	background-repeat: no-repeat;
 }
 html::before{
@@ -36,6 +36,7 @@ a[title="ad-gamethread"]{
 	background-image: url("../img/HERO-sf-min-3.jpg");
 	background-position: center center;
 	font-size: 0;
+	pointer-events: none;
 }
 #header{
 	background: #fff;
