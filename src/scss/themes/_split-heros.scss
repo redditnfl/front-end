@@ -1,4 +1,4 @@
-$color-1: #040404;
+$color-1: #0d0d0d;
 html{
 	background-color: $color-1;
 }
@@ -17,27 +17,28 @@ html::after{
 html::before{
 	left: 0;
 	right: 50%;
-	background-image: url("../img/HERO-sf-min-1.jpg");
+	background-image: url("../img/HERO-pack.jpg");
 	background-position: left top;
 }
 html::after{
 	right: 0;
 	left: 50%;
-	background-image: url("../img/HERO-sf-min-2.jpg");
+	background-image: url("../img/HERO-hawks.jpg");
 	background-position: right top;
 }
 a[title="ad-gamethread"]{
 	position: absolute;
-	top: 140px;
+	top: 185px;
 	left: 50%;
 	transform: translateX(-50%);
 	height: 135px;
 	width: 360px;
-	background-image: url("../img/HERO-sf-min-3.jpg");
+	background-image: url("../img/HERO-logos.jpg");
 	background-position: center center;
+	background-size: cover;
 	font-size: 0;
 	pointer-events: none;
 }
 #header{
-	background: #fff;
+	background: $color-1;
 }
