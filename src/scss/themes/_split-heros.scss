@@ -28,13 +28,14 @@ html::after{
 }
 a[title="ad-gamethread"]{
 	position: absolute;
-	top: 140px;
+	top: 240px;
 	left: 50%;
 	transform: translateX(-50%);
 	height: 135px;
 	width: 360px;
 	background-image: url("../img/HERO-logos.jpg");
 	background-position: center center;
+	background-size: cover;
 	font-size: 0;
 	pointer-events: none;
 }
