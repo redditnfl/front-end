@@ -1,0 +1,44 @@
+$color-1: #0d0d0d;
+html{
+	background-color: $color-1;
+}
+html::before,
+html::after{
+	content: "";
+	position: absolute;
+	top: 20px;
+	z-index: -1;
+	height: 600px;
+	margin-top: 80px;
+	background-color: transparent;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+html::before{
+	left: 0;
+	right: 50%;
+	background-image: url("../img/HERO-pack.jpg");
+	background-position: left top;
+}
+html::after{
+	right: 0;
+	left: 50%;
+	background-image: url("../img/HERO-hawks.jpg");
+	background-position: right top;
+}
+a[title="ad-gamethread"]{
+	position: absolute;
+	top: 185px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 135px;
+	width: 360px;
+	background-image: url("../img/HERO-logos.jpg");
+	background-position: center center;
+	background-size: cover;
+	font-size: 0;
+	pointer-events: none;
+}
+#header{
+	background: $color-1;
+}
