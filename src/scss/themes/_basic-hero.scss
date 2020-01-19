@@ -1,4 +1,4 @@
-$color-1: #fff;
+$color-1: #000007;
 html{
 	background-color: $color-1;
 }
@@ -7,11 +7,11 @@ html::before{
 	position: absolute;
 	top: 0;
 	z-index: -1;
-	height: 275px;
+	height: 475px;
 	width: 100%;
 	margin-top: 80px;
 	background-color: transparent;
-	background-image: url("../img/HERO-hou-kc.png");
+	background-image: url("../img/HERO-nfc.jpg");
 	background-position: center top;
 	background-size: 1440px;
 	background-repeat: no-repeat;
