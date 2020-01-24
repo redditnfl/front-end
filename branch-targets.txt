@@ -1,0 +1,4 @@
+master: nfl
+develop: nflopendev
+rasherdk/*: rasherdk
+deploy_magic: rasherdk
