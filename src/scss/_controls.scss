@@ -1,16 +1,8 @@
-$headerHeight: 80px; //ex: 40px or false. 80px is new default
+$headerHeight: 80px; //ex: 40px or false. 80px default
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
 // New Promo
 $promos: (
-/*
-	(
-		image: "../img/sidebar-AR.jpg",
-		target: "ad-aaron-rodgers",
-		height: 200px,
-		position: true
-	),
-    */
 	(
 		image: "../img/twitter-promo.png",
 		target: "ad-twitter",
@@ -23,12 +15,18 @@ $promos: (
 		height: 105px,
 		position: false
 	),
+    (
+        image: "../img/sidebar-ad-bennett.jpg",
+        target: "ama-bennett",
+        height: 220px,
+        position: true
+    )
 );
 
 // Sidebar Variables
-$sidebarImage: "../img/SB-POST-WC-Henry.jpg";
-$sidebarHeader: "A Titan-ic Game";
-$sidebarText: "The Tennessee Titans have advanced to the AFC Divisional Round after defeating the defending Super Bowl champions, the New England Patriots, 20-13 at Gillette Stadium. The Titans took control of the game on the ground, led by RB Derrick Henry. Henry toted the rock 34 times in the game and rushed for 182 yards, setting the Titans postseason franchise record. Tennessee will head to Baltimore next weekend and the Houston Texans, who were victorious in the early Saturday matchup with the Buffalo Bills, will head to Kansas City.";
+$sidebarImage: "../img/Doleman.png";
+$sidebarHeader: "Vikings HoF DE Chris Doleman has died";
+$sidebarText: "Hall of Fame defensive end Chris Doleman died Tuesday night after a battle with brain cancer. He was 58 years old. The prolific defensive end played 15 seasons in the NFL, including 10 with the Vikings. Minnesota drafted Doleman fourth overall out of Pittsburgh in the 1985 draft and the edge rusher made an instant impact, earning All-Rookie honors. A member of the Vikings Ring of Honor, Doleman was inducted into the Pro Football Hall of Fame in 2012.";
 $sidebarPicHeight: 200px;
 $sidebarPicOffset: 0;
 

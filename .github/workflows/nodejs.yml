@@ -4,8 +4,6 @@ on:
   
   push:
     branches:
-      - master
-      - develop
 
 jobs:
   build:
@@ -49,36 +47,55 @@ jobs:
       with:
         name: themedata
         path: dist
-        
-  deploy:
+    
+    - name: Save branch targets
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: branch-targets
+        path: branch-targets.txt
 
+  deploy:
     runs-on: ubuntu-latest
     needs: build
-
+    
     steps:
+    - name: Download branch-targets
+      uses: actions/download-artifact@v1.0.0
+      with:
+        name: branch-targets
+
+    - name: Determine target
+      shell: python
+      run: |
+        from fnmatch import fnmatch
+        import os
+        import re
+        ref = "${{ github.ref }}"
+        for line in open("%s/branch-targets/branch-targets.txt" % os.environ['GITHUB_WORKSPACE']):
+            pattern, target = re.split(r'\s*:\s*', line.strip())
+            target = target.strip()
+            pattern = 'refs/heads/' + pattern
+            if fnmatch(ref, pattern):
+                print("Setting target to /r/%s" % target)
+                print("::set-env name=SUBREDDIT::%s" % target)
+                break
+        else:
+            print("::warning ::No target found matching ref=" + ref)
+
     - name: Download theme data
+      if: env.SUBREDDIT != ''
       uses: actions/download-artifact@v1.0.0
       with:
         name: themedata
         path: downloaded_theme
     
-    - name: Deploy to nflopendev
-      if: github.ref == 'refs/heads/develop'
-      uses: redditnfl/publish-reddit-stylesheet-action@v1.1.0
+    - name: Deploy to reddit
+      if: env.SUBREDDIT != ''
+      uses: redditnfl/publish-reddit-stylesheet-action@v1.3.0
       with:
-        subreddit: nflopendev
+        subreddit: ${{ env.SUBREDDIT }}
         path: downloaded_theme
-      env:
-        praw_client_id: ${{ secrets.style_publisher_praw_client_id }}
-        praw_client_secret: ${{ secrets.style_publisher_praw_client_secret }}
-        praw_refresh_token: ${{ secrets.style_publisher_praw_refresh_token }}
-
-    - name: Deploy to nfl
-      if: github.ref == 'refs/heads/master'
-      uses: redditnfl/publish-reddit-stylesheet-action@v1.1.0
-      with:
-        subreddit: nfl
-        path: downloaded_theme
+        cleanup: true
       env:
         praw_client_id: ${{ secrets.style_publisher_praw_client_id }}
         praw_client_secret: ${{ secrets.style_publisher_praw_client_secret }}

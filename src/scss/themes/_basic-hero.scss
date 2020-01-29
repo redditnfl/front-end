@@ -1,32 +1,21 @@
-$color-1: #e7e7e7;
-$color-2: #ededed;
+$color-1: #ffffff;
 html{
 	background-color: $color-1;
 }
-html::after{
+html::before{
 	content: "";
 	position: absolute;
 	top: 0;
 	z-index: -1;
 	height: 275px;
 	width: 100%;
-	margin-top: 80px;
+	margin-top: 104px;
 	background-color: transparent;
-	background-image: url("../img/hero-sea-phi.png");
+	background-image: url("../img/HERO-pro-bowl.jpg");
 	background-position: center top;
-	background-size: 1440px;
+	background-size: 1480px;
 	background-repeat: no-repeat;
 }
-html::before{
-	content: "";
-	position: fixed;
-	top: 0;
-	width: 50%;
-	right: 0;
-	z-index: -1;
-	height: 100%;
-	background-color: $color-2;
-}
 #header{
-	background: #fff;
+	background: $color-1;
 }
