@@ -6,7 +6,7 @@
 .side .titlebox .md hr + h5 + h2 + ul{
 	&{
 		position: absolute;
-		top: 535px;
+		top: $headerHeight + 40px;
 		left: 30px;
 		right: 30px;
 		display: flex;
@@ -18,7 +18,7 @@
 		background-size: cover;
 	}
 	li{
-		padding: 20px 30px;
+		padding: 15px 30px;
 	}
 	li:first-child{
 		&{
@@ -26,6 +26,13 @@
 		}
 		a{
 			color: #fff;
+		}
+		a::after{
+			content: "|";
+			margin: 0 10px;
+		}
+		a:last-child::after{
+			display: none;
 		}
 	}
 	li:last-child{
@@ -36,12 +43,13 @@
 		a{
 			position: absolute;
 			top: 0;
-			height: 100%;
-			width: 200px;
+			bottom: 0;
+			right: 0;
+			width: 300px;
 			color: rgba(#fff, 0);
 			background-size: contain;
 			background-repeat: no-repeat;
-			background-position: left center;
+			background-position: right center;
 			background-image: url("../img/hub-btn.png");
 		}
 	}
