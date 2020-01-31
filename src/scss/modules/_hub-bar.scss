@@ -1,0 +1,13 @@
+// All "components" within the side bar will begin with an hr, then an h4, and finally a random header between h1-h6
+// creating a unique code for us to target (e.g. hr + h4 + h1 + component).
+// It's messy, for sure.
+
+// kill all h4 following hr
+.side .titlebox .md hr + h5 + h2 + ul{
+	position: absolute;
+	top: 535px;
+	left: 30px;
+	right: 30px;
+	background-image: url("../img/hub-btn.png");
+	background-image: url("../img/hub-bg.png");
+}
