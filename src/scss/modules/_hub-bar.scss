@@ -16,13 +16,19 @@
 		padding: 0;
 		margin: 0;
 		background-size: cover;
+		@media (max-width: 1100px){
+			left: 0;
+			right: 0;
+		}
 	}
 	li{
 		padding: 15px 30px;
+		white-space: nowrap;
 	}
 	li:first-child{
 		&{
 			width: 70%;
+			overflow: hidden;
 		}
 		a{
 			color: #fff;
@@ -39,6 +45,7 @@
 		&{
 			position: relative;
 			width: 30%;
+			overflow: visible;
 		}
 		a{
 			position: absolute;
