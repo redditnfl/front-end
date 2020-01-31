@@ -1,0 +1,64 @@
+// All "components" within the side bar will begin with an hr, then an h4, and finally a random header between h1-h6
+// creating a unique code for us to target (e.g. hr + h4 + h1 + component).
+// It's messy, for sure.
+
+// kill all h4 following hr
+.side .titlebox .md hr + h5 + h2 + ul{
+	&{
+		position: absolute;
+		top: $headerHeight + 40px;
+		left: 30px;
+		right: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		background-image: url("../img/hub-bg.png");
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		background-size: cover;
+		@media (max-width: 1100px){
+			left: 0;
+			right: 0;
+		}
+	}
+	li{
+		padding: 15px 30px;
+		white-space: nowrap;
+	}
+	li:first-child{
+		&{
+			width: 70%;
+			overflow: hidden;
+		}
+		a{
+			color: #fff;
+		}
+		a::after{
+			content: "|";
+			margin: 0 10px;
+		}
+		a:last-child::after{
+			display: none;
+		}
+	}
+	li:last-child{
+		&{
+			position: relative;
+			width: 30%;
+			overflow: visible;
+		}
+		a{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			width: 300px;
+			color: rgba(#fff, 0);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: right center;
+			background-image: url("../img/hub-btn.png");
+		}
+	}
+
+}

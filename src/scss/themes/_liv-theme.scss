@@ -1,0 +1,22 @@
+$blue: #039ad9;
+$red: #c53996;
+$accent: #4a1fe0;
+$white: #fff;
+$black: #000005;
+html{
+	background-color: $black;
+}
+#header{
+	background: $white !important;
+}
+.content .linklisting .thing .title>.title,
+.content .linklisting .thing .title .domain a,
+.side #search input:focus:nth-child(1), .side #search input:hover:nth-child(1), .side .login-form input:focus, .side .login-form input:hover, .side .sidecontentbox .helplink:focus, .side .sidecontentbox .helplink:focus:before, .side .sidecontentbox .helplink:hover, .side .sidecontentbox .helplink:hover:before, .side .submit-text a:focus, .side .submit-text a:hover, .side .subscribe-button a:focus, .side .subscribe-button a:hover, .side .titlebox .tagline .flairselectbtn:focus, .side .titlebox .tagline .flairselectbtn:hover, .side a:focus[title=subreddit-rules], .side a:hover[title=subreddit-rules]{
+	color: $blue;
+}
+#header-bottom-left .pagename a{
+	color: $red;
+}
+.md a{
+	color: $accent
+}
