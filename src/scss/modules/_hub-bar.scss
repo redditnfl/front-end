@@ -4,10 +4,46 @@
 
 // kill all h4 following hr
 .side .titlebox .md hr + h5 + h2 + ul{
-	position: absolute;
-	top: 535px;
-	left: 30px;
-	right: 30px;
-	background-image: url("../img/hub-btn.png");
-	background-image: url("../img/hub-bg.png");
+	&{
+		position: absolute;
+		top: 535px;
+		left: 30px;
+		right: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		background-image: url("../img/hub-bg.png");
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		background-size: cover;
+	}
+	li{
+		padding: 20px 30px;
+	}
+	li:first-child{
+		&{
+			width: 70%;
+		}
+		a{
+			color: #fff;
+		}
+	}
+	li:last-child{
+		&{
+			position: relative;
+			width: 30%;
+		}
+		a{
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 200px;
+			color: rgba(#fff, 0);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: left center;
+			background-image: url("../img/hub-btn.png");
+		}
+	}
+
 }
