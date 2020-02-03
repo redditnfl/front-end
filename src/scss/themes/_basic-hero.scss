@@ -1,14 +1,14 @@
-$color-1: #06060D;
+$color-1: #ffffff;
 html::before{
 	content: "";
 	position: absolute;
 	top: 0;
 	z-index: -1;
-	height: 700px;
+	height: 297px;
 	width: 100%;
 	margin-top: 104px;
 	background-color: transparent;
-	background-image: url("../img/liv-hero-final.png");
+	background-image: url("../img/hero-sb-chiefs.png");
 	background-position: center top;
 	background-size: 1600px;
 	background-repeat: no-repeat;
