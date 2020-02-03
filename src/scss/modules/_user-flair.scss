@@ -76,8 +76,20 @@ $pos-100:  0%;
 			@if $status_eliminated{
 				opacity: .4;
 			}
-			@if $status_champion{
-				// multiple css backgrounds to be added at a later time
+		}
+		@if $status_champion{
+			&::after{
+				content: "";
+				position: absolute;
+				top: 11%;
+				left: 28px;
+				display: block;
+				width: 15px;
+				height: 15px;
+				background-image: url("../img/sb-trophy.png");
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
 			}
 		}
 	}
