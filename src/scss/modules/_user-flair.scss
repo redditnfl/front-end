@@ -64,7 +64,7 @@ $pos-100:  0%;
 	$url: map-get($team, url);
 	$bg: map-get($team, bg);
 	$status_eliminated: map-get($team, eliminated);
-	$status_champion: map-get($team, eliminated);
+	$status_champion: map-get($team, champion);
 	.md a[href*="/r/#{$url}"],
 	.md a[href*="/r/#{to-lower-case($url)}"],
 	.md a[href*="/r/#{to-upper-case($url)}"],
@@ -76,8 +76,29 @@ $pos-100:  0%;
 			@if $status_eliminated{
 				opacity: .4;
 			}
-			@if $status_champion{
-				// multiple css backgrounds to be added at a later time
+		}
+	}
+
+	@if $status_champion{
+		.flair-#{to-lower-case($name)}{
+			&{
+				width: 48px;
+			}
+			&::before{
+				margin-right: 22px;
+			}
+			&::after{
+				content: "";
+				position: absolute;
+				top: 11%;
+				left: 28px;
+				display: block;
+				width: 10px;
+				height: 18px;
+				background-image: url("../img/sb-trophy.png");
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
 			}
 		}
 	}
