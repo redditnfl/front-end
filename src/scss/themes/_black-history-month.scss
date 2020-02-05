@@ -1,0 +1,74 @@
+$black: #000000;
+
+
+// All "components" within the side bar will begin with an hr, then an h4, and finally a random header between h1-h6
+// creating a unique code for us to target (e.g. hr + h4 + h1 + component).
+// It's messy, for sure.
+
+// kill all h4 following hr
+.side .titlebox .md hr + h5 + h2 + ul{
+	&{
+		width: 300px;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		color: #fff;
+	}
+	li{
+		padding: 10px 20px;
+		background-color: $black;
+	}
+	li:nth-child(1){
+		position: relative;
+		z-index: 2;
+		display: block;
+		height: 130px;
+		width: 100%;
+		font-size: 0;
+		background-color: transparent;
+		background-image: url("../img/bhm-header.png");
+		background-size: 100%;
+	}
+	li:nth-child(2){
+		position: relative;
+		z-index: 1;
+		display: block;
+		height: 236px;
+		width: 100%;
+		margin-top: -14px;
+		font-size: 0;
+		background-image: url("../img/bhm-sidebar-1.png");
+		background-size: 100%;
+	}
+	li:nth-child(3){
+		padding-top: 20px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	li:nth-last-child(2){
+		display: block;
+		width: 100%;
+		padding: 20px 0 0;
+		font-size: 0;
+	}
+	li:nth-last-child(2) a,
+	li:nth-last-child(1) a{
+		display: block;
+		height: 55px;
+		width: 100%;
+		background-size: 100%;
+	}
+	li:nth-last-child(2) a{
+		background-image: url("../img/bhm-button-1.png");
+	}
+	li:nth-last-child(1){
+		display: block;
+		width: 100%;
+		padding: 0;
+		font-size: 0;
+		background-color: transparent;
+	}
+	li:nth-last-child(1) a{
+		background-image: url("../img/bhm-button-2.png");
+	}
+}
