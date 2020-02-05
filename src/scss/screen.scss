@@ -36,6 +36,7 @@ $all-teams: map-collect($nfl-teams);
 @import "states/nightmode";
 
 // Themes
+@import "themes/basic-theme";
 @import "themes/black-history-month";
 
 // yeah, no reddit new button
