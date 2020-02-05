@@ -25,7 +25,6 @@ $all-teams: map-collect($nfl-teams);
 @import "modules/utility-icons";
 @import "modules/utility-text";
 @import "modules/sidebar-ad";
-@import "modules/hub-bar";
 
 // modules
 @import "modules/flair-selection-index";
@@ -37,7 +36,7 @@ $all-teams: map-collect($nfl-teams);
 @import "states/nightmode";
 
 // Themes
-@import "themes/basic-hero";
+@import "themes/black-history-month";
 
 // yeah, no reddit new button
 #sr-header-area .redesign-beta-optin{

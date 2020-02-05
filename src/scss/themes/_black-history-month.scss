@@ -1,0 +1,37 @@
+$black: #000000;
+
+
+// All "components" within the side bar will begin with an hr, then an h4, and finally a random header between h1-h6
+// creating a unique code for us to target (e.g. hr + h4 + h1 + component).
+// It's messy, for sure.
+
+// kill all h4 following hr
+.side .titlebox .md hr + h5 + h2 + ul{
+	&{
+		width: 100%;
+	}
+	li:nth-child(1){
+		display: block;
+		height: 130px;
+		width: 100%;
+		background-image: url("../img/bhm-header.png");
+	}
+	li:nth-child(2){
+		display: block;
+		height: 236px;
+		width: 100%;
+		background-image: url("../img/bhm-sidebar-1.png");
+	}
+	li:nth-child(5){
+		display: block;
+		height: 55px;
+		width: 100%;
+		background-image: url("../img/bhm-button-1.png");
+	}
+	li:nth-child(5){
+		display: block;
+		height: 55px;
+		width: 100%;
+		background-image: url("../img/bhm-button-2.png");
+	}
+}
