@@ -2,6 +2,18 @@
 # https://stackoverflow.com/a/4774063
 SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
+missing=0
+for cmd in make xsltproc inkscape montage convert mogrify pngcrush; do
+    if ! command -v $cmd &>/dev/null; then
+        echo "Missing command: $cmd"
+        missing=1
+    fi
+done
+if [ $missing -ne 0 ]; then
+    exit
+fi
+
+
 outdir=output/$(date +%Y-%m-%d)
 
 mkdir -p $outdir
@@ -45,7 +57,7 @@ done
     https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/SEA.svg  29_seahawks_logo.svg
     https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/TB.svg   30_buccaneers_logo.svg
     https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/TEN.svg  31_titans_logo.svg
-    https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/WAS.svg  32_redskins_logo.svg
+    https://static.nfl.com/static/content/public/static/wildcat/assets/img/application-shell/shield/default.svg 32_redskins_logo.svg
     https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/league/NFC.svg 33_nfc_logo.svg
     https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/league/AFC.svg 34_afc_logo.svg
 URLS
@@ -53,5 +65,6 @@ URLS
 pushd "$outdir"
 # The Giants are... special.
 xsltproc -o temp $SCRIPTPATH/giants-red-blue.xslt 24_giants_logo.svg && mv -f temp 24_giants_logo.svg
+xsltproc -o temp $SCRIPTPATH/washington-nfl-gold-burgundy.xslt 32_redskins_logo.svg && mv -f temp 32_redskins_logo.svg
 make -f $SCRIPTPATH/Makefile -j8
 popd
