@@ -15,7 +15,7 @@ OUTPUT=flair.png
 
 
 %.full.png: %.svg
-	$(INKSCAPE) $^ --export-png=$@ -w2000
+	$(INKSCAPE) $^ --export-filename=$@ -w 2000
 
 %.cropped.png: %.full.png
 	$(CONVERT) -verbose -trim -geometry 1000x +repage $^ $@
