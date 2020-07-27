@@ -18,7 +18,7 @@ OUTPUT=flair.png
 	$(INKSCAPE) $^ --export-filename=$@ -w 2000
 
 %.cropped.png: %.full.png
-	$(CONVERT) -verbose `if echo "$^" |grep -vq "^32_"; then printf -- "-trim"; fi` -geometry 1000x +repage "$^" "$@"
+	$(CONVERT) -verbose -trim -geometry 1000x +repage "$^" "$@"
 
 %.flair.png: %.cropped.png
 	$(CONVERT) -filter lanczos -resize $(SIZE) $^ $@
