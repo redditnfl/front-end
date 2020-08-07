@@ -91,7 +91,7 @@ jobs:
     
     - name: Deploy to reddit
       if: env.SUBREDDIT != ''
-      uses: redditnfl/publish-reddit-stylesheet-action@v1.3.0
+      uses: redditnfl/publish-reddit-stylesheet-action@v1.3.1
       with:
         subreddit: ${{ env.SUBREDDIT }}
         path: downloaded_theme
