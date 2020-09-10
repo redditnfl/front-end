@@ -20,3 +20,14 @@ html::before{
     background: $color-1;
     margin-top: 400px;
    }
+
+   li:nth-child(2){
+	position: relative;
+	z-index: 1;
+	display: block;
+	height: 236px;
+	width: 100%;
+	margin-top: -14px;
+	font-size: 0;
+	background-size: 100%;
+}
