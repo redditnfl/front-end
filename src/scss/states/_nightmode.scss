@@ -3,6 +3,7 @@ $resnm-bg-alt: #262626;
 $resnm-font: #ccc;
 $resnm-grey: #666;
 $resnm-title: #94bbe7;
+$resnm-visited: #c6c6c6;
 .res-nightmode {
 	#header,
 	.side .titlebox .md hr+h4+h1+ul::before{
@@ -19,6 +20,9 @@ $resnm-title: #94bbe7;
 	}
 	.content .linklisting .thing .title {
 		color:$resnm-title !important;
+	}
+	.content .linklisting .thing .title:visited {
+		color:$resnm-visited !important;
 	}
 	.side #search input:nth-child(1){
 		background-color: $resnm-bg;
