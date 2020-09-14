@@ -2,6 +2,8 @@ $resnm-bg: #333333;
 $resnm-bg-alt: #262626;
 $resnm-font: #ccc;
 $resnm-grey: #666;
+$resnm-title: #7289da;
+$resnm-visited: #cfcfcf;
 .res-nightmode {
 	#header,
 	.side .titlebox .md hr+h4+h1+ul::before{
@@ -15,6 +17,12 @@ $resnm-grey: #666;
 	.side a[title=subreddit-rules],
 	.side a[title=subreddit-rules]::after{
 		background-color: $resnm-bg-alt !important;
+	}
+	.content .linklisting .thing .title {
+		color:$resnm-title !important;
+	}
+	.content .linklisting .thing .title:visited {
+		color:$resnm-visited !important;
 	}
 	.side #search input:nth-child(1){
 		background-color: $resnm-bg;

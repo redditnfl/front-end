@@ -1,4 +1,4 @@
-$headerHeight: 264px; //ex: 40px or false. 80px default
+$headerHeight: 80px; //ex: 40px or false. 80px default
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
 // New Promo
@@ -18,10 +18,10 @@ $promos: (
 );
 
 // Sidebar Variables
-$sidebarImage: "../img/sunday-night-sidebar.jpg";
+$sidebarImage: "../img/monday-night-sidebar.jpg";
 $sidebarHeader: "Are you ready for some football?";
-$sidebarText: "The first Sunday of the 2020 season ends with a rivalry that spanned nearly 4 decades before the Rams moving effectively ended it. Is it time to bring back the Cowboys v Rams of yore?";
-$sidebarPicHeight: 300px; //set back to 200px for standard sidebar
+$sidebarText: "The season as gone from 0-60 and as is tradition, the first Monday night of the NFL season features two matchups, giving you a full helping of pigskin to end your Monday right. Giants at Steelers then Titans at Broncos.";
+$sidebarPicHeight: 200px; //set to 200px for standard sidebar
 $sidebarPicOffset: 0;
 
 // Links in sidebar
