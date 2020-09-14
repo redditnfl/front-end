@@ -2,7 +2,7 @@ $resnm-bg: #333333;
 $resnm-bg-alt: #262626;
 $resnm-font: #ccc;
 $resnm-grey: #666;
-$resmn-title: #c6c6c6;
+$resnm-title: #94bbe7;
 .res-nightmode {
 	#header,
 	.side .titlebox .md hr+h4+h1+ul::before{
@@ -18,7 +18,7 @@ $resmn-title: #c6c6c6;
 		background-color: $resnm-bg-alt !important;
 	}
 	.content .linklisting .thing .title {
-		color:$resmn-title !important;
+		color:$resnm-title !important;
 	}
 	.side #search input:nth-child(1){
 		background-color: $resnm-bg;
