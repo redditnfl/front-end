@@ -36,9 +36,9 @@ $all-teams: map-collect($nfl-teams);
 @import "states/nightmode";
 
 // Themes
-//@import "themes/basic-theme";
+@import "themes/basic-theme";
 //@import "themes/memorial-theme";
-@import "themes/season-start";
+//@import "themes/season-start";
 
 // yeah, no reddit new button
 #sr-header-area .redesign-beta-optin{
