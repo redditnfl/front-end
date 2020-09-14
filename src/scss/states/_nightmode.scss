@@ -17,7 +17,7 @@ $resmn-title: #c6c6c6;
 	.side a[title=subreddit-rules]::after{
 		background-color: $resnm-bg-alt !important;
 	}
-	.content .linklisting .thing .title>.title {
+	.content .linklisting .thing .title {
 		color:resmn-title;
 	}
 	.side #search input:nth-child(1){
