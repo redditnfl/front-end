@@ -3,7 +3,7 @@ $red: #C13A2C;
 $accent: #2D81BC;
 $white: #fff;
 html{
-	background-color: #34495E;
+	background-color: $blue;
 }
 #header{
 	background: $white !important;
