@@ -77,7 +77,8 @@ jobs:
             pattern = 'refs/heads/' + pattern
             if fnmatch(ref, pattern):
                 print("Setting target to /r/%s" % target)
-                print("::set-env name=SUBREDDIT::%s" % target)
+                with open(os.environ['GITHUB_ENV'], 'a') as fp:
+                    fp.write("SUBREDDIT=%s\n" % target)
                 break
         else:
             print("::warning ::No target found matching ref=" + ref)
