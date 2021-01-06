@@ -65,6 +65,7 @@ $pos-100:  0%;
 	$bg: map-get($team, bg);
 	$status_eliminated: map-get($team, eliminated);
 	$status_champion: map-get($team, champion);
+	$status_bandwagon: map-get($team, bandwagon);
 	.md a[href*="/r/#{$url}"],
 	.md a[href*="/r/#{to-lower-case($url)}"],
 	.md a[href*="/r/#{to-upper-case($url)}"],
@@ -101,6 +102,33 @@ $pos-100:  0%;
 				background-repeat: no-repeat;
 			}
 		}
+	}
+	@if $status_bandwagon{
+		.flair-#{to-lower-case($name)}{
+			&{
+			width: 48px;
+			}
+			&:hover{
+				width: auto;
+			}
+			&::before{
+				margin-right: 22px;
+			}
+			&::after{
+				content: "";
+				position: absolute;
+				top: 11%;
+				left: 28px;
+				display: block;
+				width: 15px;
+				height: 15px;
+				background-image: url("../img/bandwagon.png");
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		}
+
 	}
 	.side .titlebox .tagline .flair-#{to-lower-case($name)} ~ .flairselectbtn::before{
 		background-position: 0 $pos-100;
