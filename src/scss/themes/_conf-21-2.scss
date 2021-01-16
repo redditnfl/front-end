@@ -1,26 +1,30 @@
 html {
 	background-image: url("../img/CONF-2-1.png");
     background-color: #090e09;
-    background-size: contain;
+    background-size: 1843px;
 }
 html::before {
 	background-image: url("../img/CONF-2-4.png");
-    background-size: contain;
+	background-position: center;
+    background-size: 1843px;
 }
 body::before {
 	background-image: url("../img/CONF-2-2.png");
-    background-size: 543px;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: left center;
 }
 body::after {
 	background-image: url("../img/CONF-2-3.png");
-    background-size: 600px;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: right center;
     z-index:-2;
 }
 @media only screen and (min-width: 1400px) {
+	html {
+		background-size: contain;
+	}
     body::before,
     body::after {
         background-position: center;
