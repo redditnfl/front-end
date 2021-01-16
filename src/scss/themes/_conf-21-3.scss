@@ -1,0 +1,28 @@
+html {
+	background-image: url("../img/CONF-3-1.png");
+    background-color: #090e09;
+    background-size: contain;
+}
+html::before {
+	background-image: url("../img/CONF-3-4.png");
+    background-size: contain;
+}
+body::before {
+	background-image: url("../img/CONF-3-2.png");
+    background-size: 543px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+body::after {
+	background-image: url("../img/CONF-3-3.png");
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    z-index:-2;
+}
+@media only screen and (min-width: 1400px) {
+    body::before,
+    body::after {
+        background-position: center;
+    }
+}
