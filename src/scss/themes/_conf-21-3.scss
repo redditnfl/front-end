@@ -1,0 +1,32 @@
+html {
+	background-image: url("../img/CONF-3-1.png");
+    background-color: linear-gradient(90deg, rgba(241,67,10,1) 0%, rgba(229,22,35,1) 100%);
+    background-size: 1843px;
+}
+html::before {
+	background-image: url("../img/CONF-3-4.png");
+	background-position: center;
+    background-size: 1843px;
+}
+body::before {
+	background-image: url("../img/CONF-3-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+body::after {
+	background-image: url("../img/CONF-3-3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    z-index:-2;
+}
+@media only screen and (min-width: 1400px) {
+	html {
+		background-size: contain;
+	}
+    body::before,
+    body::after {
+        background-position: center;
+    }
+}
