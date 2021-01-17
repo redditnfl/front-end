@@ -1,1 +1,28 @@
-// do not have design yet
+html {
+	background-image: url("../img/CONF-4-1.png");
+    background-color: #090c12;
+    background-size: 1892px;
+}
+html::before {
+	background-image: url("../img/CONF-4-4.png");
+    background-size: cover;
+}
+body::before {
+	background-image: url("../img/CONF-4-2.png");
+    background-size: 543px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+body::after {
+	background-image: url("../img/CONF-4-3.png");
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    z-index:-2;
+}
+@media only screen and (min-width: 1400px) {
+    body::before,
+    body::after {
+        background-position: center;
+    }
+}
