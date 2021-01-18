@@ -1,5 +1,5 @@
-$headerHeight: 223px; // Use this when there is a banner. Use the exact banner height if banner is not 223px tall
-//$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
+//$headerHeight: 223px; // Use this when there is a banner. Use the exact banner height if banner is not 223px tall
+$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
 // New Promo
@@ -21,10 +21,10 @@ $promos: (
 // Sidebar Variables
 
 
-$sidebarImage: "../img/divisionalsun.jpg";
-$sidebarHeader: "Divisional Round Football Is Upon Us.";
-$sidebarText: "With Super Wild Card Weekend in the books, we turn our attention to the divisional round. Fresh off a bye, the #1 seeds in each conference will host one of last week's winners. The Green Bay Packers will welcome the Los Angeles Rams to frigid Lambeau Field, while the high-octane Kansas City Chiefs will square off against the ground-and-pound Cleveland Browns. This weekend may also feature the final Brady/Brees battle, their squads facing off for a third time this season. Finally, two much-scrutinized 2017 draft picks will battle when the Buffalo Bills take on the Baltimore Ravens.";
-$sidebarPicHeight: 300px; //set to 200px for standard sidebar
+$sidebarImage: "../img/divround.jpg";
+$sidebarHeader: "And Then There Were Four";
+$sidebarText: "After another exciting weekend of football, the Championship game participants have been decided. The Packers offense was too much for the #1 ranked Rams defense, allowing the Packers to advance to their second NFCC game in a row. The Tampa Bay defense also showed up big, forcing 4 turnovers, including 3 interceptions, in what might be Drew Brees' last game. Buffalo handled the Ravens' 1st ranked run game and a late 3rd quarter 101 yard interception return for a TD sealed the game. Despite being held to only 22 points by a stout Browns defense, and losing Mahomes to a concussion in the 3rd quarter, the Chiefs held off a late rally to win.";
+$sidebarPicHeight: 200px; //set to 200px for standard sidebar
 $sidebarPicOffset: 0;
 
 // Links in sidebar
