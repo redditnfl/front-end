@@ -1,11 +1,11 @@
 html {
 	background-image: url("../img/chiefsbills-bg.png");
     background-color: #070707;
-    background-size: 1892px;
+    background-size: contain;
 }
 html::before {
 	background-image: url("../img/chiefsbills-text.png");
-    background-size: contain;
+    background-size: cover;
 }
 body::before {
 	background-image: url("../img/mahomes.png");
