@@ -5,17 +5,17 @@ html {
 }
 html::before {
 	background-image: url("../img/chiefsbills-text.png");
-    background-size: cover;
+    background-size: contain;
 }
 body::before {
 	background-image: url("../img/mahomes.png");
-    background-size: contain;
+    background-size: 543px;
     background-repeat: no-repeat;
     background-position: right center;
 }
 body::after {
 	background-image: url("../img/allen.png");
-    background-size: contain;
+    background-size: 600px;
     background-repeat: no-repeat;
     background-position: left center;
     z-index:-2;
