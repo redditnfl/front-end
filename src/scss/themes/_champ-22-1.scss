@@ -1,0 +1,28 @@
+html {
+	background-image: url("../img/gb-tb-bg.png");
+    background-color: #090e09;
+    background-size: contain;
+}
+html::before {
+	background-image: url("../img/gb-tb-text.png");
+    background-size: contain;
+}
+body::before {
+	background-image: url("../img/tb-players.png");
+    background-size: 543px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+body::after {
+	background-image: url("../img/gb-players.png");
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    z-index:-2;
+}
+@media only screen and (min-width: 1400px) {
+    body::before,
+    body::after {
+        background-position: center;
+    }
+}

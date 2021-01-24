@@ -1,0 +1,28 @@
+html {
+	background-image: url("../img/chiefsbills-bg.png");
+    background-color: #070707;
+    background-size: 1892px;
+}
+html::before {
+	background-image: url("../img/chiefsbills-text.png");
+    background-size: cover;
+}
+body::before {
+	background-image: url("../img/mahomes.png");
+    background-size: 543px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+body::after {
+	background-image: url("../img/allen.png");
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    z-index:-2;
+}
+@media only screen and (min-width: 1400px) {
+    body::before,
+    body::after {
+        background-position: center;
+    }
+}
