@@ -1,5 +1,5 @@
-$headerHeight: 223px; // Use this when there is a banner. Use the exact banner height if banner is not 223px tall
-//$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
+//$headerHeight: 223px; // Use this when there is a banner. Use the exact banner height if banner is not 223px tall
+$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
 // New Promo
@@ -21,10 +21,10 @@ $promos: (
 // Sidebar Variables
 
 
-$sidebarImage: "../img/championshipsunday.jpg";
-$sidebarHeader: "The Penultimate Weekend of Football is Upon Us";
-$sidebarText: "Just four teams remain in the hunt for the Lombardi Trophy. First, the wild card Tampa Bay Buccaneers (led by perennial playoff participant Tom Brady) roll in to Lambeau to take on the Green Bay Packers and the presumptive MVP, Aaron Rodgers. Then, the upstart Buffalo Bills travel west to face the offensive juggernaut Kansas City Chiefs - though superstar QB Patrick Mahomes' status remains unclear. With no Pro Bowl, only three NFL games remain in this unlikely season. Nevertheless, all four of these teams are hoping to represent their conference in Tampa on February 7th for a chance at sports immortality.";
-$sidebarPicHeight: 300px; //set to 200px for standard sidebar
+$sidebarImage: "../img/champaftermath.png";
+$sidebarHeader: "And Then There Were Two";
+$sidebarText: "With the dust from Sunday afternoon settled, the stage is set for Super Bowl LV. After a one-year hiatus, Tom Brady makes his return to the big game, as the Tampa Bay Buccaneers knocked off the Green Bay Packers in chilly Lambeau Field 31-26 (with some assistance from Matt LaFleur). Meanwhile, Kansas City appears dominant as ever, as Patrick Mahomes' three touchdown passes through turf toe lifted them over the Buffalo Bills, 38-24. These teams met before in late November - expect a similarly close game as old guard meets young phenom once again, this time with the Lombardi Trophy on the line.";
+$sidebarPicHeight: 200px; //set to 200px for standard sidebar
 $sidebarPicOffset: 0;
 
 // Links in sidebar
