@@ -36,9 +36,7 @@ $all-teams: map-collect($nfl-teams);
 @import "states/nightmode";
 
 // Themes
-@import "themes/conf-21";
-@import "themes/champ-22-1";
-//@import "themes/basic-theme";
+@import "themes/basic-theme";
 //@import "themes/memorial-theme";
 
 // yeah, no reddit new button
