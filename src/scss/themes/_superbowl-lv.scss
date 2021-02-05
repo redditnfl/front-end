@@ -9,7 +9,7 @@ html::before {
 }
 body::before {
 	background-image: url("../img/lv-buccs.png");
-    background-size: 620px;
+    background-size: 625px;
     background-repeat: no-repeat;
     background-position: right center;
 }
@@ -20,7 +20,7 @@ body::after {
     background-position: left center;
     z-index:-2;
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1483px) {
     body::before,
     body::after {
         background-position: center;
