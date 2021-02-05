@@ -1,0 +1,12 @@
+html {
+	background-image: url("../img/buccs-win.png");
+    background-color: #090e09;
+    background-size: contain;
+}
+
+@media only screen and (min-width: 1400px) {
+    body::before,
+    body::after {
+        background-position: center;
+    }
+}
