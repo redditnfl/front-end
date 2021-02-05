@@ -1,0 +1,16 @@
+html {
+    position: relative;
+    background-position: center 100px;
+    background-repeat: no-repeat;
+}
+html::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 200px;
+    height: px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
