@@ -4,6 +4,11 @@ html {
     background-size: contain;
 }
 
+html::before {
+	background-image: url("../img/brady.png");
+    background-size: contain;
+}
+
 @media only screen and (min-width: 1400px) {
     body::before,
     body::after {
