@@ -1,0 +1,17 @@
+html {
+	background-image: url("../img/chiefs-win.png");
+    background-color: #090e09;
+    background-size: contain;
+}
+
+html::before {
+	background-image: url("../img/mahomes.png");
+    background-size: contain;
+}
+
+@media only screen and (min-width: 1400px) {
+    body::before,
+    body::after {
+        background-position: center;
+    }
+}
