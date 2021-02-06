@@ -1,5 +1,5 @@
-//$headerHeight: 223px; // Use this when there is a banner. Use the exact banner height if banner is not 223px tall
-$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
+$headerHeight: 325px; // Use this when there is a banner. Use the exact banner height if banner is not 223px tall
+//$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
 // New Promo
@@ -21,10 +21,10 @@ $promos: (
 // Sidebar Variables
 
 
-$sidebarImage: "../img/staffordgoff.jpg";
-$sidebarHeader: "The Lions Went To Jared";
-$sidebarText: "Over the weekend, the offseason QB carousel took its first spin. In a move reminiscent of the Brock Osweiler trade, the Detroit Lions sent 12-year veteran Matthew Stafford to the Los Angeles Rams in exchange for two-time Pro Bowler Jared Goff and three draft picks (including two firsts). Stafford gives the Rams stability at the quarterback position, while Goff could either cement himself as Detroit's long-term starter or serve as an effective bridge QB. In this first-ever swap of #1 overall picks, LA's front office hopes that this is the move that pushes them over the top.";
-$sidebarPicHeight: 200px; //set to 200px for standard sidebar
+$sidebarImage: "../img/lv-sidebar.jpg";
+$sidebarHeader: "The Bucs have won Super Bowl 55";
+$sidebarText: "";
+$sidebarPicHeight: 300px; //set to 200px for standard sidebar
 $sidebarPicOffset: 0;
 
 // Links in sidebar
