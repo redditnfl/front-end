@@ -1,11 +1,11 @@
 html {
 	background-image: url("../img/lv-bg.png");
     background-color: #090e09;
-    background-size: contain;
+    background-size: 1843px;
 }
 html::before {
 	background-image: url("../img/lv-text.png");
-    background-size: 1843px;
+    background-size: contain;
 }
 body::before {
 	background-image: url("../img/lv-buccs.png");
