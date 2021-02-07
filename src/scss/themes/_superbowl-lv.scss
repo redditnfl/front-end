@@ -11,13 +11,13 @@ body::before {
 	background-image: url("../img/lv-buccs.png");
     background-size: 625px;
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: right center;
 }
 body::after {
 	background-image: url("../img/lv-chiefs.png");
     background-size: 625px;
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: left center;
     z-index:-2;
 }
 @media only screen and (min-width: 1483px) {
