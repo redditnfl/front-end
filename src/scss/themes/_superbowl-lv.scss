@@ -1,7 +1,7 @@
 html {
 	background-image: url("../img/lv-bg.png");
     background-color: #090e09;
-    background-size: 1843px;
+    background-size: contain;
 }
 html::before {
 	background-image: url("../img/lv-text.png");
