@@ -37,10 +37,10 @@ $all-teams: map-collect($nfl-teams);
 
 // Themes
 
-//@import "themes/buccs-sb-win";
-//@import "themes/sb-win";
-@import "themes/superbowl-lv";
-@import "themes/conf-21";
+@import "themes/buccs-sb-win";
+@import "themes/sb-win";
+//@import "themes/superbowl-lv";
+//@import "themes/conf-21";
 
 // yeah, no reddit new button
 #sr-header-area .redesign-beta-optin{
