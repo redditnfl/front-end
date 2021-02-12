@@ -1,4 +1,4 @@
-$headerHeight: 220px; // Use this when there is a banner. Use the exact banner height if banner is not 223px tall
+$headerHeight: 220px; // Use this when there is a banner. Use the banner hieght - 15 px. ex. 
 //$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
@@ -19,6 +19,7 @@ $promos: (
 );
 
 // Sidebar Variables
+
 
 
 $sidebarImage: "../img/lv-sidebar.jpg";
