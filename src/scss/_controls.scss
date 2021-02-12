@@ -1,6 +1,5 @@
 //$headerHeight: 325px; // Use this when there is a banner. Use the banner hieght - 15 px. ex. 
-$headerHeight: 220px; //Winners banner. Delete later. 
-//$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
+$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
 // New Promo
@@ -22,9 +21,9 @@ $promos: (
 // Sidebar Variables
 
 
-$sidebarImage: "../img/lv-sidebar.jpg";
-$sidebarHeader: "Chiefs Win Super Bowl 55";
-$sidebarText: "";
+$sidebarImage: "../img/watt.png";
+$sidebarHeader: "Texans Release JJ Watt";
+$sidebarText: "The end of an era in Houston has come, as the Texans released star DE J.J. Watt early Friday morning. Watt leaves Houston as a 3x DPOY, 5x First-Team All-Pro, and unanimous 2010 All-Decade Team selection. Though the 31 year-old &apos; s next team is still unclear, the future of the Texans is even murkier, with rumors surfacing that star QB DeShaun Watson might be on the move as well.";
 $sidebarPicHeight: 300px; //set to 200px for standard sidebar
 $sidebarPicOffset: 0;
 
