@@ -1,5 +1,5 @@
-//$headerHeight: 325px; // Use this when there is a banner. Use the banner hieght - 15 px. ex. 
-$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
+$headerHeight: 220px; // Use this when there is a banner. Use the banner hieght - 15 px. ex. 
+//$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
 // New Promo
@@ -21,9 +21,10 @@ $promos: (
 // Sidebar Variables
 
 
-$sidebarImage: "../img/marty.png";
-$sidebarHeader: "Marty Schottenheimer has passed away at the age of 77";
-$sidebarText: "He was known best for his Martyball philosophy, which focused on team toughness and establishing the rushing attack. His coaching tenures were marked by consistent winning records in Cleveland, Kansas City and San Diego. After retirement from the player ranks, he climbed the coaching ladder before spending 21 seasons as a head coach. His 200 career regular season wins rank 7th all-time among head coaches and he was inducted into the Chiefs Hall of Fame in 2010.";
+
+$sidebarImage: "../img/lv-sidebar.jpg";
+$sidebarHeader: "The Bucs have won Super Bowl 55";
+$sidebarText: "The Tampa Bay Buccaneers Have Won Super Bowl 55.";
 $sidebarPicHeight: 300px; //set to 200px for standard sidebar
 $sidebarPicOffset: 0;
 
