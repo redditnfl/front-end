@@ -21,14 +21,11 @@ $promos: (
 );
 
 // Sidebar Variables
+$sidebarImage: "../img/zachw.png"; 
+$sidebarHeader: "#2 Zach Wilson, QB, BYU - Welcome to the NFL";
+$sidebarText: "While their late-season heroics dropped them out of Lawrence contention, the Jets selected the late-blooming Wilson with the second pick. His guady passing stats (third in the NCAA in yards and touchdowns) inspire Gang Green that he might captain them to the playoffs for the first time in over a decade.";
 
-
-
-$sidebarImage: "../img/schedulerelease.jpg";
-$sidebarHeader: "";
-$sidebarText: "";
-
-$sidebarPicHeight: 300px; //set to 200px for standard sidebar
+$sidebarPicHeight: 200px; //set to 200px for standard sidebar
 $sidebarPicOffset: 0;
 
 // Links in sidebar
