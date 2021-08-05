@@ -1,6 +1,6 @@
 
-//$headerHeight: 325px; // Use this when there is a banner. Use the banner hieght - 15 px. ex. 
-$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
+$headerHeight: 325px; // Use this when there is a banner. Use the banner hieght - 15 px. ex. 
+//$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
 
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
@@ -24,9 +24,9 @@ $promos: (
 
 
 
-$sidebarImage: "../img/rashodb.png"; 
-$sidebarHeader: "#27 Rashod Bateman, WR, Minnesota  - Welcome to the NFL";
-$sidebarText: "After sporting a rather unimpressive receiver room last season, the Ravens drafted Bateman as QB Lamar Jackson's newest weapon. The Minnesota product offers all the traits of a #1 receiver and will see many isolation opportunities resulting from Baltimore's run-heavy offense.";
+$sidebarImage: "../img/hofsidebar.jpg"; 
+$sidebarHeader: "Football Starts Tonight!";
+$sidebarText: "The Hall of Fame Game kicks off Enshrinement Week, which is a part of the overall Centennial Celebration for the birth of the NFL. It will take place in the spectacular Tom Benson Hall of Fame Stadium with the Dallas Cowboys and the Pittsburgh Steelers will facing off. The game marks the seventh appearance by each club in the annual preseason classic which is tied for the most by any team. Both teams own 3-3 records in the Hall of Fame Game series.";
 
 $sidebarPicHeight: 200px; //set to 200px for standard sidebar
 $sidebarPicOffset: 0;
