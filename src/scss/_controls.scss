@@ -1,6 +1,6 @@
 
-$headerHeight: 242px; // Use this when there is a banner. Use the banner height - 15 px. ex. 
-//$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
+//$headerHeight: 242px; // Use this when there is a banner. Use the banner height - 15 px. ex. 
+$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
 
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
@@ -24,11 +24,11 @@ $promos: (
 
 
 
-$sidebarImage: "../img/hofsidebar.jpg"; 
-$sidebarHeader: "Football Starts Tonight!";
-$sidebarText: "The Hall of Fame Game kicks off Enshrinement Week, which is a part of the overall Centennial Celebration for the birth of the NFL. It will take place in the spectacular Tom Benson Hall of Fame Stadium with the Dallas Cowboys and the Pittsburgh Steelers will facing off. The game marks the seventh appearance by each club in the annual preseason classic which is tied for the most by any team. Both teams own 3-3 records in the Hall of Fame Game series.";
+$sidebarImage: "../img/paytont.jpg"; 
+$sidebarHeader: "#28 Payton Turner, DE, Houston - Welcome to the NFL";
+$sidebarText: "Despite flying under the radar for most of the draft process, a late surge allowed Turner to be selected near the end of the first. He joins a team that has invested heavily on defense the past several years and should feature early as a rotational piece.";
 
-$sidebarPicHeight: 300px; //set to 200px for standard sidebar
+$sidebarPicHeight: 200px; //set to 200px for standard sidebar
 $sidebarPicOffset: 0;
 
 // Links in sidebar
