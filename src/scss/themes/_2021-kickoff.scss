@@ -6,7 +6,7 @@ html {
 body::before {
 	background-image: url("../img/leftelement.png");
     background-size: 543px;
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
     background-position: 300px;
 }
 body::after {
