@@ -1,13 +1,13 @@
 html {
     position: relative;
-    background-position: center 100px;
+    background-position: center 104px;
     background-repeat: no-repeat;
 }
 html::before {
     content: "";
     position: absolute;
     z-index: -1;
-    top: 104px;
+    top: 100px;
     height: 200px;
     width: 100%;
     background-position: center;
