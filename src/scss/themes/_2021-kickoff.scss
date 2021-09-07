@@ -5,15 +5,15 @@ html {
 }
 body::before {
 	background-image: url("../img/leftelement.png");
-    background-size: 600px;
+    background-size: 525px;
     background-repeat: no-repeat;
-    background-position: 50% 25%;
+    background-position: 100% 5%;
 }
 body::after {
 	background-image: url("../img/rightelement.png");
-    background-size: 600px;
+    background-size: 525px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 100% 5%;
     z-index:-2;
 }
 @media only screen and (min-width: 1400px) {
