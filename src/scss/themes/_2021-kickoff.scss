@@ -5,9 +5,9 @@ html {
 }
 body::before {
 	background-image: url("../img/leftelement.png");
-    background-size: 543px;
-    // background-repeat: no-repeat;
-    background-position: 300px;
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: right center;
 }
 body::after {
 	background-image: url("../img/rightelement.png");
