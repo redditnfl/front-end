@@ -1,6 +1,6 @@
 
-//$headerHeight: 242px; // Use this when there is a banner. Use the banner height - 15 px. ex. 
-$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
+$headerHeight: 208px; // Use this when there is a banner. Use the banner height - 15 px. ex. 
+//$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
 
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
@@ -24,11 +24,11 @@ $promos: (
 
 
 
-$sidebarImage: "../img/joet.png"; 
-$sidebarHeader: "#32 Joe Tryon, LB, Washington - Welcome to the NFL";
-$sidebarText: "The end of the first round was marked by a run on edge rushers, culminating with the Super Bowl champs' selection of Tryon. The athletic linebacker opted out of the 2020 season but should be an important piece on a defense that already put on an all-time performance against the Chiefs.";
+$sidebarImage: "../img/sidebar.png"; 
+$sidebarHeader: "";
+$sidebarText: "";
 
-$sidebarPicHeight: 200px; //set to 200px for standard sidebar
+$sidebarPicHeight: 400px; //set to 200px for standard sidebar
 $sidebarPicOffset: 0;
 
 // Links in sidebar
