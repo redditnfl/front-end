@@ -5,7 +5,7 @@ html {
 }
 body::before {
 	background-image: url("../img/leftelement.png");
-    background-size: 530px;
+    background-size: 535px;
     background-repeat: no-repeat;
     background-position: right center;
 }
@@ -19,6 +19,6 @@ body::after {
 @media only screen and (min-width: 1400px) {
     body::before,
     body::after {
-        background-position: 95% 3%;
+        background-position: 95% 5%;
     }
 }
