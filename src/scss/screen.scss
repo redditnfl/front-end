@@ -37,10 +37,10 @@ $all-teams: map-collect($nfl-teams);
 
 // Themes
 
-//@import "themes/basic-theme";
+@import "themes/basic-theme";
 //@import "themes/season-end";
-@import "themes/2021-kickoff";
-@import "themes/conf-21";
+//@import "themes/2021-kickoff";
+//@import "themes/conf-21";
 
 
 // yeah, no reddit new button

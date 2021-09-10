@@ -1,6 +1,6 @@
 
-$headerHeight: 249px; // Use this when there is a banner. Use the banner height + 15 px. ex. 
-//$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
+//$headerHeight: 249px; // Use this when there is a banner. Use the banner height + 15 px. ex. 
+$headerHeight: 80px; //This is the default with no banner. ex: 40px or false.
 
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
@@ -24,11 +24,11 @@ $promos: (
 
 
 
-$sidebarImage: "../img/sidebar.png"; 
-$sidebarHeader: "";
-$sidebarText: "";
+$sidebarImage: "../img/kickoffsidebar.png"; 
+$sidebarHeader: "Football Is Back!";
+$sidebarText: "Thursday night went down to the wire with the almost triumphant return of Dak Prescott. What else is in store as the 2021 NFL season kickoff weekend continues?";
 
-$sidebarPicHeight: 400px; //set to 200px for standard sidebar
+$sidebarPicHeight: 200px; //set to 200px for standard sidebar
 $sidebarPicOffset: 0;
 
 // Links in sidebar
