@@ -19,7 +19,7 @@
 	}
 	@each $team in $nfl-teams{
 		$name: map-get($team, name);
-		&.flair-#{($name)} + .author::after{
+		&.flair-#{to-camel-case($name)} + .author::after{
 			content: " - #{$name} Ranker"
 		}
 	}
