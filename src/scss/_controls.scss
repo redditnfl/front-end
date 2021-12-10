@@ -26,9 +26,13 @@ $promos: (
 
 
 $sidebarImage: "../img/thomasRIP.jpg"; 
-$sidebarHeader: "   RIP Demaryius Thomas";
+$sidebarHeader: "RIP Demaryius Thomas"{
+	text-align: center;
+	}
 
-$sidebarText: "            1987 - 2021";
+$sidebarText: "1987 - 2021"{
+	text-align: center;
+	}
 
 
 $sidebarPicHeight: 200px; //set to 200px for standard sidebar
