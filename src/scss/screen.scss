@@ -37,9 +37,10 @@ $all-teams: map-collect($nfl-teams);
 
 // Themes
 
-@import "themes/memorial-theme";
-//@import "themes/xmas";
 //@import "themes/basic-theme";
+//@import "themes/memorial-theme";
+//@import "themes/xmas";
+@import "themes/wildcard";
 //@import "themes/season-end";
 //@import "themes/2021-kickoff";
 //@import "themes/conf-21";
