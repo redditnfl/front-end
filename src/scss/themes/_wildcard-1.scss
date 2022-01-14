@@ -1,0 +1,29 @@
+html {
+	background-image: url("../img/wc1-bg.png");
+    background: rgb(172,31,50);
+	background: linear-gradient(135deg, rgba(172,31,50,1) 6%, rgba(241,197,142,1) 60%) fixed;
+    background-size: contain;
+}
+html::before {
+	background-image: url("../img/wc-1-text.png");
+    background-size: contain;
+}
+body::before {
+	background-image: url("../img/wc-1-player-left.png");
+    background-size: 543px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+body::after {
+	background-image: url("../img/wc-1-player-right.png");
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    z-index:-2;
+}
+@media only screen and (min-width: 1400px) {
+    body::before,
+    body::after {
+        background-position: center;
+    }
+}
