@@ -4,17 +4,17 @@ html {
     background-size: contain;
 }
 html::before {
-	background-image: url("../img/wc1-text.png");
+	background-image: url("../wc-img/wc1-text.png");
     background-size: cover;
 }
 body::before {
-	background-image: url("../img/wc1-playerleft.png");
+	background-image: url("../wc-img/wc1-playerleft.png");
     background-size: 543px;
     background-repeat: no-repeat;
     background-position: right center;
 }
 body::after {
-	background-image: url("../img/wc1-playerright.png");
+	background-image: url("../wc-img/wc1-playerright.png");
     background-size: 600px;
     background-repeat: no-repeat;
     background-position: left center;
