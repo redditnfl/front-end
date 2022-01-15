@@ -6,16 +6,19 @@ html {
 html::before {
 	background-image: url("../img/wc1-text.png");
     background-size: cover;
+    top: 20px;
 }
 body::before {
 	background-image: url("../img/wc1-playerleft.png");
     background-size: 543px;
+    top: 20px;
     background-repeat: no-repeat;
     background-position: left center;
 }
 body::after {
 	background-image: url("../img/wc1-playerright.png");
     background-size: 600px;
+    top: 20px;
     background-repeat: no-repeat;
     background-position: right center;
     z-index:-2;
