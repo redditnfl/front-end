@@ -7,20 +7,13 @@ body::before {
 	background-image: url("../img/wc3-playerleft.png");
     //background-size: 543px;
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: left;
 }
 body::after {
 	background-image: url("../img/wc3-playerright.png");
     //background-size: 600px;
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: right;
     z-index:-2;
 }
-@media only screen and (min-width: 1400px) {
-    body::before{
-	    background-position: top left;
-	}
-    body::after{
-	    background-position: top right;
-	}
-}
+
