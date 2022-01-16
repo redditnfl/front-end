@@ -1,0 +1,24 @@
+html {
+	background-image: url("../img/wc3-bg.png");
+   	background-color: linear-gradient(90deg, rgba(241,67,10,1) 0%, rgba(229,22,35,1) 100%);
+    background-size: contain;
+}
+body::before {
+	background-image: url("../img/wc3-playerleft.png");
+    background-size: 543px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+body::after {
+	background-image: url("../img/wc3-playerright.png");
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    z-index:-2;
+}
+@media only screen and (min-width: 1400px) {
+    body::before,
+    body::after {
+        background-position: center;
+    }
+}
