@@ -6,8 +6,8 @@ html {
 }
 html::before {
 	background-image: url("../img/wc5-text.png");
-    background-size: cover;
-    top: 50px;
+    background-size: auto;
+    top: 5px;
 }
 body::before {
 	background-image: url("../img/wc5-playerleft.png");
