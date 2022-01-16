@@ -5,13 +5,13 @@ html {
 }
 body::before {
 	background-image: url("../img/wc3-playerleft.png");
-    background-size: 543px;
+    //background-size: 543px;
     background-repeat: no-repeat;
     background-position: left center;
 }
 body::after {
 	background-image: url("../img/wc3-playerright.png");
-    background-size: 600px;
+    //background-size: 600px;
     background-repeat: no-repeat;
     background-position: right center;
     z-index:-2;
