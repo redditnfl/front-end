@@ -1,0 +1,20 @@
+html {
+	background-image: url("../img/wc6-bg.png");
+	z-index: 1;
+   	background-color: #FFFFFF;
+    background-size: contain;
+}
+body::before {
+	background-image: url("../img/wc6-playerleft.png");
+    //background-size: 543px;
+    background-repeat: no-repeat;
+    background-position: top left 20px;
+    z-index:2;
+}
+body::after {
+	background-image: url("../img/wc6-playerright.png");
+    //background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: top right 20px;
+    z-index:3;
+}
