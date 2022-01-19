@@ -1,6 +1,6 @@
 html{
     background: rgb(84,0,3);
-    //background: linear-gradient(180deg, rgba(84,0,3,1) 14%, rgba(194,1,1,1) 85%);
-	background: linear-gradient(135deg, rgba(172,31,50,1) 6%, rgba(241,197,142,1) 60%) fixed;
-    /*background: linear-gradient(180deg, rgba(84,0,3,1) 14%, rgba(194,1,1,1) 85%) fixed;*/
+    //background: linear-gradient(180deg, rgba(84,0,3,1) 14%, rgba(194,1,1,1) 85%); /*rejected*/
+	//background: linear-gradient(135deg, rgba(172,31,50,1) 6%, rgba(241,197,142,1) 60%) fixed;  /*wildcard gradie*/
+    background: linear-gradient(180deg, rgba(84, 0, 3,1) 14%, rgba(194,1,1,1) 60%) fixed;
 }
