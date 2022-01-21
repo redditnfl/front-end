@@ -1,26 +1,45 @@
 html {
 	background-image: url("../img/div3-bg.png");
 	z-index: 1;
-   	background-color: #700805;
-    background-size: contain;
+   	background-color: #08090C;
+    background-size: auto;
+    background-position: center 107px;
+    position: relative;
+    background-repeat: no-repeat;
 }
 html::before {
-	background-image: url("../img/div3-text.png");
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 67px;
+    height: 350px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/div3-text.png");
     background-size: auto;
-    background-position: center 35px;
-    //top: 50px;
+    background-position: center;
 }
 body::before {
-	background-image: url("../img/div3-playerleft.png");
-    //background-size: 543px;
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 350px;
+    top: 107px;
+    left: 0;
+    background-image: url("../img/div3-playerleft.png");
     background-repeat: no-repeat;
-    background-position: top right -40px;
+    background-position: top right 60px;
     z-index:2;
 }
 body::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 350px;
+    top: 107px;
+    left: 50%;
 	background-image: url("../img/div3-playerright.png");
-    //background-size: 600px;
     background-repeat: no-repeat;
-    background-position: top left -68px;
+    background-position: top left 10px;
     z-index:3;
 }
