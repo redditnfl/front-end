@@ -1,0 +1,26 @@
+html {
+	background-image: url("../img/div1-bg.png");
+	z-index: 1;
+   	background-color: #08090C;
+    background-size: contain;
+}
+html::before {
+	background-image: url("../img/div1-text.png");
+    background-size: auto;
+    background-position: center 35px;
+    //top: 50px;
+}
+body::before {
+	background-image: url("../img/div1-playerleft.png");
+    //background-size: 543px;
+    background-repeat: no-repeat;
+    background-position: top right -40px;
+    z-index:2;
+}
+body::after {
+	background-image: url("../img/div1-playerright.png");
+    //background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: top left -68px;
+    z-index:3;
+}
