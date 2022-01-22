@@ -37,7 +37,9 @@ $all-teams: map-collect($nfl-teams);
 
 // Themes
 
-@import "themes/divisional";
+//@import "themes/divisional";
+@import "themes/divisional-1";
+//@import "themes/divisional-3";
 //@import "themes/wildcard-6";
 //@import "themes/conf-21";
 //@import "themes/basic-theme";
