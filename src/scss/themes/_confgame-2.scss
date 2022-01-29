@@ -1,0 +1,45 @@
+html {
+	background-image: url("../img/ccg2-bg.png");
+	z-index: 1;
+   	background-color: #700805;
+    background-size: auto;
+    background-position: center 107px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+html::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 44px;
+    height: 350px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/ccg2-text.png");
+    background-size: auto;
+    background-position: center;
+}
+body::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 222px;
+    top: 107px;
+    left: 0;
+    background-image: url("../img/ccg2-playerleft.png");
+    background-repeat: no-repeat;
+    background-position: top right 70px;
+    z-index:2;
+}
+body::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 222px;
+    top: 107px;
+    left: 50%;
+	background-image: url("../img/ccg2-playerright.png");
+    background-repeat: no-repeat;
+    background-position: top left 10px;
+    z-index:3;
+}

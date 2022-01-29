@@ -1,0 +1,45 @@
+html {
+	background-image: url("../img/ccg1-bg.png");
+	z-index: 1;
+   	background-color: #ffffff;
+    background-size: auto;
+    background-position: center 107px;
+    //from conf-21
+    position: relative;
+//    background-position: center 100px;
+    background-repeat: no-repeat;
+    //end conf-21
+}
+body::before {
+    //from conf-21
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 222px;
+    top: 108px;
+    left: 0;
+    //end conf-21
+    background-image: url("../img/ccg1-playerleft.png");
+    //background-size: 543px;
+    background-repeat: no-repeat;
+    background-position: top right -900px;
+    z-index:2;
+}
+body::after {
+    //from conf-21
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 222px;
+    top: 108px;
+    left: 50%;
+//    z-index:-1;
+//    z-index:-2;
+    //end conf-21
+	background-image: url("../img/ccg1-playerright.png");
+    //background-size: 600px;
+    background-repeat: no-repeat;
+//    background-position: top left -50px;
+    background-position: top left -900px;
+    z-index:3;
+}
