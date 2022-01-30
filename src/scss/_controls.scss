@@ -1,6 +1,6 @@
 
-$headerHeight: 250px; // Use this when there is a banner. Use the banner height + 15 px. ex. 
-//$headerHeight: 80px; //This is the default with no banner. ex: 40px or false. 
+//$headerHeight: 250px; // Use this when there is a banner. Use the banner height + 15 px. ex. 
+$headerHeight: 80px; //This is the default with no banner. ex: 40px or false. 
 
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
@@ -21,8 +21,8 @@ $promos: (
 );
 
 // Sidebar Variables
-$sidebarImage: "../img/tom-brady-sidebar.jpg"; 
-$sidebarHeader: "Brady Retires";
+$sidebarImage: "../img/championship-sidebar.jpg"; 
+//$sidebarHeader: "Brady Retires";
 
 $sidebarText: "";
 
