@@ -7,7 +7,7 @@ $black: #000000;
 
 // kill all h4 following hr
 html{
-	background-color: linear-gradient(90deg, #f6a124 20%, #247353 20%, #788343 20%,#925906 20%, #4e4e2f 20%);
+	background:#E68E32;background:-webkit-linear-gradient(45deg,#E68E32 0%,#8E2F29 40%, #358E3C 98%) fixed;background:-o-linear-gradient(45deg,#368E32 0%,#8E2F29 40%, #358E3C 98%) fixed;background:linear-gradient(45deg,#368E32 0%,#8E2F29 40%, #358E3C 98%) fixed;
 }
 
 .side .titlebox .md hr + h5 + h2 + ul{
