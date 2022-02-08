@@ -27,19 +27,19 @@ body::after {
     }
 
 .arrow.up {
-    background: url(%%upinactive%%); 
+    background: #000000; 
     }
 
 .arrow.upmod { 
-    background: url(%%upactive%%); 
+    background: #FFFFFF; 
     }
 
 .arrow.down {
-    background: url(%%downinactive%%); 
+    background: #FFFFFF; 
     }
 
 .arrow.downmod { 
-    background: url(%%downactive%%); 
+    background: #000000; 
     }
     
 }
