@@ -28,6 +28,17 @@ body::after {
         background-position: center;
     }
 
+.arrow{
+        display: block;
+        height: 20px;
+        width: 20px;
+        font-size: 0;
+        overflow: hidden;
+        background-image:none;
+        background-size: 100%;
+        transition: opacity .3s ease-out;
+    }
+
 .arrow.up {
     background: url(%%bengals-helmet%%); 
     background-position: 0 0 !important;
