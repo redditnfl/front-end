@@ -31,17 +31,20 @@ body::after {
 .arrow.up {
     background: url(%%bengals-helmet%%); 
     background-position: 0 0 !important;
+    background-size: 50%;
     }
 
 .arrow.upmod { 
     background: url(%%Lombardi%%); 
     background-position: 0 0 !important;
-    }
+    background-size: 150%;
+}
 
 .arrow.down {
     background: url(%%rams-helmet%%); 
     background-position: 0 0 !important;
-    }
+    background-size: 100%;
+}
 
 .arrow.downmod { 
     background: url(%%Lombardi%%); 
