@@ -1,0 +1,45 @@
+html {
+	//background-image: url("../img/liv-bg.png");
+    background-color: #BC213B;
+    //background-size: contain;
+}
+html::before {
+	//background-image: url("../img/liv-text.png");
+    //background-size: contain;
+}
+body::before {
+	//background-image: url("../img/liv-bengals.png");
+    //background-size: 625px;
+    //background-repeat: no-repeat;
+    //background-position: left center;
+}
+body::after {
+	//background-image: url("../img/liv-rams.png");
+    // background-size: 625px;
+    // background-repeat: no-repeat;
+    // background-position: right center;
+    //z-index:-2;
+}
+@media only screen and (min-width: 1400px) {
+    body::before,
+    body::after {
+        background-position: center;
+    }
+
+.arrow.up {
+    background: url(%%upinactive%%); 
+    }
+
+.arrow.upmod { 
+    background: url(%%upactive%%); 
+    }
+
+.arrow.down {
+    background: url(%%downinactive%%); 
+    }
+
+.arrow.downmod { 
+    background: url(%%downactive%%); 
+    }
+    
+}
