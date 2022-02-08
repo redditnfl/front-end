@@ -28,18 +28,22 @@ body::after {
 
 .arrow.up {
     background: url(%%bengals-helmet%%); 
+    background-position: 0 0 !important;
     }
 
 .arrow.upmod { 
     background: url(%%Lombardi%%); 
+    background-position: 0 0 !important;
     }
 
 .arrow.down {
     background: url(%%rams-helmet%%); 
+    background-position: 0 0 !important;
     }
 
 .arrow.downmod { 
     background: url(%%Lombardi%%); 
+    background-position: 0 0 !important;
     }
     
 }
