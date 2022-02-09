@@ -1,5 +1,5 @@
 html {
-	background-image: url("../img/liv-bg.jpg");
+	background-image: url("../img/lvi-bg.jpg");
     //background-color: #BC213B;
     //background:#ff9322;background:-webkit-linear-gradient(45deg,#FFD3B9 0%,#CA465A 50%,#543660 98%) fixed;
     //background:-o-linear-gradient(45deg,#FFD3B9 0%,#CA465A 50%,#543660 98%) fixed;background:linear-gradient(45deg,#FFD3B9 0%,#CA465A 50%,#543660 98%) fixed;
@@ -18,7 +18,7 @@ html::before {
     height: 350px;
     width: 100%;
     background-repeat: no-repeat;
-    background-image: url("../img/liv-text.png");
+    background-image: url("../img/lvi-text.png");
     background-size: auto;
     background-position: center;
 }
@@ -29,7 +29,7 @@ body::before {
     height: 532px;
     top: 95px;
     left: 0;
-	background-image: url("../img/liv-bengals.png");
+	background-image: url("../img/lvi-bengals.png");
     background-repeat: no-repeat;
     background-position: top right -1060px;
     z-index:2;
@@ -41,7 +41,7 @@ body::after {
     height: 222px;
     top: 108px;
     left: 50%;
-	background-image: url("../img/liv-rams.png");
+	background-image: url("../img/lvi-rams.png");
     background-repeat: no-repeat;
 //    background-position: top left -50px;
     background-position: top left -1060px;
