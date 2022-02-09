@@ -17,7 +17,8 @@ html::before {
     top: 44px;
     height: 350px;
     width: 100%;
-    background-repeat: no-repeat;	background-image: url("../img/liv-text.png");
+    background-repeat: no-repeat;
+    background-image: url("../img/ccg2-text.png");
     background-size: auto;
     background-position: center;
 }
@@ -25,12 +26,12 @@ body::before {
     content: "";
     position: absolute;
     width: 50%;
-    height: 222px;
-    top: 108px;
+    height: 532px;
+    top: 95px;
     left: 0;
 	background-image: url("../img/liv-bengals.png");
     background-repeat: no-repeat;
-    background-position: top right -900px;
+    background-position: top right -1060px;
     z-index:2;
 }
 body::after {
@@ -43,7 +44,7 @@ body::after {
 	background-image: url("../img/liv-rams.png");
     background-repeat: no-repeat;
 //    background-position: top left -50px;
-    background-position: top left -900px;
+    background-position: top left -1060px;
     z-index:3;
 }
 @media only screen and (min-width: 1400px) {
