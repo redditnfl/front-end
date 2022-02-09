@@ -1,6 +1,6 @@
 
-//$headerHeight: 250px; // Use this when there is a banner. Use the banner height + 15 px. ex. 
-$headerHeight: 80px; //This is the default with no banner. ex: 40px or false. 
+$headerHeight: 547px;//250px; // Use this when there is a banner. Use the banner height + 15 px. ex. 
+//$headerHeight: 80px; //This is the default with no banner. ex: 40px or false. 
 
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false
 
@@ -25,14 +25,14 @@ $promos: (
 
 
 
-$sidebarImage: "../img/sb-preview-sidebar.png"; 
+$sidebarImage: "../img/SB-lvi-sidebar2022.jpg"; 
 $sidebarHeader: "";
 
 $sidebarText: "";
 
 
-//$sidebarPicHeight: 300px; //set to 200px for alt sidebar
-$sidebarPicHeight: 200px; //set to 200px for standard sidebar
+$sidebarPicHeight: 300px; //set to 200px for alt sidebar
+//$sidebarPicHeight: 200px; //set to 200px for standard sidebar
 $sidebarPicOffset: 0;
 
 // Links in sidebar
