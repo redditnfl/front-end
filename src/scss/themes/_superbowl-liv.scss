@@ -25,26 +25,26 @@ html::before {
 body::before {
     content: "";
     position: absolute;
-    width: 50%;
+    width: 100%;
     height: 532px;
     top: 95px;
     left: 0;
 	background-image: url("../img/lvi-bengals.png");
     background-repeat: no-repeat;
-    background-position: top right -1060px;
+    background-position: top right -388px;
     z-index:2;
 }
 body::after {
     content: "";
     position: absolute;
-    width: 50%;
-    height: 222px;
-    top: 108px;
+    width: 100%;
+    height: 532px;
+    top: 95px;
     left: 50%;
 	background-image: url("../img/lvi-rams.png");
     background-repeat: no-repeat;
 //    background-position: top left -50px;
-    background-position: top left -1060px;
+    background-position: top left -388px;
     z-index:3;
 }
 @media only screen and (min-width: 1400px) {
