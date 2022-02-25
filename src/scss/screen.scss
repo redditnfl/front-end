@@ -37,15 +37,9 @@ $all-teams: map-collect($nfl-teams);
 
 // Themes
 
-@import "themes/black-history-month";
-//@import "themes/superbowl-ramschamps"; 
-//@import "themes/confgame-2";
-//@import "themes/wildcard-6";
-//@import "themes/conf-21";
+//@import "themes/black-history-month";
 //@import "themes/basic-theme";
-//@import "themes/memorial-theme";
-//@import "themes/xmas";
-//@import "themes/sb-win";
+@import "themes/memorial-theme";
 //@import "themes/season-end";
 //@import "themes/2021-kickoff";
 
