@@ -95,7 +95,7 @@ $pos-100:  0%;
 	$status_champion: map-get($team, eliminated);
 	$flair-rank: null;
 
-	@if($league == "aaf"){
+	@if($league == "nfl"){
 		.md a[href$="/r/#{$url}"]::before,
 		.md a[href^="/r/#{$url}#"]::before,
 		.md a[href$="/r/#{to-lower-case($url)}"]::before,
