@@ -39,11 +39,11 @@ $all-teams: map-collect($nfl-teams);
 // Themes
 
 //@import "themes/black-history-month";
-@import "themes/basic-theme";
+//@import "themes/basic-theme";
 //@import "themes/usa-theme";
 //@import "themes/memorial-theme";
 //@import "themes/season-end";
-//@import "themes/2021-kickoff";
+@import "themes/2021-kickoff";
 
 
 // yeah, no reddit new button
