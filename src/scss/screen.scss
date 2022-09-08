@@ -17,7 +17,8 @@ $all-teams: map-collect($nfl-teams);
 // essential modules
 @import "modules/remove-subreddit-stats";
 @import "modules/sidebar-padding";
-@import "modules/user-flair";
+//@import "modules/user-flair";
+@import "modules/dual-flair";
 @import "modules/rankers-flair";
 @import "modules/official-flair";
 @import "modules/link-flair";
