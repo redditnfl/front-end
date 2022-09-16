@@ -17,8 +17,8 @@ $all-teams: map-collect($nfl-teams);
 // essential modules
 @import "modules/remove-subreddit-stats";
 @import "modules/sidebar-padding";
-//@import "modules/user-flair";
-@import "modules/dual-flair";
+@import "modules/user-flair";
+//@import "modules/dual-flair";
 @import "modules/rankers-flair";
 @import "modules/official-flair";
 @import "modules/link-flair";
@@ -43,7 +43,7 @@ $all-teams: map-collect($nfl-teams);
 //@import "themes/usa-theme";
 //@import "themes/memorial-theme";
 //@import "themes/season-end";
-//@import "themes/2021-kickoff";
+//@import "themes/superbowl-ramschamps";
 
 
 // yeah, no reddit new button
