@@ -55,9 +55,10 @@
 	}
 	li:last-child{
 		&{
+			display: none !important;
 			position: relative;
 			width: 30%;
-			overflow: visible;
+			//overflow: visible;
 		}
 		a{
 			position: absolute;
@@ -65,11 +66,11 @@
 			bottom: 0;
 			right: 0;
 			width: 300px;
-			color: rgba(#fff, 0);
+			//color: rgba(#fff, 0);
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: right center;
-			background-image: url("../img/hub-btn.png");
+			//background-image: url("../img/hub-btn.png");
 		}
 	}
 
