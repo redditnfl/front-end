@@ -92,7 +92,7 @@ $bg-cell-width: 334px/2;
 		display: none !important;
 		@extend %default-text;
 		content: "";
-		background-position: pos(0,4);
+		//background-position: pos(0,4);
 	}
 }
 
@@ -104,7 +104,7 @@ $bg-cell-width: 334px/2;
 	&::before{
 		@extend %default-text;
 		content: "";
-		background-position: pos(0,5);
+		//background-position: pos(0,5);
 	}
 }
 
@@ -116,7 +116,7 @@ $bg-cell-width: 334px/2;
 	&::before{
 		@extend %default-text;
 		content: "";
-		background-position: pos(0,6);
+		background-position: pos(0,5);
 	}
 }
 .side #search input:nth-child(1){
