@@ -159,6 +159,10 @@ $pos-100:  0%;
 	}
 }
 .flairselector{
-	display: none;
+    display: none !important;
+}
+
+.flairselector .customizer {
+    display: none !important;
 }
 
