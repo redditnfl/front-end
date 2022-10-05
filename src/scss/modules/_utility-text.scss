@@ -102,7 +102,7 @@ $bg-cell-width: 334px/2;
 	&::before{
 		@extend %default-text;
 		content: "";
-		background-position: pos(0,5);
+		background-position: pos(0,6);
 	}
 }
 // mods text
@@ -113,7 +113,7 @@ $bg-cell-width: 334px/2;
 	&::before{
 		@extend %default-text;
 		content: "";
-		background-position: pos(0,6);
+		background-position: pos(0,5);
 	}
 }
 
