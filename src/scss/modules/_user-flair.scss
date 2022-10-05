@@ -26,7 +26,7 @@ body.moderator #siteTable .flair{
 		position: relative;
 		display: inline-block;
 		height: 29px;
-		width: 28px;
+		width: auto;
 		padding: 1px 4px;
 		margin-right: 3px;
 		vertical-align: middle;
@@ -49,12 +49,12 @@ body.moderator #siteTable .flair{
 	// Flair logo element
 	&::before{
 		display: inline-block;
-		width: 20px;
+		width: auto;
 		height: 20px;
 	}
 	&::after{
 		display: inline-block;
-		width: 20px;
+		width: auto;
 		height: 20px;
 		vertical-align: middle;
 		left:30px;
