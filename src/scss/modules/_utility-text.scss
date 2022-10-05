@@ -81,7 +81,28 @@ $bg-cell-width: 334px/2;
 		background-position: pos(0,3);
 	}
 }
-
+// rules text
+.side a[title=subreddit-rules]{
+	&{
+		font-size: 0;
+	}
+	&::before{
+		@extend %default-text;
+		content: "";
+		background-position: pos(0,4);
+	}
+}
+// mods text
+.side .sidecontentbox .helplink{
+	&{
+		font-size: 0;
+	}
+	&::before{
+		@extend %default-text;
+		content: "";
+		background-position: pos(0,5);
+	}
+}
 // flair text
 .side .titlebox .tagline .flairselectbtn{
 	&{
@@ -96,29 +117,9 @@ $bg-cell-width: 334px/2;
 	}
 }
 
-// mods text
-.side .sidecontentbox .helplink{
-	&{
-		font-size: 0;
-	}
-	&::before{
-		@extend %default-text;
-		content: "";
-		background-position: pos(0,5);
-	}
-}
 
-// rules text
-.side a[title=subreddit-rules]{
-	&{
-		font-size: 0;
-	}
-	&::before{
-		@extend %default-text;
-		content: "";
-		background-position: pos(0,4);
-	}
-}
+
+
 .side #search input:nth-child(1){
 	width: 300px;
 	padding: 0 10px;
