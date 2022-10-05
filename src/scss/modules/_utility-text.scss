@@ -85,9 +85,11 @@ $bg-cell-width: 334px/2;
 // flair text
 .side .titlebox .tagline .flairselectbtn{
 	&{
+		display: none !important;
 		font-size: 0;
 	}
 	&::after{
+		display: none !important;
 		@extend %default-text;
 		content: "";
 		background-position: pos(0,4);
