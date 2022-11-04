@@ -81,19 +81,30 @@ $bg-cell-width: 334px/2;
 		background-position: pos(0,3);
 	}
 }
-
 // flair text
 .side .titlebox .tagline .flairselectbtn{
 	&{
+		display: none !important;
 		font-size: 0;
 	}
 	&::after{
+		display: none !important;
 		@extend %default-text;
 		content: "";
 		background-position: pos(0,4);
 	}
 }
-
+// rules text
+.side a[title=subreddit-rules]{
+	&{
+		font-size: 0;
+	}
+	&::before{
+		@extend %default-text;
+		content: "";
+		background-position: pos(0,6);
+	}
+}
 // mods text
 .side .sidecontentbox .helplink{
 	&{
@@ -106,17 +117,6 @@ $bg-cell-width: 334px/2;
 	}
 }
 
-// rules text
-.side a[title=subreddit-rules]{
-	&{
-		font-size: 0;
-	}
-	&::before{
-		@extend %default-text;
-		content: "";
-		background-position: pos(0,6);
-	}
-}
 .side #search input:nth-child(1){
 	width: 300px;
 	padding: 0 10px;
