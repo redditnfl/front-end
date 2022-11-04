@@ -3,7 +3,7 @@
 		display: block;
 	}
 	.title{
-		display: block;
+		display: none;
 	}
 }
 .linkflair{
@@ -28,7 +28,7 @@
 }
 .flairoptionpane .linkflair:before,
 .flairselection .linkflair:before{
-	display: block;
+	display: none;
 }
 
 $pos-100:  0%;
