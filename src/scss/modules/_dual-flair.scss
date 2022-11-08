@@ -26,7 +26,7 @@ body.moderator #siteTable .flair{
 		position: relative;
 		display: inline-block;
 		height: 29px;
-		width: auto;
+		width: 28px;
 		padding: 1px 4px;
 		margin-right: 3px;
 		vertical-align: middle;
@@ -47,10 +47,23 @@ body.moderator #siteTable .flair{
 		cursor: help;
 	}
 	// Flair logo element
+	&::before,
+	&::after{
+		@extend %flair-element;
+	}
 	&::before{
 		display: inline-block;
-		width: 20px;
-		height: 20px;
+		width: 28px;
+		height: 28px;
+	}
+	&::after{
+		position: absolute;
+		top: 50%;
+		left: 30px;
+		transform: translateY(-50%);
+		width: 15px;
+		height: 15px;
+		display: none;
 	}
 }
 #siteTable .tagline .flair-official {
