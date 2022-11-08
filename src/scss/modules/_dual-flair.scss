@@ -26,7 +26,7 @@ body.moderator #siteTable .flair{
 		position: relative;
 		display: inline-block;
 		height: 29px;
-		width: 28px;
+		width: auto;
 		padding: 1px 4px;
 		margin-right: 3px;
 		vertical-align: middle;
@@ -47,23 +47,10 @@ body.moderator #siteTable .flair{
 		cursor: help;
 	}
 	// Flair logo element
-	&::before,
-	&::after{
-		@extend %team-icons;
-	}
 	&::before{
 		display: inline-block;
-		width: 28px;
-		height: 28px;
-	}
-	&::after{
-		position: absolute;
-		top: 50%;
-		left: 30px;
-		transform: translateY(-50%);
-		width: 15px;
-		height: 15px;
-		display: none;
+		width: 20px;
+		height: 20px;
 	}
 }
 #siteTable .tagline .flair-official {
