@@ -25,8 +25,9 @@ body.moderator #siteTable .flair{
 	&{
 		position: relative;
 		display: inline-block;
-		height: 28px;
+		height: 29px;
 		width: 28px;
+		padding: 1px 4px;
 		margin-right: 3px;
 		vertical-align: middle;
 		font-size: 10px;
@@ -41,127 +42,115 @@ body.moderator #siteTable .flair{
 	// Flair wrap on hover
 	&:hover{
 		width: auto;
-		border-color:  #ddd;
+		border-color: #ddd;
 		background-color: #f5f5f5;
 		cursor: help;
 	}
 	// Flair logo element
-	&::before,
-	&::after{
-		@extend %flair-element;
-	}
 	&::before{
 		display: inline-block;
-		width: 25px;
-		height: 25px;
-	}
-	&::after{
-		position: absolute;
-		top: 50%;
-		left: 30px;
-		transform: translateY(-50%);
-		width: 15px;
-		height: 15px;
-		display: none;
+		width: 20px;
+		height: 20px;
 	}
 }
-span[class*='flair-nfl-'],
-span[class*='flair-nfl-']{
-	&{
-		width: 54px;
-	}
-	&::before{
-		margin-right: 28px;
-	}
-	&::after{
-		display: block;
-	}
-}
-
 #siteTable .tagline .flair-official {
 	display: inline-block !important;
 }
-
-
 $pos-100:  0%;
-@each $team in $all-teams{
+@each $team in $nfl-teams{
 	$league: map-get($team, league);
 	$name: map-get($team, name);
 	$abbr: map-get($team, abbr);
 	$url: map-get($team, url);
 	$bg: map-get($team, bg);
-	$fg: map-get($team, fg);
 	$status_eliminated: map-get($team, eliminated);
-	$status_champion: map-get($team, eliminated);
-	$flair-rank: null;
-
-	@if($league == "nfl"){
-		.md a[href$="/r/#{$url}"]::before,
-		.md a[href^="/r/#{$url}#"]::before,
-		.md a[href$="/r/#{to-lower-case($url)}"]::before,
-		.md a[href="/#{to-lower-case($abbr)}"]::before,
-		.md a[href="/#{to-upper-case($abbr)}"]::before,
-		.md a[data-href-url$="/r/#{$url}"]::before,
-		.md a[data-href-url^="/r/#{$url}#"]::before,
-		.md a[data-href-url$="/r/#{to-lower-case($url)}"]::before,
-		.md a[data-href-url="/#{to-lower-case($abbr)}"]::before,
-		.md a[data-href-url="/#{to-upper-case($abbr)}"]::before
-		{
+	$status_champion: map-get($team, champion);
+	$status_bandwagon: map-get($team, bandwagon);
+	.md a[href*="/r/#{$url}"],
+	.md a[href*="/r/#{to-lower-case($url)}"],
+	.md a[href*="/r/#{to-upper-case($url)}"],
+	.md a[href*="/#{to-upper-case($abbr)}"],
+	.flair-#{to-lower-case($name)}{
+		&::before{
 			@extend %flair-element;
-		}
-
-		.md a[href$="/r/#{$url}"],
-		.md a[href^="/r/#{$url}#"],
-		.md a[href$="/r/#{to-lower-case($url)}"],
-		.md a[href="/#{to-lower-case($abbr)}"],
-		.md a[href="/#{to-upper-case($abbr)}"],
-		.md a[data-href-url$="/r/#{$url}"],
-		.md a[data-href-url^="/r/#{$url}#"],
-		.md a[data-href-url$="/r/#{to-lower-case($url)}"],
-		.md a[data-href-url="/#{to-lower-case($abbr)}"],
-		.md a[data-href-url="/#{to-upper-case($abbr)}"],
-		.flair-#{to-lower-case($name)}{
-			&::before{
-				background-position: 0 $pos-100;
-				@if $status_eliminated{
-					opacity: .4;
-				}
-				@if $status_champion{
-					// multiple css backgrounds to be added at a later time
-				}
+			background-position: 0 $pos-100;
+			@if $status_eliminated{
+				opacity: .4;
 			}
 		}
-		.flair-#{to-lower-case($name)}.flair-official + .author {
-			background: grayscale($bg);
-			color: grayscale($fg);
-		}
-	} @else{
-		$flair-rank: "secondary";
-		.flair-#{to-lower-case($league)}-#{to-lower-case($name)}::after{
-			background-position: 0 $pos-100;
-		}
 	}
 
-	a[href*="/wiki/flair/#{to-lower-case($name)}"],
-	a[href*="#{$flair-rank}%3A#{to-lower-case($league)}-#{to-upper-case($abbr)}"]{
-		&::before{
-			background-position: 0 $pos-100 !important;
+	@if $status_champion{
+		.flair-#{to-lower-case($name)}{
+			&{
+				width: 48px;
+			}
+			&::before{
+				margin-right: 22px;
+			}
+			&::after{
+				content: "";
+				position: absolute;
+				top: 11%;
+				left: 28px;
+				display: block;
+				width: 10px;
+				height: 18px;
+				background-image: url("../img/sb-trophy.png");
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
 		}
 	}
-
-
+	.side .titlebox .tagline .flair-#{to-lower-case($name)} ~ .flairselectbtn::before{
+		background-position: 0 $pos-100;
+	}
+	.flair-#{to-lower-case($name)}.flair-official + .author {
+		background: $bg;
+	}
 	$pos-100: $pos-100 - 100%;
 }
 
 /* Special flair */
-.flair-twitter, .flair-robot {
-	&:before {
-		background-image: url(#{$special-icons});
-	}
+%special-flair-element {
+	@extend %flair-element;
+	background-image: url(#{$special-icons});
 }
 .flair-twitter:before {
+	@extend %special-flair-element;
 	background-position: 0 0;
 }
 .flair-robot:before {
-	background-position: 0 -25px;
+	@extend %special-flair-element;
+	background-position: 0 -20px;
+}
+
+// bandwagon flair
+.flair.flair-party{
+	&{
+		width: 48px;
+	}
+	&:hover{
+		width: auto;
+	}
+	&::before{
+		margin-right: 22px;
+	}
+	&::after{
+		content: "";
+		position: absolute;
+		top: 11%;
+		left: 28px;
+		display: block;
+		width: 15px;
+		height: 15px;
+		background-image: url("../img/bandwagon.png");
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+.flairselector .flair::after{
+	display: none;
 }
