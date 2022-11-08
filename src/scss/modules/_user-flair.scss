@@ -14,7 +14,7 @@ body.moderator #siteTable .flair{
 	content: "";
 	display: inline-block;
 	height: 20px;
-	width: auto;
+	width: 20px;
 	margin-right: 4px;
 	vertical-align: middle;
 	background-image: url(#{$team-icons});
@@ -26,7 +26,7 @@ body.moderator #siteTable .flair{
 		position: relative;
 		display: inline-block;
 		height: 29px;
-		width: auto;
+		width: 28px;
 		padding: 1px 4px;
 		margin-right: 3px;
 		vertical-align: middle;
@@ -49,15 +49,8 @@ body.moderator #siteTable .flair{
 	// Flair logo element
 	&::before{
 		display: inline-block;
-		width: auto;
+		width: 20px;
 		height: 20px;
-	}
-	&::after{
-		display: inline-block;
-		width: auto;
-		height: 20px;
-		vertical-align: middle;
-		left:30px;
 	}
 }
 #siteTable .tagline .flair-official {
@@ -158,7 +151,6 @@ $pos-100:  0%;
 		background-repeat: no-repeat;
 	}
 }
-.flairselector{
+.flairselector .flair::after{
 	display: none;
 }
-
