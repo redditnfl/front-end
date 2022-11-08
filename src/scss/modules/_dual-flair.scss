@@ -49,7 +49,7 @@ body.moderator #siteTable .flair{
 	// Flair logo element
 	&::before,
 	&::after{
-		@extend %flair-element;
+		@extend %team-icons;
 	}
 	&::before{
 		display: inline-block;
