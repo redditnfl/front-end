@@ -51,9 +51,12 @@ body.moderator #siteTable .flair{
     }
     span.flairemoji {
         display: inline-block;
+        width: 20px;
+        height: 20px;
     }
     &:hover span {
         display: inline-block;
+        margin-right: 4px;
     }
 	// Flair logo element
 	&::before{
