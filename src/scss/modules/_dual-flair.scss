@@ -46,6 +46,15 @@ body.moderator #siteTable .flair{
 		background-color: #f5f5f5;
 		cursor: help;
 	}
+    span {
+        display: none;
+    }
+    span.flairemoji {
+        display: inline-block;
+    }
+    &:hover span {
+        display: inline-block;
+    }
 	// Flair logo element
 	&::before{
 		display: inline-block;
