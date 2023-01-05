@@ -1,5 +1,6 @@
 // global
 const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const fileinclude = require('gulp-file-include');
