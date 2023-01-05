@@ -1,6 +1,5 @@
 // global
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const fileinclude = require('gulp-file-include');
@@ -16,7 +15,7 @@ const filter = require('gulp-filter');
 // css
 const syntax_scss = require('postcss-scss');
 const postcss = require('gulp-postcss');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('autoprefixer');
 const pcss_size = require('postcss-short-size');
 const pcss_alias = require('postcss-alias');
