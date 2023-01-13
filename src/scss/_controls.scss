@@ -1,6 +1,6 @@
 
-//$headerHeight: 350px; // Use this when there is a banner. Use the banner height + 15 px. ex. 
-$headerHeight: 80px; //This is the default with no banner. ex: 40px or false. 
+$headerHeight: 350px; // Use this when there is a banner. Use the banner height + 15 px. ex. 
+//$headerHeight: 80px; //This is the default with no banner. ex: 40px or false. 
 
 $headerSideOffset: $headerHeight - 20px; //ex: 20px or false 
 
@@ -26,12 +26,12 @@ $promos: (
 
 
 
-//$sidebarImage: "../img/WeeklyImage.jpg"; 
-$sidebarImage: "../img/Hamlin.jpg"; 
+$sidebarImage: "../img/wildcardSidebar.jpg"; 
 
-$sidebarHeader: "";
 
-$sidebarText: "In support of Damar";
+$sidebarHeader: "It Wild Card Weekend!";
+
+$sidebarText: "";
 
 
 $sidebarPicHeight: 168px; //set to 200px for alt sidebar
