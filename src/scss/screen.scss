@@ -12,8 +12,8 @@ $all-teams: map-collect($nfl-teams);
 @import "controls";
 
 // base theme
-@import "r-aafb-base-theme/theme/index";
-
+//@import "r-aafb-base-theme/theme/index";
+@import "themes/divisional";
 // essential modules
 @import "modules/remove-subreddit-stats";
 @import "modules/sidebar-padding";
@@ -39,8 +39,8 @@ $all-teams: map-collect($nfl-teams);
 
 // Themes
 
-@import "themes/basic-theme";
-//@import "themes/2021_kickoff";
+//@import "themes/basic-theme";
+@import "themes/divisional-1";
 
 
 // yeah, no reddit new button
