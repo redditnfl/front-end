@@ -1,5 +1,5 @@
 html {
-	background-image: url("../img/wildcard-bg.png");
+	background-image: url("../img/wildcard-bg5.png");
 	z-index: 1;
    	background-color: #08090C;
     background-size: auto;
@@ -21,7 +21,7 @@ html::before {
 //    background-position: center;
     background-repeat: no-repeat;
     //end conf-21
-    background-image: url("../img/wildcard-text.png");
+    background-image: url("../img/wildcard-text2.png");
     background-size: auto;
     background-position: center;
     //top: 50px;
@@ -35,7 +35,7 @@ body::before {
     top: 107px;
     left: 0;
     //end conf-21
-    background-image: url("../img/wildcard-playerleft.png");
+    background-image: url("../img/wild-left2.png");
     //background-size: 543px;
     background-repeat: no-repeat;
     background-position: top right 60px;
@@ -52,7 +52,7 @@ body::after {
 //    z-index:-1;
 //    z-index:-2;
     //end conf-21
-	background-image: url("../img/wildcard-playerright.png");
+	background-image: url("../img/wild-right2.png");
     //background-size: 600px;
     background-repeat: no-repeat;
 //    background-position: top left -50px;
