@@ -1,7 +1,7 @@
 html {
 	background-image: url("../img/div1-bg.png");
 	z-index: 1;
-   	background-color: #08090C;
+   	background-color: rgb(33,33,33);
     background-size: auto;
     background-position: center 107px;
     //from conf-21
@@ -35,7 +35,7 @@ body::before {
     top: 107px;
     left: 0;
     //end conf-21
-    background-image: url("../img/div1-playerleft.png");
+    background-image: url("../img/div1-left.png");
     //background-size: 543px;
     background-repeat: no-repeat;
     background-position: top right 60px;
@@ -48,11 +48,11 @@ body::after {
     width: 50%;
     height: 222px;
     top: 107px;
-    left: 50%;
+    left: 60%;
 //    z-index:-1;
 //    z-index:-2;
     //end conf-21
-	background-image: url("../img/div1-playerright.png");
+	background-image: url("../img/div1-right.png");
     //background-size: 600px;
     background-repeat: no-repeat;
 //    background-position: top left -50px;
