@@ -39,9 +39,9 @@ $all-teams: map-collect($nfl-teams);
 
 // Themes
 
-@import "themes/basic-theme";
-//@import "themes/divisional";
-//@import "themes/divisional-1";
+//@import "themes/basic-theme";
+@import "themes/season-end";
+
 
 
 // yeah, no reddit new button
