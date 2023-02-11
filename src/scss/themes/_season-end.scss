@@ -1,7 +1,7 @@
 $color-1: #ffffff;
 
 html{
-	background:#931e74;background:-webkit-linear-gradient(45deg,#931e74 0%,#c14433 40%, #ab1d5a 98%) fixed;background:-o-linear-gradient(45deg,#931e74 0%,#c14433 40%, #ab1d5a 98%) fixed;background:linear-gradient(45deg,#931e74 0%,#c14433 40%, #ab1d5a 98%) fixed;
+	background:#931e74;background:-webkit-linear-gradient(45deg,#ab1d5a 0%,#c14433 40%, #931e74 98%) fixed;background:-o-linear-gradient(45deg,#ab1d5a 0%,#c14433 40%, #931e74 98%) fixed;background:linear-gradient(45deg,#ab1d5a 0%,#c14433 40%, #931e74 98%) fixed;
 }
 html::before{
 	content: "";
