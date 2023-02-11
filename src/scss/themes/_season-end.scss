@@ -1,7 +1,9 @@
 $color-1: #ffffff;
+
 html{
-	background: #3d3d3d;
+	background:#931e74;background:-webkit-linear-gradient(45deg,#921e74 0%,#c14433 40%, #ab1d5a 98%) fixed;background:-o-linear-gradient(45deg,#921e74 0%,#c14433 40%, #ab1d5a 98%) fixed;background:linear-gradient(45deg,#921e74 0%,#c14433 40%, #ab1d5a 98%) fixed;
 }
+
 html::before{
 	content: "";
 	position: absolute;
@@ -9,9 +11,9 @@ html::before{
 	z-index: -1;
 	height: 400px;
 	width: 100%;
-	margin-top: 104px;
+	margin-top: 54px;//104px;
 	background-color: transparent;
-	background-image: url("../img/conferenceBanner.jpg");
+	background-image: url("../img/SBLVIIbanner.png");
 	background-position: center top;
 	background-size: 1890px;
 	background-repeat: no-repeat;
