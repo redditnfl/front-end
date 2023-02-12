@@ -1,7 +1,7 @@
-$color-1: #ffffff;
+$color-1: #921e74;
 
 html{
-	background:#921e74;background:-webkit-linear-gradient(45deg,#921e74 0%,#c14433 40%, #ab1d5a 98%) fixed;background:-o-linear-gradient(45deg,#921e74 0%,#c14433 40%, #ab1d5a 98%) fixed;background:linear-gradient(45deg,#921e74 0%,#c14433 40%, #ab1d5a 98%) fixed;
+	background-color:$color-1;
 }
 
 html::before{
