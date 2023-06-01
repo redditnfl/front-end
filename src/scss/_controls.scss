@@ -11,25 +11,16 @@ $promos: (
 		target: "ad-twitter",
 		height: 136px,
 		position: false
-	),
-	(
-		image: "../img/pro-css.png",
-		target: "pro-css",
-		height: 105px,
-		position: false
 	)
 );
 
 // Sidebar Variables
 
 
-
-
-
 $sidebarImage: "../img/draftday.jpg"; 
 
 
-$sidebarHeader: "With the 1st pick in the 2023 Draft...";
+$sidebarHeader: "";
 
 $sidebarText: "";
 
