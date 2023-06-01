@@ -1,0 +1,39 @@
+/* Aurelian by r/nfl */
+
+
+
+// Modules
+@import "modules/functions";
+@import "modules/variables";
+@import "modules/mixins";
+@import "modules/placeholders";
+
+// Patterns
+@import "patterns/typography";
+@import "patterns/buttons";
+@import "patterns/tables";
+
+// Components
+@import "components/global";
+@import "components/reddit-header";
+@import "components/reddit-sidebar";
+@import "components/reddit-oc";
+@import "components/reddit-content";
+
+// Post Types
+@import "post-types/thread-trashtalk";
+@import "post-types/thread-pressbox";
+
+// yeah, no reddit new button
+#sr-header-area div.redesign-beta-optin{
+	display: none;
+	opacity: 0;
+	position: absolute;
+	left: -9999px;
+	z-index: -1000;
+	visibility: hidden;
+	height: 0;
+	overflow: hidden;
+	width: 0;
+	pointer-events: none;
+}

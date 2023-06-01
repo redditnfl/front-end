@@ -1,0 +1,70 @@
+.side{
+	&{
+		@extend %sidebar-width;
+		display: block;
+		padding: 0;
+		margin: 0;
+	}
+	.md-container{
+		margin: 20px 0;
+	}
+	.spacer{
+		margin: 0;
+	}
+	.create{
+		@extend %kill;
+	}
+	.login-form{
+		&{
+			padding: 0 20px;
+			border: none;
+		}
+		&::before{
+			content: "Log In";
+			@extend %section-title;
+		}
+		input{
+			@extend %sidebar-button-text;
+			display: block;
+			width: 100%;
+			padding: 2px 10px 0;
+			border: none;
+			border-bottom: 2px solid color(grey,20);
+			margin: 4px 0 0;
+			font-size: 12px;
+			line-height: 30px;
+			font-weight: 400;
+			text-transform: capitalize;
+		}
+	}
+	ul li a[href="/r/NFL"]::before{
+		display: none;
+	}
+	.sponsor-300-250{
+		margin: 20px 20px 0;
+	}
+	.dfp-ad-container{
+		margin: 0 auto;
+	}
+	// Buttons
+	@import "_reddit-sidebar/search";
+	@import "_reddit-sidebar/submit";
+	@import "_reddit-sidebar/subscribe";
+	@import "_reddit-sidebar/flair";
+	@import "_reddit-sidebar/message-mods";
+	@import "_reddit-sidebar/rules";
+
+	// Ad
+	@import "_reddit-sidebar/premium-ad";
+
+	// Components
+	@import "_reddit-sidebar/link-info";
+	@import "_reddit-sidebar/stats";
+	@import "_reddit-sidebar/mod-tools";
+	@import "_reddit-sidebar/moderators";
+    @import "_reddit-sidebar/events";
+
+	// Special stuff
+	@import "_reddit-sidebar/flair-based-header";
+	@import "_reddit-sidebar/image";
+}

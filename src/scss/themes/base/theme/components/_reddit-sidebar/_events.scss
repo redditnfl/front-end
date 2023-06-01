@@ -1,0 +1,13 @@
+.md hr+h4+h3+table {
+    strong { }
+    em {
+        display: block;
+        font-style: normal;
+    }
+    td {
+        vertical-align: top;
+    }
+    a:before {
+        display: none;
+    }
+}
