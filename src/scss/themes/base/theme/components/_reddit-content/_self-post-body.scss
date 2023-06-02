@@ -1,0 +1,47 @@
+.usertext-edit{
+	&{
+		//width: 100%;
+	}
+	textarea{
+	  min-width: 80%;
+	  height: 100px;
+	}
+}
+.expando{
+	&{}
+	.md{
+		padding: 0;
+		border: none;
+		background: none;
+	}
+	p{
+		@extend %body-copy;
+		margin: 10px 0 10px;
+		font-size: 14px;
+	}
+	.md h1{
+		@extend %section-title;
+		font-size: rem(26px);
+		margin: 10px 0;
+	}
+	.md h1:not(:first-of-type){
+		margin-top: 30px;
+	}
+	.md h2{
+		@include font(display,1);
+		font-size: rem(20px);
+		margin: 10px 0;
+	}
+	.md h3{
+		@include font(display,0);
+		font-size: rem(18px);
+		letter-spacing: .2em;
+		margin: 10px 0;
+	}
+	.md blockquote{
+		margin: 20px 0;
+	}
+	.md table{
+		@extend %default-table;
+	}
+}

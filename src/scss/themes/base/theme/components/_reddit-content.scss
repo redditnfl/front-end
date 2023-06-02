@@ -1,0 +1,19 @@
+.content{
+	&{
+		padding: 0 20px;
+		margin: 0 320px 0 0;
+		background: color(white);
+	}
+
+	// Post list
+	@import "_reddit-content/post-list";
+
+	// Single post
+	@import "_reddit-content/self-post-body";
+	@import "_reddit-content/post-info";
+
+	// Comments
+	@import "_reddit-content/comments";
+
+    @import "_reddit-content/nfl_mod";
+}

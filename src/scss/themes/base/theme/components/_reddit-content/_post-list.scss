@@ -1,0 +1,100 @@
+.link{
+	white-space: nowrap;
+}
+.link > .rank{
+	display: inline-block;
+	float: none;
+	vertical-align: text-top;
+}
+.link > .thumbnail{
+	float: none;
+	display: inline-block;
+	vertical-align: text-top;
+}
+.link > .midcol{
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	float: none;
+	vertical-align: text-top;
+}
+.link > .entry{
+	z-index: 1;
+	display: inline-block;
+	width: 80%;
+	padding-right: 20px;
+	float: none;
+	vertical-align: text-top;
+	white-space: normal;
+}
+
+
+.linklisting{
+	&{
+		width: auto;
+		//margin-right: 300px;
+	}
+	.thing{
+		display: block;
+		margin: 20px 0 20px;
+	}
+	// Post title - I know, fuck whoever came up with this nest!
+	.thing .title{
+		margin: 0 0 2px;
+	}
+	.thing .title > .title{
+    font-weight: 400;
+		margin-bottom: 3px;
+		font-size: rem(16px);
+		line-height: 1.2em;
+		color: color(blue);
+		vertical-align: middle;
+	}
+	.thing .title > .title:visited{
+		color: color(grey,60);
+	}
+	.thing .title .domain{
+		font-size: 0;
+		color: color(grey,40);
+		vertical-align: text-bottom;
+		margin-top: -2px;
+	}
+
+	.thing .title .domain::before{
+		content: "from ";
+		font-size: rem(10px);
+		vertical-align: text-bottom;
+	}
+	.thing .title .domain a{
+		font-size: rem(10px);
+		color: color(blue);
+		vertical-align: text-bottom;
+	}
+	.tagline{
+		@include font(copy, 0);
+		margin: 0 0 2px;
+		font-size: rem(10px);
+		color: color(grey,40);
+	}
+	.tagline::first-letter{
+		text-transform: uppercase;
+	}
+	.tagline a{
+		color: color(grey, 80);
+	}
+
+	.buttons{
+	}
+	.buttons a{
+		@include font(copy, 0);
+		text-transform: capitalize;
+		color: color(grey,40);
+	}
+	.buttons .marknsfw-button a{
+		text-transform: uppercase;
+	}
+	.buttons .marknsfw-button a::before{
+		content: "Mark as ";
+		text-transform: initial;
+	}
+}

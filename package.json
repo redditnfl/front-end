@@ -42,7 +42,6 @@
     "postcss-base64": "^0.7.1",
     "postcss-scss": "^2.0.0",
     "postcss-short-size": "^3.0.0",
-    "r-aafb-base-theme": "^4.0.0",
     "stylelint": "^12.0.0"
   },
   "dependencies": {

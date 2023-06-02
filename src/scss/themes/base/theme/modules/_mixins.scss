@@ -1,0 +1,85 @@
+// Font smoothing
+@mixin font-smoothing($value) {
+  @if $value == true{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @elseif $value == inherit {
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+// Media Breakpoint Mixin
+@mixin media($group, $id: general, $custom: ()){
+	@each $media in $media-stack{
+		@if($group == map-get($media, group) and $id == map-get($media, id)){
+			@media #{map-get($media, rule) + $custom} { @content };
+		}
+	}
+}
+
+// Breakpoint Mixin
+@mixin breakpoint($size){
+  @each $point in $breakpoints{ // each loop
+    @if($size == map-get($point, name)){ // checks size
+      @media (max-width: map-get($point, size) * 1px){@content;} // runs breakpoint
+    }
+  }
+}
+
+// Centering Mixin
+@mixin center($type){
+  @if($type == v){
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @if($type == h){
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if($type == vh){
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  @if($type == false){
+    top: auto;
+    transform: none;
+  }
+}
+
+// Max-width - instill max width on certain elements
+@mixin max-width(){
+  @include breakpoint(max){
+    max-width: rem($max-width+0px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Font Selection Mixin
+@mixin font($name, $num:0){
+  @each $font in $fonts{ // each loop
+    @if($name == map-get($font, type)){
+      @each $fontWeight in map-get($font, variants){
+        @if($num == map-get($fontWeight, num)){ // checks size
+          font-family: map-get($fontWeight, name);
+          font-weight: map-get($fontWeight, weight);
+        }
+      }
+    }
+  }
+}
+
+@mixin sideButtonPosition($count){
+	@if $headerSideOffset {
+		top: $headerSideOffset + $h-reddit-nav + $h-team-header + $h-sub-nav + $h-hero + ($sidebarLinksHeight * $count);
+	} @else {
+		top: $h-reddit-nav + $h-team-header + $h-sub-nav + $h-hero + ($sidebarLinksHeight * $count);
+	}
+}
