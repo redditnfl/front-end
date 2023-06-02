@@ -1,0 +1,48 @@
+// Color
+$black: #111;
+$grey: #555;
+$aaf-blue: #1B487B;
+$aaf-red: #AA2E3A;
+$aaf-0: #FFF;
+$aaf-100: #4D4D55;
+$h-switchboard-height: 0;
+
+// Media Breaks
+$breakpoints: (name: max, size: 1700, num:20),
+	  (name: medium, size:1040, num:10),
+	  (name: small, size:1100, num:0);
+
+$media-stack:
+	(group: mobile, id: general, rule: "only screen and (max-width: 767px)"),
+	(group: tablet, id: general, rule: "only screen and (min-width: 768px)"),
+	(group: tablet, id: inbetween, rule: "only screen and (min-width: 768px) and (max-width:1024px)"),
+	(group: desktop, id: general, rule: "only screen and (min-width: 1200px)"),
+	(group: custom, id: screen, rule: "only screen ");
+
+// Fonts Info
+$f-stack1: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+$f-stack2: "Arial", "Helvetica", sans-serif;
+$f-stack3: monospace;
+$fonts:(
+  (type: display, variants:(
+	(name: $f-stack1, weight: 400, num: 0),
+	(name: $f-stack1, weight: 700, num: 1)
+  )),
+  (type: copy, variants:(
+	(name: $f-stack2, weight: 400, num: 0),
+	(name: $f-stack2, weight: 700, num: 1)
+  )),
+  (type: code, variants:(
+	(name: $f-stack3, weight: 400, num: 0),
+	(name: $f-stack3, weight: 700, num: 1)
+  ))
+);
+
+// Element Info
+$h-reddit-nav: 20px;
+$h-team-header: 60px;
+$h-hero: 40px;
+$h-sidebar-pic: $sidebarPicHeight;
+$h-sub-nav: 60px;
+$h-switchboard-height: 0;
+$t-important-links: $h-reddit-nav + $h-team-header + $h-hero + $h-sub-nav;

@@ -12,7 +12,7 @@ $all-teams: map-collect($nfl-teams);
 @import "controls";
 
 // base theme
-@import "r-aafb-base-theme/theme/index";
+@import "themes/base/theme/index";
 
 // essential modules
 @import "modules/remove-subreddit-stats";

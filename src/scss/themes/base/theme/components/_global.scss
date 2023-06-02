@@ -1,0 +1,21 @@
+* {
+	box-sizing: border-box;
+}
+html{
+	background: color(grey,10);
+	background-repeat: no-repeat;
+}
+body{
+	width: auto;
+	margin: 0 30px 30px;
+	// Mobile styles
+	@include breakpoint(small){
+		margin: 0;
+	}
+}
+a[title="faded"]{
+	opacity: .4 !important;
+}
+.md a em {
+    display: none;
+}
