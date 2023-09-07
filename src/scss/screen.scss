@@ -39,7 +39,8 @@ $all-teams: map-collect($nfl-teams);
 
 // Themes
 
-@import "themes/basic-theme";
+//@import "themes/basic-theme";
+@import "themes/season-open";
 //@import "themes/black-history-month";
 //@import "themes/usa-theme";
 
