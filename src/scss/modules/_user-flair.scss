@@ -66,6 +66,8 @@ $pos-100:  0%;
 	$status_eliminated: map-get($team, eliminated);
 	$status_champion: map-get($team, champion);
 	$status_bandwagon: map-get($team, bandwagon);
+	@debug "team: #{$team}";
+	@debug "eliminated: #{$status_eliminated}";
 	.md a[href*="/r/#{$url}"],
 	.md a[href*="/r/#{to-lower-case($url)}"],
 	.md a[href*="/r/#{to-upper-case($url)}"],
@@ -74,6 +76,9 @@ $pos-100:  0%;
 		&::before{
 			@extend %flair-element;
 			background-position: 0 $pos-100;
+			@if $status_eliminated{
+				opacity: .4;
+			}
 		}
 	}
 
@@ -102,9 +107,6 @@ $pos-100:  0%;
 	}
 	.side .titlebox .tagline .flair-#{to-lower-case($name)} ~ .flairselectbtn::before{
 		background-position: 0 $pos-100;
-		@if $status_eliminated{
-			opacity: .4;
-		}
 	}
 	.flair-#{to-lower-case($name)}.flair-official + .author {
 		background: $bg;
