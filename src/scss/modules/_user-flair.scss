@@ -74,9 +74,9 @@ $pos-100:  0%;
 		&::before{
 			@extend %flair-element;
 			background-position: 0 $pos-100;
-			// @if $status_eliminated{
-			// 	opacity: .4;
-			// }
+			@if $status_eliminated{
+				opacity: .4;
+			}
 		}
 	}
 
@@ -108,17 +108,6 @@ $pos-100:  0%;
 	}
 	.flair-#{to-lower-case($name)}.flair-official + .author {
 		background: $bg;
-	}
-	@if $status_eliminated{
-		.md a[href*="/r/#{$url}"],
-		.md a[href*="/r/#{to-lower-case($url)}"],
-		.md a[href*="/r/#{to-upper-case($url)}"],
-		.md a[href*="/#{to-upper-case($abbr)}"],
-		.flair-#{to-lower-case($name)}{
-			&::before{
-				opacity: .4;
-			}
-		}
 	}
 	$pos-100: $pos-100 - 100%;
 }
