@@ -36,7 +36,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^7.0.1",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.1.0",
     "natives": "^1.1.6",
     "postcss-alias": "^2.0.0",
     "postcss-base64": "^0.7.1",
