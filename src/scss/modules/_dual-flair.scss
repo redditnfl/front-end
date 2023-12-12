@@ -75,7 +75,7 @@ $pos-100:  0%;
 	$abbr: map-get($team, abbr);
 	$url: map-get($team, url);
 	$bg: map-get($team, bg);
-	$status_eliminated: map-get($team, eliminated);
+	$status_eliminated: true;
 	$status_champion: map-get($team, champion);
 	$status_bandwagon: map-get($team, bandwagon);
 	@debug "team: #{$team}";
