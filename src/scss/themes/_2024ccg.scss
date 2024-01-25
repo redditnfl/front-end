@@ -1,7 +1,7 @@
 $color-1: #ffffff;
 
 html{
-background:transparent; //background:-webkit-linear-gradient(90deg,##00010e 100%, ##240420 100%) fixed;background:-o-linear-gradient(90deg,##00010e 100%, ##240420 100%) fixed;background:linear-gradient(90deg,##00010e 100%, ##240420 100%) fixed;
+background-image: linear-gradient(to right top, #00010e, #080316, #13041b, #1b051f, #240420);
 }
 
 html::before{
