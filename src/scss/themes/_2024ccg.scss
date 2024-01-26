@@ -1,7 +1,8 @@
 $color-1: #ffffff;
 
 html{
-       background-color: #000110
+       background-color: #000110;
+	   background-color: linear-gradient(90deg, rgba(0,1,16,1) 0%, rgba(8,13,35,1) 100%);
 }
 
 html::before{
