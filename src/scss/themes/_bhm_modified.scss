@@ -23,20 +23,27 @@ html{
 		background-color: $black;
 	}
 	li:nth-child(1){
-		content: "";
-	position: absolute;
-	top: 0;
-	z-index: -1;
-	height: 238px;
-	width: 100%;
-	margin-top: 104px; //54px
-	background-color: transparent;
-	background-image: url("../img/probowl24.jpg");
-	background-position: center top;
-	background-size: 1890px;
-	background-repeat: no-repeat;
+		position: relative;
+		z-index: 2;
+		display: block;
+		height: 130px;
+		width: 100%;
+		font-size: 0;
+		background-color: transparent;
+        background-image: url("../img/probowl24.jpg");
+		background-size: 100%;
 	}
-
+	li:nth-child(2){
+		position: relative;
+		z-index: 1;
+		display: block;
+		height: 236px;
+		width: 100%;
+		margin-top: -14px;
+		font-size: 0;
+		background-image: url("../img/probowlsb.jpg");
+		background-size: 100%;
+	}
 	li:nth-child(3){
 		padding-top: 20px;
 		font-size: 20px;
@@ -55,4 +62,17 @@ html{
 		width: 100%;
 		background-size: 100%;
 	}
+	/*li:nth-last-child(2) a{
+		background-image: url("../img/bhm-button-1.png");
+	}
+	li:nth-last-child(1){
+		display: block;
+		width: 100%;
+		padding: 0;
+		font-size: 0;
+		background-color: transparent;
+	}
+	li:nth-last-child(1) a{
+		background-image: url("../img/bhm-button-2.png");
+	}*/
 }
