@@ -13,7 +13,7 @@ html::before{
 	position: absolute;
 	top: 0;
 	z-index: -1;
-	height: 238px;
+	height: 412px;
 	width: 100%;
 	margin-top: 104px; //54px
 	background-color: transparent;
