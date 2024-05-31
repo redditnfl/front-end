@@ -1,5 +1,3 @@
-$color-1: #ffffff;
-
 
 // All "components" within the side bar will begin with an hr, then an h4, and finally a random header between h1-h6
 // creating a unique code for us to target (e.g. hr + h4 + h1 + component).
@@ -20,7 +18,7 @@ html {
     background-position: center 107px;
     position: relative;
 //    background-position: center 100px;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 html::before{
@@ -37,7 +35,3 @@ html::before{
 	background-size: 1890px;
 	background-repeat: no-repeat;
 }
-#header{
-    background: $color-1;
-   // margin-top: 230px;
-   }
