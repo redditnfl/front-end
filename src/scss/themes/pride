@@ -7,8 +7,7 @@ $black: #000000;
 
 // kill all h4 following hr
 html{
-	background:#E68E32;background:-webkit-linear-gradient(45deg,#E68E32 0%,#8E2F29 40%, #358E3C 98%) fixed;background:-o-linear-gradient(45deg,#E68E32 0%,#8E2F29 40%, #358E3C 98%) fixed;background:linear-gradient(45deg,#E68E32 0%,#8E2F29 40%, #358E3C 98%) fixed;
-}
+	background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(222,168,248,1) 0%, rgba(168,222,258,1) 21.9%, rgba(189,250,205,1) 35.6%, rgba(243,250,189,1) 53.9%, rgba(250,227,189,1) 66.8%, rgba(248,172,171,1) 95%, rgba(254,170,212,1) 99.9% );
 
 .side .titlebox .md hr + h5 + h2 + ul{
 	&{
