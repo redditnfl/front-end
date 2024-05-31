@@ -1,0 +1,36 @@
+
+// All "components" within the side bar will begin with an hr, then an h4, and finally a random header between h1-h6
+// creating a unique code for us to target (e.g. hr + h4 + h1 + component).
+// It's messy, for sure.
+
+// kill all h4 following hr
+/*html{
+background:#E68E32;
+background:-webkit-linear-gradient(45deg,#69bde1 20%,#86db98 40%, #fda8a8 98%) fixed;
+background:-o-linear-gradient(45deg,#69bde1 20%,#86db98 40%, #fda8a8 98%) fixed;
+background:linear-gradient(45deg,#69bde1 20%,#86db98 40%, #fda8a8 98%) fixed;
+}*/
+html {
+	background-image: url("../img/pridebg.png");
+	z-index: 1;
+   	background-color: #08090C;
+    background-size: contain;
+    background-position: center 107px;
+    position: relative;
+    background-repeat: repeat;
+}
+
+html::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	height: 238px;
+	width: 100%;
+	margin-top: 104px; //54px
+	background-color: transparent;
+	background-image: url("../img/pride2.png");
+	background-position: center top;
+	background-size: 1890px;
+	background-repeat: no-repeat;
+}
