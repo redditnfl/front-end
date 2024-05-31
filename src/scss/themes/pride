@@ -7,9 +7,11 @@ $black: #000000;
 
 // kill all h4 following hr
 html{
-	background-image: url("../img/pridebg.png");
+	background:linear-gradient(90deg, Red, Orange, Yellow, Green, Blue, Indigo,violet);
+  width:4000px;
+  height:500px;
+}
 
-.side .titlebox .md hr + h5 + h2 + ul{
 	&{
 		width: 300px;
 		list-style: none;
