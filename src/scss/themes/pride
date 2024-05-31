@@ -7,7 +7,7 @@ $black: #000000;
 
 // kill all h4 following hr
 html{
-	background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(222,168,248,1) 0%, rgba(168,222,258,1) 21.9%, rgba(189,250,205,1) 35.6%, rgba(243,250,189,1) 53.9%, rgba(250,227,189,1) 66.8%, rgba(248,172,171,1) 95%, rgba(254,170,212,1) 99.9% );
+	background-image: url("../img/pridebg.png");
 
 .side .titlebox .md hr + h5 + h2 + ul{
 	&{
