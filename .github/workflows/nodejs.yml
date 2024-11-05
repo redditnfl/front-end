@@ -61,6 +61,9 @@ jobs:
       with:
         name: branch-targets
 
+    - name: List files
+      run: ls -lR
+
     - name: Determine target
       shell: python
       run: |
@@ -68,7 +71,7 @@ jobs:
         import os
         import re
         ref = "${{ github.ref }}"
-        for line in open("%s/branch-targets/branch-targets.txt" % os.environ['GITHUB_WORKSPACE']):
+        for line in open("%s/branch-targets.txt" % os.environ['GITHUB_WORKSPACE']):
             pattern, target = re.split(r'\s*:\s*', line.strip())
             target = target.strip()
             pattern = 'refs/heads/' + pattern
