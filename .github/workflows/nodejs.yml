@@ -40,13 +40,13 @@ jobs:
         CI: true
         
     - name: Save theme data
-      uses: actions/upload-artifact@v1.0.0
+      uses: actions/upload-artifact@v4
       with:
         name: themedata
         path: dist
     
     - name: Save branch targets
-      uses: actions/upload-artifact@v1.0.0
+      uses: actions/upload-artifact@v4
       with:
         name: branch-targets
         path: branch-targets.txt
@@ -57,7 +57,7 @@ jobs:
     
     steps:
     - name: Download branch-targets
-      uses: actions/download-artifact@v1.0.0
+      uses: actions/download-artifact@v4
       with:
         name: branch-targets
 
@@ -82,7 +82,7 @@ jobs:
 
     - name: Download theme data
       if: env.SUBREDDIT != ''
-      uses: actions/download-artifact@v1.0.0
+      uses: actions/download-artifact@v4
       with:
         name: themedata
         path: downloaded_theme
