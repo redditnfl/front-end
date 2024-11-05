@@ -17,7 +17,7 @@ jobs:
     
     - name: Cache node modules
       id: cache-node-modules
-      uses: actions/cache@v1
+      uses: actions/cache@v4
       with:
         path: node_modules
         key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
@@ -60,9 +60,6 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: branch-targets
-
-    - name: List files
-      run: ls -lR
 
     - name: Determine target
       shell: python
