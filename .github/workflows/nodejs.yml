@@ -17,7 +17,7 @@ jobs:
     
     - name: Cache node modules
       id: cache-node-modules
-      uses: actions/cache@v1
+      uses: actions/cache@v4
       with:
         path: node_modules
         key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
@@ -40,13 +40,13 @@ jobs:
         CI: true
         
     - name: Save theme data
-      uses: actions/upload-artifact@v1.0.0
+      uses: actions/upload-artifact@v4
       with:
         name: themedata
         path: dist
     
     - name: Save branch targets
-      uses: actions/upload-artifact@v1.0.0
+      uses: actions/upload-artifact@v4
       with:
         name: branch-targets
         path: branch-targets.txt
@@ -57,7 +57,7 @@ jobs:
     
     steps:
     - name: Download branch-targets
-      uses: actions/download-artifact@v1.0.0
+      uses: actions/download-artifact@v4
       with:
         name: branch-targets
 
@@ -68,7 +68,7 @@ jobs:
         import os
         import re
         ref = "${{ github.ref }}"
-        for line in open("%s/branch-targets/branch-targets.txt" % os.environ['GITHUB_WORKSPACE']):
+        for line in open("%s/branch-targets.txt" % os.environ['GITHUB_WORKSPACE']):
             pattern, target = re.split(r'\s*:\s*', line.strip())
             target = target.strip()
             pattern = 'refs/heads/' + pattern
@@ -82,7 +82,7 @@ jobs:
 
     - name: Download theme data
       if: env.SUBREDDIT != ''
-      uses: actions/download-artifact@v1.0.0
+      uses: actions/download-artifact@v4
       with:
         name: themedata
         path: downloaded_theme
