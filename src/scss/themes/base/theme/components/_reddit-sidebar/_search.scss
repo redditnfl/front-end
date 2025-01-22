@@ -9,21 +9,21 @@
 	width: 100%;
 	padding: 0 20px;
 	border: 0;
-	background: color(white);
+	background: color(#000000);
 	outline: none;
 }
-#search input:nth-child(1)::-webkit-input-placeholder{color: color(grey,40); transition: color .3s ease-out;}
-#search input:nth-child(1):-moz-placeholder{color: color(grey,40); transition: color .3s ease-out;}
-#search input:nth-child(1)::-moz-placeholder{color: color(grey,40); transition: color .3s ease-out;}
-#search input:nth-child(1):-ms-input-placeholder{color: color(grey,40); transition: color .3s ease-out;}
+#search input:nth-child(1)::-webkit-input-placeholder{color: color(#808080,40); transition: color .3s ease-out;}
+#search input:nth-child(1):-moz-placeholder{color: color(#808080,40); transition: color .3s ease-out;}
+#search input:nth-child(1)::-moz-placeholder{color: color(#808080,40); transition: color .3s ease-out;}
+#search input:nth-child(1):-ms-input-placeholder{color: color(#808080,40); transition: color .3s ease-out;}
 #search input:nth-child(1):hover,
 #search input:nth-child(1):focus{
-	background: color(white);
+	background: color(#ffffff);
 }
-#search input:nth-child(1):hover::-webkit-input-placeholder{color: color(black);}
-#search input:nth-child(1):hover:-moz-placeholder{color: color(black);}
-#search input:nth-child(1):hover::-moz-placeholder{color: color(black);}
-#search input:nth-child(1):hover:-ms-input-placeholder{color: color(black);}
+#search input:nth-child(1):hover::-webkit-input-placeholder{color: color(#000000);}
+#search input:nth-child(1):hover:-moz-placeholder{color: color(#000000);}
+#search input:nth-child(1):hover::-moz-placeholder{color: color(#000000);}
+#search input:nth-child(1):hover:-ms-input-placeholder{color: color(#000000);}
 #search input:nth-child(2){
 	@include center(v);
 	position: absolute;

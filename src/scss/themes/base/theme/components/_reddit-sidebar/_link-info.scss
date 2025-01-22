@@ -15,7 +15,7 @@
 		display: block;
 		margin: 0 0 10px;
 		font-size: 14px;
-		color: color(grey,40);
+		color: color(#696969,40);
 	}
 	.date span{
 		font-size: 0;
@@ -28,7 +28,7 @@
 		display: block;
 		margin: 0 0 10px;
 		font-size: 14px;
-		color: color(grey,20);
+		color: color(#696969,20);
 	}
 	.score .number{
 		@include font(display,1);
@@ -49,6 +49,4 @@
 		margin: 0;
 		font-size: 12px;
 		text-decoration: underline;
-		color: color(red);
-	}
-}
+		color: color(#fd2727
