@@ -1,4 +1,32 @@
 $color-1: #ffffff;
+
+html{
+	background-color:$color-1;
+}
+
+html::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	height: 400px;
+	width: 100%;
+	margin-top: 54px;//104px;
+	background-color: transparent;
+	background-image: url("../img/ccg27.jpg");
+	background-position: center top;
+	background-size: 1890px;
+	background-repeat: no-repeat;
+}
+#header{
+    background: $color-1;
+   // margin-top: 230px;
+   }
+
+
+
+
+/*$color-1: #ffffff;
 $grey: #34495e;
 
 html{
@@ -20,4 +48,4 @@ html{
 #header{
     background: $color-1;
    // margin-top: 230px;
-   }
+   }*/
