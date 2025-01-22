@@ -12,7 +12,8 @@ $all-teams: map-collect($nfl-teams);
 @import "controls";
 
 // base theme
-@import "themes/base/theme/index";
+//@import "themes/base/theme/index";
+@import "themes/2024ccg/theme/index";
 
 // essential modules
 @import "modules/remove-subreddit-stats";
@@ -40,9 +41,9 @@ $all-teams: map-collect($nfl-teams);
 // Themes
 
 //@import "themes/bhm_modified";
-//@import "themes/2024ccg";
+@import "themes/2024ccg";
 //@import "themes/sb2024";
-@import "themes/basic-theme";
+//@import "themes/basic-theme";
 //@import "themes/season-open";
 //@import "themes/black-history-month";
 //@import "themes/usa-theme";
