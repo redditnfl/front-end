@@ -1,3 +1,4 @@
+
 &::before{
 	content: "";
 	display: block;
@@ -20,7 +21,7 @@
 		content: $sidebarHeader;
 		font-size: 20px;
 		margin: 0 0 10px;
-		color: color(#000000);
+		color: color(black);
 	}
 	.spacer:nth-child(1)::after{
 		@extend %body-copy;
@@ -30,7 +31,7 @@
 		font-size: 12px;
 		line-height: 1.4em;
 		text-align: left;
-		color: color(#000000);
+		color: color(black);
 	}
 }
 
