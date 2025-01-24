@@ -1,11 +1,7 @@
-$color-1: #ffffff;
+$color-1: #34495e;
 
-/*html{
-      background-color: #34495e;
-		//background:-o-linear-gradient(45deg,#060725 0%,#000111 50%,#060725 98%) fixed;background:linear-gradient(45deg,#000111 0%,#000111 50%,#060725 98%) fixed;
-}*/
 html{
-	background:#34495e;
+	background-color:$color-1;
 }
 
 html::before{
@@ -13,10 +9,10 @@ html::before{
 	position: absolute;
 	top: 0;
 	z-index: -1;
-	height: 238px;
+	height: 400px;
 	width: 100%;
-	margin-top: 104px; //54px
-	background-color: #34495e;
+	margin-top: 104px;
+	background-color: transparent;
 	background-image: url("../img/ccg27.jpg");
 	background-position: center top;
 	background-size: 1890px;

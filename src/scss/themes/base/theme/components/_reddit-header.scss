@@ -10,7 +10,7 @@
 	} @else{
 		margin-top: $h-reddit-nav + $h-team-header + $h-hero;
 	}
-	background: color(grey, 5);
+	background: color(#808080, 5);
 }
 #jumpToContent{
 	@extend %kill;
