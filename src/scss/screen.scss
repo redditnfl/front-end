@@ -13,7 +13,7 @@ $all-teams: map-collect($nfl-teams);
 
 // base theme
 @import "themes/base/theme/index";
-@import "themes/bhm_modified";
+//@import "themes/bhm_modified";
 
 // essential modules
 @import "modules/remove-subreddit-stats";
