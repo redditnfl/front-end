@@ -1,7 +1,7 @@
-color-1: #ffffff;
+$color-1: #ffffff;
 
 html{
-	background-color:color-1;
+	background-color:$color-1;
 }
 
 html::before{
